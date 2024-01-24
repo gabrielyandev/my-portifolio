@@ -18,7 +18,7 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100 bg-dark">
-        <main class="flex-shrink-0">
+        <main class="flex-shrink-0" id="up">
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
                 <div class="container px-5">
@@ -47,7 +47,7 @@
                                 <h2 class="text-primary fw-bolder mb-0">Experiências</h2>
                                 <!-- Download resume button-->
                                 <!-- Note: Set the link href target to a PDF file within your project-->
-                                <a class="btn btn-primary px-4 py-3" href="assets/curriculo.pdf" target="_blank">
+                                <a class="btn btn-primary px-1 py-2" href="assets/curriculo.pdf" target="_blank">
                                     <div class="d-inline-block bi bi-download me-2"></div>
                                     Download
                                 </a>
@@ -105,7 +105,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div></div></div>
+                                        <div class="col-lg-8"><div>
+                                            Até o momento, estou cursando a faculdade de Análise e Desenvolvimento de Sistemas, onde estou aprendendo sobre lógica de programação, banco de dados, desenvolvimento web, entre outros.
+                                        </div></div>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +115,7 @@
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
-                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                        <div class="col text-justify text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-light p-4 rounded-4">
                                                 <div class="text-secondary fw-bolder mb-2">2022 - 2022</div>
                                                 <div class="mb-2">
@@ -139,7 +141,7 @@
                             <div class="card shadow border-0 rounded-4 mb-5">
                                 <div class="card-body p-5">
                                     <!-- skills list-->
-                                    <div class="mb-5">
+                                    <div class="mb-4">
                                         <div class="d-flex align-items-center mb-4">
                                             <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
                                             <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Skills</span></h3>
@@ -180,20 +182,19 @@
             </div>
         </main>
         <!-- Footer-->
-        <footer class="bg-white py-4 mt-auto">
+        <footer class="bg-black py-4 mt-auto">
             <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; Your Website 2023</div></div>
-                    <div class="col-auto">
-                        <a class="small" href="#!">Privacy</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Terms</a>
-                        <span class="mx-1">&middot;</span>
-                        <a class="small" href="#!">Contact</a>
-                    </div>
+              <div
+                class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                  <div class="small m-0 text-light">Copyright &copy; gabrielyandev 2024</div>
                 </div>
+                <div class="col-auto">
+                  <a href="#up" class="icon-top"><i class="bi bi-arrow-up-circle-fill"></i></a>
+                </div>
+              </div>
             </div>
-        </footer>
+          </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
