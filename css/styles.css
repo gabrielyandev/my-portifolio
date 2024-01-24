@@ -5262,6 +5262,29 @@ textarea.form-control-lg {
   margin: var(--bs-modal-margin);
   pointer-events: none;
 }
+/* máquina de escrever */
+.titulo-principal{
+  max-width: 480px;
+  text-align: center;
+  margin: 60px auto;
+}
+.titulo-principal:after{
+content: '|';
+margin-left: 5px;
+opacity: 1;
+animation: pisca .7s infinite;
+}
+/* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+@keyframes pisca{
+  0%, 100%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 0;
+  }
+}
+/* fim máquina de escrever */
 
 .icon-top{
   font-size: 2rem;
