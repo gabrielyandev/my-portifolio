@@ -15,10 +15,7 @@
     <link
     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <!-- Custom Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,7 +32,8 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0" id="up">
+    <!-- home -->
+    <main class="flex-shrink-0" id="inicio">
       <!-- Navigation-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
         <div class="container px-5">
@@ -56,13 +54,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Início</a>
+                <a class="nav-link" href="#inicio">Início</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="resume.html">Resumo</a>
+                <a class="nav-link" href="#resumo">Resumo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projetos</a>
+                <a class="nav-link" href="#projetos">Projetos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://api.whatsapp.com/send?phone=5571996504413&text=Oi,%20vim%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%20e%20tenho%20interesse%20em%20seus%20servi%C3%A7os" target="_blank">Contato</a>
@@ -474,7 +472,208 @@
           </div>
         </div>
       </section>
-    </main>
+    </main> <!-- home -->
+
+    <!-- resumo -->
+    <main class="flex-shrink-0" id="resumo">
+      <!-- Page Content-->
+      <div class="container px-5 my-5 hidden-element">
+          <div class="text-center mb-5">
+              <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Resumo</span></h1>
+          </div>
+          <div class="row gx-5 justify-content-center">
+              <div class="col-lg-11 col-xl-9 col-xxl-8">
+                  <!-- Experience Section-->
+                  <section>
+                      <div class="d-flex align-items-center justify-content-between mb-4">
+                          <h2 class="text-primary fw-bolder mb-0">Experiências</h2>
+                          <!-- Download resume button-->
+                          <!-- Note: Set the link href target to a PDF file within your project-->
+                          <a class="btn btn-primary px-1 py-2" href="assets/curriculo.pdf" target="_blank">
+                              <div class="d-inline-block bi bi-download me-2"></div>
+                              Download
+                          </a>
+                      </div>
+                      <!-- Experience Card 1-->
+                      <div class="card shadow border-0 rounded-4 mb-5">
+                          <div class="card-body p-5">
+                              <div class="row align-items-center gx-5">
+                                  <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                      <div class="bg-gradient-primary-to-secondary p-4 rounded-4">
+                                          <div class="text-light fw-bolder mb-2">2023 - Presente</div>
+                                          <div class="small fw-bolder text-light">Desenvolvedor Web</div>
+                                          <div class="small text-light">99jobs</div>
+                                          <div class="small text-light">Salvador, BA</div>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-8"><div>Desenvolver sites para clientes com intermediação da plataforma 99jobs e indicações</div></div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Experience Card 2-->
+                      <div class="card shadow border-0 rounded-4 mb-5">
+                          <div class="card-body p-5">
+                              <div class="row align-items-center gx-5">
+                                  <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                      <div class="bg-gradient-primary-to-secondary p-4 rounded-4">
+                                          <div class="text-light fw-bolder mb-2">...</div>
+                                          <div class="small fw-bolder text-light">...</div>
+                                          <div class="small text-muted">...</div>
+                                          <div class="small text-muted">...</div>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-8"><div>Em processo</div></div>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+                  <!-- Education Section-->
+                  <section>
+                      <h2 class="text-secondary fw-bolder mb-4">Formações</h2>
+                      <!-- Education Card 1-->
+                      <div class="card shadow border-0 rounded-4 mb-5">
+                          <div class="card-body p-5">
+                              <div class="row align-items-center gx-5">
+                                  <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                      <div class="bg-light p-4 rounded-4">
+                                          <div class="text-secondary fw-bolder mb-2">2023 - Presente</div>
+                                          <div class="mb-2">
+                                              <div class="small fw-bolder">Faculdade Descomplica</div>
+                                              <div class="small text-muted">Salvador, BA</div>
+                                          </div>
+                                          <div class="fst-italic">
+                                              <div class="small text-muted">------</div>
+                                              <div class="small text-muted">Análise e Desenvolvimento de Sistemas</div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-8"><div>
+                                      Até o momento, estou cursando a faculdade de Análise e Desenvolvimento de Sistemas, onde estou aprendendo sobre lógica de programação, banco de dados, desenvolvimento web, entre outros.
+                                  </div></div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Education Card 2-->
+                      <div class="card shadow border-0 rounded-4 mb-5">
+                          <div class="card-body p-5">
+                              <div class="row align-items-center gx-5">
+                                  <div class="col text-justify text-lg-start mb-4 mb-lg-0">
+                                      <div class="bg-light p-4 rounded-4">
+                                          <div class="text-secondary fw-bolder mb-2">2022 - 2022</div>
+                                          <div class="mb-2">
+                                              <div class="small fw-bolder">Senac</div>
+                                              <div class="small text-muted">Salvador, BA</div>
+                                          </div>
+                                          <div class="fst-italic">
+                                              <div class="small text-muted">------</div>
+                                              <div class="small text-muted">Programador FullStack</div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-8"><div>Curso onde aprendi um pouco de frontend e backend. Foi o qual desenvolvi a landing page para ser aprovado, desenvolvida apenas com o frontend em HTML, CSS e Bootstrap. Nome do projeto é EASYDATE</div></div>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+                  <!-- Divider-->
+                  <div class="pb-5"></div>
+                  <!-- Skills Section-->
+                  <section>
+                      <!-- Skillset Card-->
+                      <div class="card shadow border-0 rounded-4 mb-5">
+                          <div class="card-body p-5">
+                              <!-- skills list-->
+                              <div class="mb-4">
+                                  <div class="d-flex align-items-center mb-4">
+                                      <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
+                                      <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Skills</span></h3>
+                                  </div>
+                                  <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">UX/UI</div></div>
+                                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">Figma</div></div>
+                                      <div class="col"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">Frontend</div></div>
+                                  </div>
+                                  <div class="row row-cols-1 row-cols-md-3">
+                                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">Canva</div></div>
+                                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">Pacote Office</div></div>
+                                      <div class="col"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">Backend</div></div>
+                                  </div>
+                              </div>
+                              <!-- Languages list-->
+                              <div class="mb-0">
+                                  <div class="d-flex align-items-center mb-4">
+                                      <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
+                                      <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Linguagens</span></h3>
+                                  </div>
+                                  <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">HTML</div></div>
+                                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">CSS</div></div>
+                                      <div class="col"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">JavaScript</div></div>
+                                  </div>
+                                  <div class="row row-cols-1 row-cols-md-3">
+                                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">Git</div></div>
+                                      <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">Bootstrap</div></div>
+                                      <div class="col"><div class="d-flex align-items-center bg-dark rounded-4 p-3 h-100">React</div></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+              </div>
+          </div>
+      </div>
+  </main>
+    <!-- fim resumo -->
+
+    <!-- projetos -->
+    <main class="flex-shrink-0" id="projetos">
+    <!-- Projects section-->
+    <div class="container bg-dark hidden-element">
+        <div class="row">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projetos</span></h1>
+            </div>
+            <!-- Project 1 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="assets/img/take-ton.png" class="card-img-top" alt="ton maquininhas">
+                    <div class="card-body">
+                        <h5 class="card-title">Ton Maquininhas</h5>
+                        <p class="card-text">Landing Page para um cliente afiliado, intuito de capturar leads e levar ao checkout.</p>
+                        <a href="https://landing-page-ton-gabrielyandev.vercel.app/" class="btn btn-primary" target="_blank"><i class="bi bi-eye p-1"></i>Ver Projeto</a>
+                        <a href="#" class="btn btn-primary" target="_blank"><i class="bi bi-github p-1"></i>GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="assets/img/my-portfolio.png" class="card-img-top" alt="Meu Portfolio">
+                    <div class="card-body">
+                        <h5 class="card-title">Meu Portfólio</h5>
+                        <p class="card-text">Meu portfolio, desenvolvido com HTML, CSS e Bootstrap</p>
+                        <a href="https://my-portfolio-gabrielyandev.vercel.app/" class="btn btn-primary" target="_blank"><i class="bi bi-eye p-1"></i>Ver Projeto</a>
+                        <a href="#" class="btn btn-primary" target="_blank"><i class="bi bi-github p-1"></i>GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="assets/img/tic-tac-toe.png" class="card-img-top" alt="Jogo da velha">
+                    <div class="card-body">
+                        <h5 class="card-title">Tic Tac Toe</h5>
+                        <p class="card-text">Projeto onde coloquei em prática alguns conhecimentos em Javascritp</p>
+                        <a href="https://tic-tac-toe-gabrielyandev.vercel.app/" class="btn btn-primary" target="_blank"><i class="bi bi-eye p-1"></i>Ver Projeto</a>
+                        <a href="#" class="btn btn-primary" target="_blank"><i class="bi bi-github p-1"></i>GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- em processo -->
+        </div>
+    </div>
+</main>
+    <!-- fim projetos -->
     <!-- Footer-->
     <footer class="bg-black py-4 mt-auto">
       <div class="container px-5">
@@ -485,7 +684,7 @@
             <div class="small m-0 text-light">Copyright &copy; gabrielyandev 2024</div>
           </div>
           <div class="col-auto">
-            <a href="#up" class="icon-top"><i class="bi bi-arrow-up-circle-fill"></i></a>
+            <a href="#inicio" class="icon-top"><i class="bi bi-arrow-up-circle-fill"></i></a>
           </div>
         </div>
       </div>
