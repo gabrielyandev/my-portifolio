@@ -9,7 +9,9 @@
     <meta name="description" content="Meu portfólio" />
     <meta name="author" content="Gabriel Yan" />
     <title>Gabriel Yan</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- animate css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Favicon-->
@@ -70,24 +72,24 @@
         </div>
       </nav>
       <!-- Header-->
-      <header class="py-5">
+      <header class="py-5 hidden-element">
         <div class="container px-5 pb-5">
           <div class="row gx-5 align-items-center">
             <div class="col-xxl-5">
               <!-- Header text content-->
               <div class="text-center text-xxl-start">
                 <div
-                  class="badge bg-gradient-primary-to-secondary text-white mb-4"
+                  class="badge bg-gradient-primary-to-secondary text-white mb-4 hidden-element"
                 >
                   <div class="text-uppercase">
                     Design &middot; UX/UI &middot; Frontend
                   </div>
                 </div>
-                <div class="fs-3 fw-light text-muted">
+                <div class="fs-3 fw-light text-muted titulo-principal">
                   Um ser humano apaixonado
                 </div>
                 <h1 class="display-3 fw-bolder mb-4">
-                  <span class="text-gradient d-inline titulo-principal">Em desenvolver para o mundo</span
+                  <span class="text-gradient d-inline">Em desenvolver para o mundo</span
                   >
                 </h1>
                 <div
@@ -102,8 +104,8 @@
             </div>
             <div class="col-xxl-7">
               <!-- Header profile picture-->
-              <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                <div class="profile bg-gradient-primary-to-secondary animate__animated animate__flipInY">
+              <div class="d-flex justify-content-center mt-5 mt-xxl-0 hidden-element">
+                <div class="profile bg-gradient-primary-to-secondary">
                   <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
                   <!-- Watch a tutorial on how to do this on YouTube (link)-->
                   <img class="profile-img" src="assets/profile.png" alt="..." />
@@ -430,7 +432,7 @@
         </div>
       </header>
       <!-- About Section-->
-      <section class="bg-dark py-5">
+      <section class="bg-dark py-5 hidden-element">
         <div class="container px-5">
           <div class="row gx-5 justify-content-center">
             <div class="col-xxl-8">
@@ -438,7 +440,7 @@
                 <h2 class="display-5 fw-bolder">
                   <span class="text-gradient d-inline">Sobre mim</span>
                 </h2>
-                <p class="lead fw-light mb-4">
+                <p class="lead fw-light mb-3">
                   Meu nome é Gabriel Yan e estou em busca do meu primeiro
                   emprego na área
                 </p>
@@ -493,6 +495,6 @@
     <!-- JS do Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <!-- script -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
