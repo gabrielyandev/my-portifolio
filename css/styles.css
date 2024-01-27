@@ -11806,15 +11806,15 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  z-index: 1;
+  z-index: 0;
 } /* ---- stats.js ---- */
 .count-particles {
-  background: #000022;
+  background: var(--bs-accordion-btn-color);
   position: absolute;
   top: 48px;
   left: 0;
   width: 80px;
-  color: #13e8e9;
+  color: var(--bs-accordion-btn-color);
   font-size: 0.8em;
   text-align: left;
   text-indent: 4px;
