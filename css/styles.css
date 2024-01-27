@@ -11794,10 +11794,11 @@ html {
 }
 
 /* ---- particles.js container ---- */
-/* canvas {
+canvas {
   display: block;
   vertical-align: bottom;
-} */
+}
+/* ---- stats.js ---- */
 #particles-js {
   position: absolute;
   width: 100%;
