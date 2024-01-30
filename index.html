@@ -34,11 +34,6 @@
     <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body class="d-flex flex-column h-100">
-    <!-- particles.js container -->
-    <div id="particles-js"></div>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- stats.js lib -->
-    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <!-- home -->
     <main class="flex-shrink-0" id="inicio">
       <!-- Navigation-->
@@ -84,10 +79,19 @@
       <!-- Header-->
       <header class="py-5 hidden-element">
         <div class="container px-5 pb-5">
+
+          <!-- particles.js container -->
+          <div id="particles-js" class="container w-75"></div>
+          <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+          <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+          <!-- stats.js lib -->
+          <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+          <!-- fim particles -->
+
           <div class="row gx-5 align-items-center">
             <div class="col-xxl-5">
               <!-- Header text content-->
-              <div class="text-center text-xxl-start">
+              <div class="text-center text-xxl-start zindex-particles">
                 <div
                   class="badge bg-gradient-primary-to-secondary text-white mb-4 hidden-element"
                 >
@@ -890,6 +894,6 @@
     <!-- JS do Bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     <!-- script -->
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>
