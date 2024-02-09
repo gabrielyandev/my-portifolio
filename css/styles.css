@@ -93,7 +93,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-dark);
+  background-color: var(--bs-light);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -599,6 +599,15 @@ progress {
 .initialism {
   font-size: 0.875em;
   text-transform: uppercase;
+}
+
+i {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--bs-primary);
+    transform: scale(1.1);
+  }
 }
 
 .blockquote {
@@ -8006,6 +8015,7 @@ fieldset:disabled .btn {
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
+  color: black;
 }
 
 .mb-5 {
@@ -12119,7 +12129,6 @@ canvas {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #212529;
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;

@@ -32,8 +32,8 @@ revelar.reveal(".hidden-element", {
 
 particlesJS("particles-js", {
   particles: {
-    number: { value: 75, density: { enable: true, value_area: 800 } },
-    color: { value: "#ffffff" },
+    number: { value: 90, density: { enable: true, value_area: 800 } },
+    color: { value: "#000000" },
     shape: {
       type: "circle",
       stroke: { width: 0, color: "#000000" },
@@ -53,7 +53,7 @@ particlesJS("particles-js", {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#ffffff",
+      color: "#000000",
       opacity: 0.4,
       width: 1,
     },
@@ -102,3 +102,43 @@ update = function () {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
+
+
+/* darkmode */
+
+// Verificar se o usuário já tem uma preferência de tema salva no localStorage
+if (localStorage.getItem("darkMode") === "true") {
+  enableDarkMode();
+}
+
+// Adicionar um evento de clique ao botão
+document
+  .getElementById("darkModeButton")
+  .addEventListener("click", toggleDarkMode);
+
+// Função para ativar ou desativar o modo escuro
+function toggleDarkMode() {
+  if (localStorage.getItem("darkMode") === "true") {
+    disableDarkMode();
+    const toggle = document.getElementsByTagName("i")[0];
+    toggle.classList.remove("fa-sun");
+    toggle.classList.add("fa-moon");
+  } else {
+    enableDarkMode();
+  }
+}
+
+// Função para ativar o modo escuro
+function enableDarkMode() {
+  document.body.style.backgroundColor = "#333";
+  document.body.style.color = "#fff";
+  document.body.style.transition = "all 0.5s";
+  localStorage.setItem("darkMode", "true");
+}
+
+// Função para desativar o modo escuro
+function disableDarkMode() {
+  document.body.style.backgroundColor = "#fff";
+  document.body.style.color = "#333";
+  localStorage.setItem("darkMode", "false");
+}
