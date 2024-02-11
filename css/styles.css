@@ -508,9 +508,8 @@ progress {
 }
 
 .lead {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
-  color: var(--bs-light);
 }
 
 .display-1 {
@@ -3753,7 +3752,7 @@ fieldset:disabled .btn {
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
   font-size: var(--bs-nav-link-font-size);
   font-weight: var(--bs-nav-link-font-weight);
-  color: var(--bs-nav-link-color);
+  color: var(--bs-purple);
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
@@ -8592,7 +8591,7 @@ fieldset:disabled .btn {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+ /*  color: #6c757d !important; */
 }
 
 .text-black-50 {

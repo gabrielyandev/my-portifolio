@@ -103,7 +103,6 @@ update = function () {
 };
 requestAnimationFrame(update);
 
-
 /* darkmode */
 
 // Verificar se o usuário já tem uma preferência de tema salva no localStorage
