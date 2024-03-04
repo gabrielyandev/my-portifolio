@@ -33,10 +33,10 @@ revelar.reveal(".hidden-element", {
 particlesJS("particles-js", {
   particles: {
     number: { value: 90, density: { enable: true, value_area: 800 } },
-    color: { value: "#000000" },
+    color: { value: "#5E1675" },
     shape: {
       type: "circle",
-      stroke: { width: 0, color: "#000000" },
+      stroke: { width: 0, color: "#fff" },
       polygon: { nb_sides: 5 },
       image: { src: "img/github.svg", width: 100, height: 100 },
     },
@@ -53,9 +53,9 @@ particlesJS("particles-js", {
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#000000",
+      color: "#5E1675",
       opacity: 0.4,
-      width: 1,
+      width: 2,
     },
     move: {
       enable: true,
@@ -128,9 +128,10 @@ function toggleDarkMode() {
 }
 
 // Função para ativar o modo escuro
+
 function enableDarkMode() {
-  document.body.style.backgroundColor = "#333";
   document.body.style.color = "#fff";
+  document.body.style.backgroundColor = "#000";
   document.body.style.transition = "all 0.5s";
   localStorage.setItem("darkMode", "true");
 }
@@ -138,6 +139,6 @@ function enableDarkMode() {
 // Função para desativar o modo escuro
 function disableDarkMode() {
   document.body.style.backgroundColor = "#fff";
-  document.body.style.color = "#333";
+  document.body.style.color = "#111";
   localStorage.setItem("darkMode", "false");
 }
