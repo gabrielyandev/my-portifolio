@@ -111,17 +111,19 @@ if (localStorage.getItem("darkMode") === "true") {
 }
 
 // Adicionar um evento de clique ao botão
-const darkModeToggle = document.querySelector(".dark-mode-toggle");
-darkModeToggle.addEventListener("click", () => {
-  toggleDarkMode();
-});
+document
+  .getElementById("darkModeButton")
+  .addEventListener("click", toggleDarkMode);
 
 // Função para ativar ou desativar o modo escuro
 function toggleDarkMode() {
   if (localStorage.getItem("darkMode") === "true") {
-    enableDarkMode();
-  } else {
     disableDarkMode();
+    const toggle = document.getElementsByTagName("i")[0];
+    toggle.classList.remove("fa-sun");
+    toggle.classList.add("fa-moon");
+  } else {
+    enableDarkMode();
   }
 }
 
