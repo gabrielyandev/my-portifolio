@@ -22,7 +22,7 @@ typeWrite(titulo);
 window.revelar = ScrollReveal({ reset: true });
 
 revelar.reveal(".hidden-element", {
-  duration: 2000,
+  duration: 1000,
   origin: "bottom",
   distance: "90px",
   delay: 100,
@@ -32,7 +32,7 @@ revelar.reveal(".hidden-element", {
 
 particlesJS("particles-js", {
   particles: {
-    number: { value: 90, density: { enable: true, value_area: 800 } },
+    number: { value: 110, density: { enable: true, value_area: 800 } },
     color: { value: "#5E1675" },
     shape: {
       type: "circle",
@@ -55,7 +55,7 @@ particlesJS("particles-js", {
       distance: 150,
       color: "#5E1675",
       opacity: 0.4,
-      width: 2,
+      width: 1,
     },
     move: {
       enable: true,
