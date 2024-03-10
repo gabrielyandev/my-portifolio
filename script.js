@@ -32,7 +32,7 @@ revelar.reveal(".hidden-element", {
 
 particlesJS("particles-js", {
   particles: {
-    number: { value: 110, density: { enable: true, value_area: 800 } },
+    number: { value: 105, density: { enable: true, value_area: 800 } },
     color: { value: "#5E1675" },
     shape: {
       type: "circle",
