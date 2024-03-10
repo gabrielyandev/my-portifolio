@@ -3959,11 +3959,9 @@ fieldset:disabled .btn {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
- /*  color: var(--bs-navbar-color); */
- /*  background-color: transparent; */
- /*  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color); */
-  border-radius: var(--bs-navbar-toggler-border-radius);
-  transition: var(--bs-navbar-toggler-transition);
+  background-color: #380fc9;
+  border: none;
+  border-radius: 10px;
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
@@ -3981,7 +3979,7 @@ fieldset:disabled .btn {
 
 .navbar-toggler-icon {
   display: inline-block;
-  width: 1.5em;
+  width: 1.2em;
   height: 1.5em;
   vertical-align: middle;
   background-image: var(--bs-navbar-toggler-icon-bg);
