@@ -1,6 +1,6 @@
 /* máquina de escrever */
 
-function typeWrite(elemento) {
+/* function typeWrite(elemento) {
   if (elemento) {
     const textoArray = elemento.innerHTML.split("");
     elemento.innerHTML = " ";
@@ -15,7 +15,38 @@ function typeWrite(elemento) {
 }
 
 const titulo = document.querySelector(".titulo-principal");
-typeWrite(titulo);
+typeWrite(titulo); */
+
+
+function typeWrite(elemento) {
+  if (elemento) {
+    const textoOriginal = elemento.innerHTML;
+    const textoArray = textoOriginal.split("");
+    elemento.innerHTML = " ";
+    
+    textoArray.forEach(function (letra, i) {
+      setTimeout(function () {
+        elemento.innerHTML += letra;
+        
+        // Quando a última letra for adicionada, reinicie a função após uma pausa
+        if (i === textoArray.length - 1) {
+          setTimeout(function () {
+            typeWrite(elemento);
+          }, 1000); // Pausa de 1 segundo antes de reiniciar
+        }
+      }, 75 * i);
+    });
+  } else {
+    console.error("Elemento não encontrado");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const titulo = document.querySelector(".titulo-principal");
+  typeWrite(titulo);
+});
+
+
 
 /* reveal*/
 
