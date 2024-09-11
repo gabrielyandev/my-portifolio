@@ -162,7 +162,7 @@ function toggleDarkMode() {
 
 function enableDarkMode() {
   document.body.style.color = "#fff";
-  document.body.style.backgroundColor = "#000";
+  document.body.style.backgroundColor = "#111";
   document.body.style.transition = "all 0.5s";
   localStorage.setItem("darkMode", "true");
 }
