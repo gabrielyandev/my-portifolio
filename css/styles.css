@@ -99,9 +99,13 @@ body {
 }
 
 .icon-dark-mode {
-  font-size: 3rem;
-  color: #0619c5;
+  font-size: 2rem;
+  color: #37206b;
   z-index: 1000;
+}
+
+.icon-dark-mode:hover {
+  color: #51398a;
 }
 
 hr {
@@ -608,7 +612,6 @@ progress {
 
 i {
   cursor: pointer;
-
   &:hover {
     /* color: var(--bs-primary); */
     color: #37206b;
@@ -3979,8 +3982,8 @@ fieldset:disabled .btn {
 .navbar-toggler-icon {
   display: inline-block;
   color: #fff;
-  width: 1.2em;
-  height: 1.5em;
+  width: 1em;
+  height: 1em;
   vertical-align: middle;
   background-image: var(--bs-navbar-toggler-icon-bg);
   background-repeat: no-repeat;
