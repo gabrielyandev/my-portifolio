@@ -1,145 +1,717 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Desenvolvedor Web Full-Stack, DBA e entusiasta de UX/UI." />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Desenvolvedor Web Full-Stack, DBA e entusiasta de UX/UI."
+    />
     <meta name="author" content="Gabriel Yan" />
-    <title>@gabrielyandev - Portfólio de Desenvolvedor</title>
+    <title>@gabrielyandev - Portfólio</title>
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link href="css/styles.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
-        <nav class="navbar navbar-expand-lg py-3 sticky-top">
-            <div class="container px-5">
-                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">@gabrielyandev</span></a>
-                <div class="d-flex align-items-center">
-                    <i class="bi bi-moon-stars-fill fs-4 me-3" id="darkModeToggle"></i>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#resumo">Resumo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-primary btn-sm text-white px-3 ms-lg-2" href="https://api.whatsapp.com/send?phone=5571996504413&text=Oi,%20vim%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%20e%20tenho%20interesse%20em%20seus%20servi%C3%A7os" target="_blank">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg py-3 sticky-top">
+        <div class="container px-5">
+          <a class="navbar-brand" href="index.html"
+            ><span class="fw-bolder text-primary">@gabrielyandev</span></a
+          >
+          <div class="d-flex align-items-center">
+            <i class="bi bi-moon-stars-fill fs-4 me-3" id="darkModeToggle"></i>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+              <li class="nav-item">
+                <a class="nav-link" href="#inicio">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#resumo">Resumo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projetos">Projetos</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-primary btn-sm text-white px-3 ms-lg-2"
+                  href="https://api.whatsapp.com/send?phone=5571996504413&text=Oi,%20vim%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%20e%20tenho%20interesse%20em%20seus%20servi%C3%A7os"
+                  target="_blank"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-        <header class="py-5" id="inicio">
-            <div id="particles-js"></div>
-            <div class="container px-5 pb-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-7 text-center text-lg-start">
-                        <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Design &middot; UX/UI &middot; Frontend &middot; DBA</div></div>
-                        <div class="fs-6 fw-light text-muted-custom titulo-principal">Um ser humano apaixonado</div>
-                        <h1 class="display-6 fw-bolder mb-4"><span class="text-gradient d-inline">Em desenvolver para o mundo</span></h1>
-                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3">
-                            <a target="_blank" class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="https://github.com/gabrielyandev"><i class="bi bi-github p-1"></i>Github</a>
-                            <a target="_blank" class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="https://www.linkedin.com/in/gabrielyandev/"><i class="bi bi-linkedin p-1"></i>Linkedin</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="d-flex justify-content-center mt-5 mt-lg-0">
-                            <div class="profile bg-gradient-primary-to-secondary"><img class="profile-img" src="assets/profile1.png" alt="Foto de Gabriel Yan" /></div>
-                        </div>
-                    </div>
+      <header class="py-5" id="inicio">
+        <div id="particles-js"></div>
+        <div class="container px-5 pb-5">
+          <div class="row gx-5 align-items-center">
+            <div class="col-lg-7 text-center text-lg-start">
+              <div
+                class="badge bg-gradient-primary-to-secondary text-white mb-4"
+              >
+                <div class="text-uppercase">
+                  Frontend &middot; UX/UI &middot; Frontend &middot; DBA
                 </div>
+              </div>
+              <div class="fs-6 fw-light text-muted-custom titulo-principal">
+                Um ser humano apaixonado
+              </div>
+              <h1 class="display-6 fw-bolder mb-4">
+                <span class="text-gradient d-inline"
+                  >Em desenvolver para o mundo</span
+                >
+              </h1>
+              <div
+                class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3"
+              >
+                <a
+                  target="_blank"
+                  class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                  href="https://github.com/gabrielyandev"
+                  ><i class="bi bi-github p-1"></i>Github</a
+                >
+                <a
+                  target="_blank"
+                  class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder"
+                  href="https://www.linkedin.com/in/gabrielyandev/"
+                  ><i class="bi bi-linkedin p-1"></i>Linkedin</a
+                >
+              </div>
             </div>
-        </header>
+            <div class="col-lg-5">
+              <div class="d-flex justify-content-center mt-5 mt-lg-0">
+                <div class="profile bg-gradient-primary-to-secondary">
+                  <img
+                    class="profile-img"
+                    src="assets/profile1.png"
+                    alt="Foto de Gabriel Yan"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
-        <section class="py-5 bg-light-custom" id="sobre">
-            <div class="container px-5">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="text-center my-5 hidden-element">
-                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Sobre mim</span></h2>
-                            <p class="lead fw-light mb-4">DBA em TI, Desenvolvedor Web, Programador Front-End, Back-End</p>
-                            <p class="text-muted-custom mb-4">
-                                Sou brasileiro, baiano e soteropolitano. Desde a infância, aos 13 anos, me tornei amante da tecnologia depois de ver um computador pela primeira vez. Sou um pesquisador nato, autodidata, e trabalhei como freelancer em suporte de TI. Aos 22 anos, descobri minha paixão pela programação, que é minha trilha atual. Atualmente, trabalho como DBA na empresa Focus e estou cursando o 2º período de Análise e Desenvolvimento de Sistemas na Descomplica. Meu próximo passo é Engenharia de Software, com o objetivo de morar no Canadá.
-                            </p>
-                            <div class="d-flex justify-content-center fs-2 gap-4">
-                                <a class="text-gradient" href="https://www.linkedin.com/in/gabrielyandev/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                <a class="text-gradient" href="https://github.com/gabrielyandev" target="_blank"><i class="bi bi-github"></i></a>
+      <section class="py-5 bg-light-custom" id="sobre">
+        <div class="container px-5">
+          <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8">
+              <div class="text-center my-5 hidden-element">
+                <h2 class="display-5 fw-bolder">
+                  <span class="text-gradient d-inline">Sobre mim</span>
+                </h2>
+                <p class="lead fw-light mb-4">
+                  DBA em TI, Desenvolvedor Web, Programador Front-End, Back-End
+                </p>
+                <p class="text-muted-custom mb-4">
+                  Sou brasileiro, baiano e soteropolitano. Desde a infância, aos
+                  13 anos, me tornei amante da tecnologia depois de ver um
+                  computador pela primeira vez. Sou um pesquisador nato,
+                  autodidata, e trabalhei como freelancer em suporte de TI. Aos
+                  22 anos, descobri minha paixão pela programação, que é minha
+                  trilha atual. Atualmente, trabalho como DBA na empresa Focus e
+                  estou cursando o 2º período de Análise e Desenvolvimento de
+                  Sistemas na Descomplica. Meu próximo passo é Engenharia de
+                  Software, com o objetivo de morar no Canadá.
+                </p>
+                <div class="d-flex justify-content-center fs-2 gap-4">
+                  <a
+                    class="text-gradient"
+                    href="https://www.linkedin.com/in/gabrielyandev/"
+                    target="_blank"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                  <a
+                    class="text-gradient"
+                    href="https://github.com/gabrielyandev"
+                    target="_blank"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5" id="resumo">
+        <div class="container px-5 my-5">
+          <div class="text-center mb-5">
+            <h1 class="display-5 fw-bolder mb-0 hidden-element">
+              <span class="text-gradient d-inline">Resumo</span>
+            </h1>
+          </div>
+          <div class="row gx-5 justify-content-center">
+            <div class="col-lg-11 col-xl-9 col-xxl-8">
+              <div class="mb-5 hidden-element">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3"
+                >
+                  <h2 class="text-primary fw-bolder mb-0">Experiências</h2>
+                  <a
+                    class="btn btn-primary px-4 py-3"
+                    href="assets/curriculo.pdf"
+                    target="_blank"
+                    ><i class="bi bi-download me-2"></i>Download CV</a
+                  >
+                </div>
+                <div class="card shadow border-0 rounded-4 mb-5">
+                  <div class="card-body p-5">
+                    <div class="row align-items-center gx-5">
+                      <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                        <div
+                          class="bg-gradient-primary-to-secondary p-4 rounded-4"
+                        >
+                          <div class="text-white fw-bolder mb-2">
+                            2023 - 2024
+                          </div>
+                          <div class="small fw-bolder text-white">
+                            Desenvolvedor Web
+                          </div>
+                          <div class="small text-white-50">99jobs</div>
+                          <div class="small text-white-50">Salvador, BA</div>
+                        </div>
+                      </div>
+                      <div class="col-lg-8">
+                        <div>
+                          Desenvolver sites para clientes com intermediação da
+                          plataforma 99jobs e indicações
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card shadow border-0 rounded-4 mb-5">
+                  <div class="card-body p-5">
+                    <div class="row align-items-center gx-5">
+                      <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                        <div
+                          class="bg-gradient-primary-to-secondary p-4 rounded-4"
+                        >
+                          <div class="text-white fw-bolder mb-2">
+                            2024 - Presente
+                          </div>
+                          <div class="small fw-bolder text-white">DBA</div>
+                          <div class="small text-white-50">
+                            Focus Tecnologia
+                          </div>
+                          <div class="small text-white-50">Salvador, BA</div>
+                        </div>
+                      </div>
+                      <div class="col-lg-8">
+                        <div>
+                          Atuar na migração do banco de dados e fazer as devidas
+                          correções ou implementações de novas funcionalidades,
+                          utilizando o Firebird, MySQL e Pentaho.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-5 hidden-element">
+                <h2 class="text-secondary fw-bolder mb-4">Formações</h2>
+                <div class="card shadow border-0 rounded-4 mb-5">
+                  <div class="card-body p-5">
+                    <div class="row align-items-center gx-5">
+                      <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                        <div class="bg-light-custom p-4 rounded-4">
+                          <div class="text-secondary fw-bolder mb-2">
+                            2023 - 2024
+                          </div>
+                          <div class="mb-2">
+                            <div class="small fw-bolder text-body">
+                              Faculdade Descomplica
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5" id="resumo">
-            <div class="container px-5 my-5">
-                <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0 hidden-element"><span class="text-gradient d-inline">Resumo</span></h1>
-                </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
-                        <div class="mb-5 hidden-element">
-                             <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
-                                <h2 class="text-primary fw-bolder mb-0">Experiências</h2>
-                                <a class="btn btn-primary px-4 py-3" href="assets/curriculo.pdf" target="_blank"><i class="bi bi-download me-2"></i>Download CV</a>
+                            <div class="small text-muted-custom">
+                              Salvador, BA
                             </div>
-                            <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="row align-items-center gx-5"><div class="col text-center text-lg-start mb-4 mb-lg-0"><div class="bg-gradient-primary-to-secondary p-4 rounded-4"><div class="text-white fw-bolder mb-2">2023 - 2024</div><div class="small fw-bolder text-white">Desenvolvedor Web</div><div class="small text-white-50">99jobs</div><div class="small text-white-50">Salvador, BA</div></div></div><div class="col-lg-8"><div>Desenvolver sites para clientes com intermediação da plataforma 99jobs e indicações</div></div></div></div></div>
-                            <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="row align-items-center gx-5"><div class="col text-center text-lg-start mb-4 mb-lg-0"><div class="bg-gradient-primary-to-secondary p-4 rounded-4"><div class="text-white fw-bolder mb-2">2024 - Presente</div><div class="small fw-bolder text-white">DBA</div><div class="small text-white-50">Focus Tecnologia</div><div class="small text-white-50">Salvador, BA</div></div></div><div class="col-lg-8"><div>Atuar na migração do banco de dados e fazer as devidas correções ou implementações de novas funcionalidades, utilizando o Firebird, MySQL e Pentaho.</div></div></div></div></div>
+                          </div>
+                          <div class="fst-italic">
+                            <div class="small text-muted-custom">
+                              Análise e Desenvolvimento de Sistemas
+                            </div>
+                          </div>
                         </div>
-                        <div class="mb-5 hidden-element">
-                            <h2 class="text-secondary fw-bolder mb-4">Formações</h2>
-                            <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="row align-items-center gx-5"><div class="col text-center text-lg-start mb-4 mb-lg-0"><div class="bg-light-custom p-4 rounded-4"><div class="text-secondary fw-bolder mb-2">2023 - Presente</div><div class="mb-2"><div class="small fw-bolder text-body">Faculdade Descomplica</div><div class="small text-muted-custom">Salvador, BA</div></div><div class="fst-italic"><div class="small text-muted-custom">Análise e Desenvolvimento de Sistemas</div></div></div></div><div class="col-lg-8"><div>Cursando a faculdade de Análise e Desenvolvimento de Sistemas, aprendendo sobre lógica de programação, banco de dados e desenvolvimento web.</div></div></div></div></div>
-                            <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="row align-items-center gx-5"><div class="col text-center text-lg-start mb-4 mb-lg-0"><div class="bg-light-custom p-4 rounded-4"><div class="text-secondary fw-bolder mb-2">2022</div><div class="mb-2"><div class="small fw-bolder text-body">Senac</div><div class="small text-muted-custom">Salvador, BA</div></div><div class="fst-italic"><div class="small text-muted-custom">Programador FullStack</div></div></div></div><div class="col-lg-8"><div>Curso onde desenvolvi a base de frontend e backend, criando a landing page "EASYDATE" como projeto de conclusão.</div></div></div></div></div>
+                      </div>
+                      <div class="col-lg-8">
+                        <div>
+                          Cursando a faculdade de Análise e Desenvolvimento de
+                          Sistemas, aprendendo sobre lógica de programação,
+                          banco de dados e desenvolvimento web.
                         </div>
-                        <div class="hidden-element">
-                             <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="mb-0"><div class="d-flex align-items-center mb-4"><div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div><h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Hard Skills</span></h3></div><div class="row row-cols-2 row-cols-md-3 g-4"><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-html5-plain colored me-2 fs-4"></i> HTML5</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-css3-plain colored me-2 fs-4"></i> CSS3</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-javascript-plain colored me-2 fs-4"></i> JavaScript</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-react-original colored me-2 fs-4"></i> React</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-bootstrap-plain colored me-2 fs-4"></i> Bootstrap</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-git-plain colored me-2 fs-4"></i> Git</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-mysql-plain colored me-2 fs-4"></i> MySQL</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-postgresql-plain colored me-2 fs-4"></i> PostgreSQL</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-docker-plain colored me-2 fs-4"></i> Docker</div></div></div></div></div></div>
-                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+                <div class="card shadow border-0 rounded-4 mb-5">
+                  <div class="card-body p-5">
+                    <div class="row align-items-center gx-5">
+                      <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                        <div class="bg-light-custom p-4 rounded-4">
+                          <div class="text-secondary fw-bolder mb-2">2022</div>
+                          <div class="mb-2">
+                            <div class="small fw-bolder text-body">Senac</div>
+                            <div class="small text-muted-custom">
+                              Salvador, BA
+                            </div>
+                          </div>
+                          <div class="fst-italic">
+                            <div class="small text-muted-custom">
+                              Programador FullStack
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-8">
+                        <div>
+                          Curso onde desenvolvi a base de frontend e backend,
+                          criando a landing page "EASYDATE" como projeto de
+                          conclusão.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden-element">
+                <div class="card shadow border-0 rounded-4 mb-5">
+                  <div class="card-body p-5">
+                    <div class="mb-0">
+                      <div class="d-flex align-items-center mb-4">
+                        <div
+                          class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"
+                        >
+                          <i class="bi bi-tools"></i>
+                        </div>
+                        <h3 class="fw-bolder mb-0">
+                          <span class="text-gradient d-inline"
+                            >Hard Skills</span
+                          >
+                        </h3>
+                      </div>
+                      <div class="row row-cols-2 row-cols-md-3 g-4">
+                        <div class="col">
+                          <div
+                            class="d-flex align-items-center skill-item p-3 h-100"
+                          >
+                            <i
+                              class="devicon-html5-plain colored me-2 fs-4"
+                            ></i>
+                            HTML5
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div
+                            class="d-flex align-items-center skill-item p-3 h-100"
+                          >
+                            <i class="devicon-css3-plain colored me-2 fs-4"></i>
+                            CSS3
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div
+                            class="d-flex align-items-center skill-item p-3 h-100"
+                          >
+                            <i
+                              class="devicon-javascript-plain colored me-2 fs-4"
+                            ></i>
+                            JavaScript
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div
+                            class="d-flex align-items-center skill-item p-3 h-100"
+                          >
+                            <i
+                              class="devicon-react-original colored me-2 fs-4"
+                            ></i>
+                            React
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div
+                            class="d-flex align-items-center skill-item p-3 h-100"
+                          >
+                            <i
+                              class="devicon-bootstrap-plain colored me-2 fs-4"
+                            ></i>
+                            Bootstrap
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div
+                            class="d-flex align-items-center skill-item p-3 h-100"
+                          >
+                            <i class="devicon-git-plain colored me-2 fs-4"></i>
+                            Git
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div
+                            class="d-flex align-items-center skill-item p-3 h-100"
+                          >
+                            <i
+                              class="devicon-mysql-plain colored me-2 fs-4"
+                            ></i>
+                            MySQL
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div
+                            class="d-flex align-items-center skill-item p-3 h-100"
+                          >
+                            <i
+                              class="devicon-postgresql-plain colored me-2 fs-4"
+                            ></i>
+                            PostgreSQL
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div
+                            class="d-flex align-items-center skill-item p-3 h-100"
+                          >
+                            <i
+                              class="devicon-docker-plain colored me-2 fs-4"
+                            ></i>
+                            Docker
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="py-5 bg-light-custom" id="projetos">
-            <div class="container px-5 my-5">
-                <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0 hidden-element"><span class="text-gradient d-inline">Projetos</span></h1>
+      <section class="py-5 bg-light-custom" id="projetos">
+        <div class="container px-5 my-5">
+          <div class="text-center mb-5">
+            <h1 class="display-5 fw-bolder mb-0 hidden-element">
+              <span class="text-gradient d-inline">Projetos</span>
+            </h1>
+          </div>
+          <div class="row gx-5 justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-5 hidden-element">
+              <div class="card h-100 shadow border-0">
+                <img
+                  class="card-img-top"
+                  src="assets/img/take-ton.png"
+                  alt="Projeto Ton Maquininhas"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bolder">Ton Maquininhas</h5>
+                  <p class="card-text text-muted-custom">
+                    Landing Page para afiliado, com foco em captura de leads e
+                    conversão.
+                  </p>
                 </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/take-ton.png" alt="Projeto Ton Maquininhas" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Ton Maquininhas</h5><p class="card-text text-muted-custom">Landing Page para afiliado, com foco em captura de leads e conversão.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://landing-page-ton-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/landing-page-ton" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
-                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/my-portfolio.png" alt="Meu Portfólio" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Meu Portfólio</h5><p class="card-text text-muted-custom">Meu portfólio pessoal, desenvolvido com HTML, CSS, Bootstrap e JavaScript.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://portfolio-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/my-portifolio" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
-                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/tic-tac-toe.png" alt="Jogo da Velha" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Tic Tac Toe</h5><p class="card-text text-muted-custom">Projeto para praticar lógica de programação e manipulação do DOM com JavaScript.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://tic-tac-toe-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/tic-tac-toe" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
-                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/qr-code.png" alt="Gerador de QR Code" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Gerador de QR Code</h5><p class="card-text text-muted-custom">Aplicação que consome uma API externa para gerar QR Codes a partir de texto ou links.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://gerador-qr-code-alpha.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/gerador-qr-code" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
-                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/easy-date.png" alt="Landing Page Easy Date" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Landing Page Easy Date</h5><p class="card-text text-muted-custom">Projeto final do curso FullStack do Senac, focado em design responsivo e frontend.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://landing-page-easy-date-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/landing-page-easy-date" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
-                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/form-responsive.png" alt="Formulário Responsivo" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Formulário Responsivo</h5><p class="card-text text-muted-custom">Formulário com validação em tempo real utilizando HTML, CSS e JavaScript puro.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://form-responsive-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/form-responsive" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
-                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/calc-react.png" alt="Calculadora em React" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Calculadora em React</h5><p class="card-text text-muted-custom">Calculadora com design inspirado no iOS, desenvolvida para praticar estados em React.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://calculadora-react-kappa-tan.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/calculadora-react" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
-                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/gerador-de-senhas.png" alt="Gerador de Senhas" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Gerador de Senhas</h5><p class="card-text text-muted-custom">Ferramenta simples para gerar senhas seguras com opções de personalização.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://gerador-de-senhas-black-gamma.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/gerador-de-senha" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
+                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                  <div class="d-flex gap-2">
+                    <a
+                      href="https://landing-page-ton-gabrielyandev.vercel.app/"
+                      class="btn btn-sm btn-primary"
+                      target="_blank"
+                      ><i class="bi bi-eye"></i> Ver Projeto</a
+                    ><a
+                      href="https://github.com/gabrielyandev/landing-page-ton"
+                      class="btn btn-sm btn-outline-secondary"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> GitHub</a
+                    >
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+            <div class="col-lg-4 col-md-6 mb-5 hidden-element">
+              <div class="card h-100 shadow border-0">
+                <img
+                  class="card-img-top"
+                  src="assets/img/my-portfolio.png"
+                  alt="Meu Portfólio"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bolder">Meu Portfólio</h5>
+                  <p class="card-text text-muted-custom">
+                    Meu portfólio pessoal, desenvolvido com HTML, CSS, Bootstrap
+                    e JavaScript.
+                  </p>
+                </div>
+                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                  <div class="d-flex gap-2">
+                    <a
+                      href="https://portfolio-gabrielyandev.vercel.app/"
+                      class="btn btn-sm btn-primary"
+                      target="_blank"
+                      ><i class="bi bi-eye"></i> Ver Projeto</a
+                    ><a
+                      href="https://github.com/gabrielyandev/my-portifolio"
+                      class="btn btn-sm btn-outline-secondary"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 hidden-element">
+              <div class="card h-100 shadow border-0">
+                <img
+                  class="card-img-top"
+                  src="assets/img/tic-tac-toe.png"
+                  alt="Jogo da Velha"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bolder">Tic Tac Toe</h5>
+                  <p class="card-text text-muted-custom">
+                    Projeto para praticar lógica de programação e manipulação do
+                    DOM com JavaScript.
+                  </p>
+                </div>
+                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                  <div class="d-flex gap-2">
+                    <a
+                      href="https://tic-tac-toe-gabrielyandev.vercel.app/"
+                      class="btn btn-sm btn-primary"
+                      target="_blank"
+                      ><i class="bi bi-eye"></i> Ver Projeto</a
+                    ><a
+                      href="https://github.com/gabrielyandev/tic-tac-toe"
+                      class="btn btn-sm btn-outline-secondary"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 hidden-element">
+              <div class="card h-100 shadow border-0">
+                <img
+                  class="card-img-top"
+                  src="assets/img/qr-code.png"
+                  alt="Gerador de QR Code"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bolder">Gerador de QR Code</h5>
+                  <p class="card-text text-muted-custom">
+                    Aplicação que consome uma API externa para gerar QR Codes a
+                    partir de texto ou links.
+                  </p>
+                </div>
+                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                  <div class="d-flex gap-2">
+                    <a
+                      href="https://gerador-qr-code-alpha.vercel.app/"
+                      class="btn btn-sm btn-primary"
+                      target="_blank"
+                      ><i class="bi bi-eye"></i> Ver Projeto</a
+                    ><a
+                      href="https://github.com/gabrielyandev/gerador-qr-code"
+                      class="btn btn-sm btn-outline-secondary"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 hidden-element">
+              <div class="card h-100 shadow border-0">
+                <img
+                  class="card-img-top"
+                  src="assets/img/easy-date.png"
+                  alt="Landing Page Easy Date"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bolder">Landing Page Easy Date</h5>
+                  <p class="card-text text-muted-custom">
+                    Projeto final do curso FullStack do Senac, focado em design
+                    responsivo e frontend.
+                  </p>
+                </div>
+                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                  <div class="d-flex gap-2">
+                    <a
+                      href="https://landing-page-easy-date-gabrielyandev.vercel.app/"
+                      class="btn btn-sm btn-primary"
+                      target="_blank"
+                      ><i class="bi bi-eye"></i> Ver Projeto</a
+                    ><a
+                      href="https://github.com/gabrielyandev/landing-page-easy-date"
+                      class="btn btn-sm btn-outline-secondary"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 hidden-element">
+              <div class="card h-100 shadow border-0">
+                <img
+                  class="card-img-top"
+                  src="assets/img/form-responsive.png"
+                  alt="Formulário Responsivo"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bolder">Formulário Responsivo</h5>
+                  <p class="card-text text-muted-custom">
+                    Formulário com validação em tempo real utilizando HTML, CSS
+                    e JavaScript puro.
+                  </p>
+                </div>
+                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                  <div class="d-flex gap-2">
+                    <a
+                      href="https://form-responsive-gabrielyandev.vercel.app/"
+                      class="btn btn-sm btn-primary"
+                      target="_blank"
+                      ><i class="bi bi-eye"></i> Ver Projeto</a
+                    ><a
+                      href="https://github.com/gabrielyandev/form-responsive"
+                      class="btn btn-sm btn-outline-secondary"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 hidden-element">
+              <div class="card h-100 shadow border-0">
+                <img
+                  class="card-img-top"
+                  src="assets/img/calc-react.png"
+                  alt="Calculadora em React"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bolder">Calculadora em React</h5>
+                  <p class="card-text text-muted-custom">
+                    Calculadora com design inspirado no iOS, desenvolvida para
+                    praticar estados em React.
+                  </p>
+                </div>
+                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                  <div class="d-flex gap-2">
+                    <a
+                      href="https://calculadora-react-kappa-tan.vercel.app/"
+                      class="btn btn-sm btn-primary"
+                      target="_blank"
+                      ><i class="bi bi-eye"></i> Ver Projeto</a
+                    ><a
+                      href="https://github.com/gabrielyandev/calculadora-react"
+                      class="btn btn-sm btn-outline-secondary"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 hidden-element">
+              <div class="card h-100 shadow border-0">
+                <img
+                  class="card-img-top"
+                  src="assets/img/gerador-de-senhas.png"
+                  alt="Gerador de Senhas"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bolder">Gerador de Senhas</h5>
+                  <p class="card-text text-muted-custom">
+                    Ferramenta simples para gerar senhas seguras com opções de
+                    personalização.
+                  </p>
+                </div>
+                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                  <div class="d-flex gap-2">
+                    <a
+                      href="https://gerador-de-senhas-black-gamma.vercel.app/"
+                      class="btn btn-sm btn-primary"
+                      target="_blank"
+                      ><i class="bi bi-eye"></i> Ver Projeto</a
+                    ><a
+                      href="https://github.com/gabrielyandev/gerador-de-senha"
+                      class="btn btn-sm btn-outline-secondary"
+                      target="_blank"
+                      ><i class="bi bi-github"></i> GitHub</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-black py-4 mt-auto">
-        <div class="container px-5">
-            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                <div class="col-auto"><div class="small m-0 text-light">Copyright &copy; gabrielyandev 2024 - 2025</div></div>
-                <div class="col-auto"><a href="#inicio" class="icon-top text-light"><i class="bi bi-arrow-up-circle-fill fs-2"></i></a></div>
+      <div class="container px-5">
+        <div
+          class="row align-items-center justify-content-between flex-column flex-sm-row"
+        >
+          <div class="col-auto">
+            <div class="small m-0 text-light">
+              Copyright &copy; gabrielyandev 2024 - 2025
             </div>
+          </div>
+          <div class="col-auto">
+            <a href="#inicio" class="icon-top text-light"
+              ><i class="bi bi-arrow-up-circle-fill fs-2"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
