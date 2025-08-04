@@ -1,1111 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="description"
-      content="DBA em TI, Dev Web, Programador Front-End, Back-End"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Desenvolvedor Web Full-Stack, DBA e entusiasta de UX/UI." />
     <meta name="author" content="Gabriel Yan" />
-    <title>@gabrielyandev</title>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- animate css -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <!-- Favicon-->
+    <title>@gabrielyandev - Portfólio de Desenvolvedor</title>
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
-    <!-- Custom Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap icons-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" />
-  </head>
-  <body class="d-flex flex-column h-100">
-    <!-- home -->
-    <main class="flex-shrink-0" id="inicio">
-      <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg py-3">
-        <!-- navbar-light bg-light -->
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.html"
-            ><span class="fw-bolder text-primary">@gabrielyandev</span></a
-          >
-          <!-- <i class="bi bi-moon-stars-fill" onclick="toggleDarkMode()"></i> -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item">
-                <a class="nav-link" href="#inicio">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#resumo">Resumo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projetos">Projetos</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="https://api.whatsapp.com/send?phone=5571996504413&text=Oi,%20vim%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%20e%20tenho%20interesse%20em%20seus%20servi%C3%A7os"
-                  target="_blank"
-                  >Contato</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- Header-->
-      <header class="py-5 hidden-element">
-        <div class="container px-5 pb-5">
-          <i
-            class="bi bi-moon-stars-fill icon-dark-mode"
-            onclick="toggleDarkMode()"
-          ></i>
-          <!-- particles.js container -->
-          <div id="particles-js" class="container w-75"></div>
-          <!-- scripts -->
-          <script src="assets/particles/particles.js"></script>
-          <!-- fim particles -->
+</head>
 
-          <div class="row gx-5 align-items-center">
-            <div class="col-xxl-5">
-              <!-- Header text content-->
-              <div class="text-center text-xxl-start zindex-particles">
-                <div
-                  class="badge bg-gradient-primary-to-secondary text-white mb-4 hidden-element"
-                >
-                  <div class="text-uppercase">
-                    Design &middot; UX/UI &middot; Frontend &middot; DBA
-                  </div>
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <nav class="navbar navbar-expand-lg py-3 sticky-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">@gabrielyandev</span></a>
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-moon-stars-fill fs-4 me-3" id="darkModeToggle"></i>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-                <div class="fs-6 fw-light text-muted titulo-principal">
-                  Um ser humano apaixonado
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resumo">Resumo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-primary btn-sm text-white px-3 ms-lg-2" href="https://api.whatsapp.com/send?phone=5571996504413&text=Oi,%20vim%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%20e%20tenho%20interesse%20em%20seus%20servi%C3%A7os" target="_blank">Contato</a></li>
+                    </ul>
                 </div>
-                <h1 class="display-6 fw-bolder mb-4">
-                  <span class="text-gradient d-inline"
-                    >Em desenvolver para o mundo</span
-                  >
-                </h1>
-                <div
-                  class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3"
-                >
-                  <a
-                    target="_blank"
-                    class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
-                    href="https://github.com/gabrielyandev"
-                    ><i class="bi bi-github p-1"></i>Github</a
-                  >
-                  <a
-                    target="_blank"
-                    class="btn btn-primary btn-lg px-5 py-3 fs-6 fw-bolder"
-                    href="https://www.linkedin.com/in/gabrielyandev/"
-                    ><i class="bi bi-linkedin p-1"></i>Linkedin</a
-                  >
-                </div>
-              </div>
             </div>
-            <div class="col-xxl-7">
-              <!-- Header profile picture-->
-              <div
-                class="d-flex justify-content-center mt-5 mt-xxl-0 hidden-element"
-              >
-                <div class="profile bg-gradient-primary-to-secondary">
-                  
-                  <img class="profile-img" src="assets/profile1.png" />
-                  <div class="dots-1">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                  <div class="dots-2">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                  <div class="dots-3">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
-                  <div class="dots-4">
-                    <!-- SVG Dots-->
-                    <svg
-                      version="1.1"
-                      xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      x="0px"
-                      y="0px"
-                      viewBox="0 0 191.6 1215.4"
-                      style="enable-background: new 0 0 191.6 1215.4"
-                      xml:space="preserve"
-                    >
-                      <g
-                        transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
-                      >
-                        <path
-                          d="M227.7,12788.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,12801.6,289.7,12808.6,227.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,12788.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,12801.6,1569.7,12808.6,1507.7,12788.6z"
-                        ></path>
-                        <path
-                          d="M227.7,11508.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,11521.6,289.7,11528.6,227.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,11508.6c-151-50-253-216-222-362c25-119,136-230,254-255c194-41,395,142,375,339c-11,105-90,213-190,262        C1663.7,11521.6,1569.7,11528.6,1507.7,11508.6z"
-                        ></path>
-                        <path
-                          d="M227.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,10241.6,289.7,10248.6,227.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,10228.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,10241.6,1569.7,10248.6,1507.7,10228.6z"
-                        ></path>
-                        <path
-                          d="M227.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,8961.6,289.7,8968.6,227.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,8948.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,8961.6,1569.7,8968.6,1507.7,8948.6z"
-                        ></path>
-                        <path
-                          d="M227.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,7681.6,289.7,7688.6,227.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,7668.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,7681.6,1569.7,7688.6,1507.7,7668.6z"
-                        ></path>
-                        <path
-                          d="M227.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,6401.6,289.7,6408.6,227.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,6388.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,6401.6,1569.7,6408.6,1507.7,6388.6z"
-                        ></path>
-                        <path
-                          d="M227.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,5121.6,289.7,5128.6,227.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,5108.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,5121.6,1569.7,5128.6,1507.7,5108.6z"
-                        ></path>
-                        <path
-                          d="M227.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,3841.6,289.7,3848.6,227.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,3828.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,3841.6,1569.7,3848.6,1507.7,3828.6z"
-                        ></path>
-                        <path
-                          d="M227.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,2561.6,289.7,2568.6,227.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,2548.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,2561.6,1569.7,2568.6,1507.7,2548.6z"
-                        ></path>
-                        <path
-                          d="M227.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C383.7,1281.6,289.7,1288.6,227.7,1268.6z"
-                        ></path>
-                        <path
-                          d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z"
-                        ></path>
-                      </g>
-                    </svg>
-                    <!-- END of SVG dots-->
-                  </div>
+        </nav>
+
+        <header class="py-5" id="inicio">
+            <div id="particles-js"></div>
+            <div class="container px-5 pb-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-7 text-center text-lg-start">
+                        <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">Design &middot; UX/UI &middot; Frontend &middot; DBA</div></div>
+                        <div class="fs-6 fw-light text-muted-custom titulo-principal">Um ser humano apaixonado</div>
+                        <h1 class="display-6 fw-bolder mb-4"><span class="text-gradient d-inline">Em desenvolver para o mundo</span></h1>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3">
+                            <a target="_blank" class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="https://github.com/gabrielyandev"><i class="bi bi-github p-1"></i>Github</a>
+                            <a target="_blank" class="btn btn-outline-primary btn-lg px-5 py-3 fs-6 fw-bolder" href="https://www.linkedin.com/in/gabrielyandev/"><i class="bi bi-linkedin p-1"></i>Linkedin</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="d-flex justify-content-center mt-5 mt-lg-0">
+                            <div class="profile bg-gradient-primary-to-secondary"><img class="profile-img" src="assets/profile1.png" alt="Foto de Gabriel Yan" /></div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </header>
-      <!-- About Section-->
-      <section class="py-5 hidden-element">
-        <div class="container px-5">
-          <div class="row gx-5 justify-content-center">
-            <div class="col-xxl-8">
-              <div class="text-center my-5">
-                <h2 class="display-5 fw-bolder">
-                  <span class="text-gradient d-inline">Sobre mim</span>
-                </h2>
-                <p class="lead fw-light mb-3" id="lead">
-                  DBA em TI, Desenvolvedor Web, Programador Front-End, Back-End
-                </p>
-                <p class="text-muted gyss">
-                  Sou brasileiro, baiano e soteropolitano. Desde a infância, aos
-                  13 anos, me tornei amante da tecnologia depois de ver um
-                  computador pela primeira vez. Sou um pesquisador nato,
-                  autodidata, e trabalhei como freelancer em suporte de TI. Aos
-                  22 anos, descobri minha paixão pela programação, que é minha
-                  trilha atual. Atualmente, trabalho como DBA na empresa Focus e
-                  estou cursando o 2º período de Análise e Desenvolvimento de
-                  Sistemas na Descomplica. Meu próximo passo é Engenharia de
-                  Software, com o objetivo de morar no Canadá.
-                </p>
-                <div class="d-flex justify-content-center fs-2 gap-4">
-                  <a
-                    class="text-gradient"
-                    href="https://www.linkedin.com/in/yan-dev/"
-                    target="_blank"
-                    ><i class="bi bi-linkedin"></i
-                  ></a>
-                  <a
-                    class="text-gradient"
-                    href="https://github.com/gabrielyandev"
-                    target="_blank"
-                    ><i class="bi bi-github"></i
-                  ></a>
+        </header>
+
+        <section class="py-5 bg-light-custom" id="sobre">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="text-center my-5 hidden-element">
+                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Sobre mim</span></h2>
+                            <p class="lead fw-light mb-4">DBA em TI, Desenvolvedor Web, Programador Front-End, Back-End</p>
+                            <p class="text-muted-custom mb-4">
+                                Sou brasileiro, baiano e soteropolitano. Desde a infância, aos 13 anos, me tornei amante da tecnologia depois de ver um computador pela primeira vez. Sou um pesquisador nato, autodidata, e trabalhei como freelancer em suporte de TI. Aos 22 anos, descobri minha paixão pela programação, que é minha trilha atual. Atualmente, trabalho como DBA na empresa Focus e estou cursando o 2º período de Análise e Desenvolvimento de Sistemas na Descomplica. Meu próximo passo é Engenharia de Software, com o objetivo de morar no Canadá.
+                            </p>
+                            <div class="d-flex justify-content-center fs-2 gap-4">
+                                <a class="text-gradient" href="https://www.linkedin.com/in/gabrielyandev/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                                <a class="text-gradient" href="https://github.com/gabrielyandev" target="_blank"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <section class="py-5" id="resumo">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0 hidden-element"><span class="text-gradient d-inline">Resumo</span></h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                        <div class="mb-5 hidden-element">
+                             <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-3">
+                                <h2 class="text-primary fw-bolder mb-0">Experiências</h2>
+                                <a class="btn btn-primary px-4 py-3" href="assets/curriculo.pdf" target="_blank"><i class="bi bi-download me-2"></i>Download CV</a>
+                            </div>
+                            <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="row align-items-center gx-5"><div class="col text-center text-lg-start mb-4 mb-lg-0"><div class="bg-gradient-primary-to-secondary p-4 rounded-4"><div class="text-white fw-bolder mb-2">2023 - 2024</div><div class="small fw-bolder text-white">Desenvolvedor Web</div><div class="small text-white-50">99jobs</div><div class="small text-white-50">Salvador, BA</div></div></div><div class="col-lg-8"><div>Desenvolver sites para clientes com intermediação da plataforma 99jobs e indicações</div></div></div></div></div>
+                            <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="row align-items-center gx-5"><div class="col text-center text-lg-start mb-4 mb-lg-0"><div class="bg-gradient-primary-to-secondary p-4 rounded-4"><div class="text-white fw-bolder mb-2">2024 - Presente</div><div class="small fw-bolder text-white">DBA</div><div class="small text-white-50">Focus Tecnologia</div><div class="small text-white-50">Salvador, BA</div></div></div><div class="col-lg-8"><div>Atuar na migração do banco de dados e fazer as devidas correções ou implementações de novas funcionalidades, utilizando o Firebird, MySQL e Pentaho.</div></div></div></div></div>
+                        </div>
+                        <div class="mb-5 hidden-element">
+                            <h2 class="text-secondary fw-bolder mb-4">Formações</h2>
+                            <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="row align-items-center gx-5"><div class="col text-center text-lg-start mb-4 mb-lg-0"><div class="bg-light-custom p-4 rounded-4"><div class="text-secondary fw-bolder mb-2">2023 - Presente</div><div class="mb-2"><div class="small fw-bolder text-body">Faculdade Descomplica</div><div class="small text-muted-custom">Salvador, BA</div></div><div class="fst-italic"><div class="small text-muted-custom">Análise e Desenvolvimento de Sistemas</div></div></div></div><div class="col-lg-8"><div>Cursando a faculdade de Análise e Desenvolvimento de Sistemas, aprendendo sobre lógica de programação, banco de dados e desenvolvimento web.</div></div></div></div></div>
+                            <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="row align-items-center gx-5"><div class="col text-center text-lg-start mb-4 mb-lg-0"><div class="bg-light-custom p-4 rounded-4"><div class="text-secondary fw-bolder mb-2">2022</div><div class="mb-2"><div class="small fw-bolder text-body">Senac</div><div class="small text-muted-custom">Salvador, BA</div></div><div class="fst-italic"><div class="small text-muted-custom">Programador FullStack</div></div></div></div><div class="col-lg-8"><div>Curso onde desenvolvi a base de frontend e backend, criando a landing page "EASYDATE" como projeto de conclusão.</div></div></div></div></div>
+                        </div>
+                        <div class="hidden-element">
+                             <div class="card shadow border-0 rounded-4 mb-5"><div class="card-body p-5"><div class="mb-0"><div class="d-flex align-items-center mb-4"><div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div><h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Hard Skills</span></h3></div><div class="row row-cols-2 row-cols-md-3 g-4"><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-html5-plain colored me-2 fs-4"></i> HTML5</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-css3-plain colored me-2 fs-4"></i> CSS3</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-javascript-plain colored me-2 fs-4"></i> JavaScript</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-react-original colored me-2 fs-4"></i> React</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-bootstrap-plain colored me-2 fs-4"></i> Bootstrap</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-git-plain colored me-2 fs-4"></i> Git</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-mysql-plain colored me-2 fs-4"></i> MySQL</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-postgresql-plain colored me-2 fs-4"></i> PostgreSQL</div></div><div class="col"><div class="d-flex align-items-center skill-item p-3 h-100"><i class="devicon-docker-plain colored me-2 fs-4"></i> Docker</div></div></div></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light-custom" id="projetos">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0 hidden-element"><span class="text-gradient d-inline">Projetos</span></h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/take-ton.png" alt="Projeto Ton Maquininhas" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Ton Maquininhas</h5><p class="card-text text-muted-custom">Landing Page para afiliado, com foco em captura de leads e conversão.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://landing-page-ton-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/landing-page-ton" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/my-portfolio.png" alt="Meu Portfólio" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Meu Portfólio</h5><p class="card-text text-muted-custom">Meu portfólio pessoal, desenvolvido com HTML, CSS, Bootstrap e JavaScript.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://portfolio-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/my-portifolio" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/tic-tac-toe.png" alt="Jogo da Velha" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Tic Tac Toe</h5><p class="card-text text-muted-custom">Projeto para praticar lógica de programação e manipulação do DOM com JavaScript.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://tic-tac-toe-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/tic-tac-toe" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/qr-code.png" alt="Gerador de QR Code" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Gerador de QR Code</h5><p class="card-text text-muted-custom">Aplicação que consome uma API externa para gerar QR Codes a partir de texto ou links.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://gerador-qr-code-alpha.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/gerador-qr-code" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/easy-date.png" alt="Landing Page Easy Date" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Landing Page Easy Date</h5><p class="card-text text-muted-custom">Projeto final do curso FullStack do Senac, focado em design responsivo e frontend.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://landing-page-easy-date-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/landing-page-easy-date" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/form-responsive.png" alt="Formulário Responsivo" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Formulário Responsivo</h5><p class="card-text text-muted-custom">Formulário com validação em tempo real utilizando HTML, CSS e JavaScript puro.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://form-responsive-gabrielyandev.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/form-responsive" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/calc-react.png" alt="Calculadora em React" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Calculadora em React</h5><p class="card-text text-muted-custom">Calculadora com design inspirado no iOS, desenvolvida para praticar estados em React.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://calculadora-react-kappa-tan.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/calculadora-react" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
+                    <div class="col-lg-4 col-md-6 mb-5 hidden-element"><div class="card h-100 shadow border-0"><img class="card-img-top" src="assets/img/gerador-de-senhas.png" alt="Gerador de Senhas" /><div class="card-body p-4"><h5 class="card-title fw-bolder">Gerador de Senhas</h5><p class="card-text text-muted-custom">Ferramenta simples para gerar senhas seguras com opções de personalização.</p></div><div class="card-footer p-4 pt-0 bg-transparent border-top-0"><div class="d-flex gap-2"><a href="https://gerador-de-senhas-black-gamma.vercel.app/" class="btn btn-sm btn-primary" target="_blank"><i class="bi bi-eye"></i> Ver Projeto</a><a href="https://github.com/gabrielyandev/gerador-de-senha" class="btn btn-sm btn-outline-secondary" target="_blank"><i class="bi bi-github"></i> GitHub</a></div></div></div></div>
+                </div>
+            </div>
+        </section>
     </main>
-    <!-- home -->
 
-    <!-- resumo -->
-    <main class="flex-shrink-0" id="resumo">
-      <!-- Page Content-->
-      <div class="container px-5 my-5 hidden-element">
-        <div class="text-center mb-5">
-          <h1 class="display-5 fw-bolder mb-0">
-            <span class="text-gradient d-inline">Resumo</span>
-          </h1>
-        </div>
-        <div class="row gx-5 justify-content-center">
-          <div class="col-lg-11 col-xl-9 col-xxl-8">
-            <!-- Experience Section-->
-            <section>
-              <div
-                class="d-flex align-items-center justify-content-between mb-4"
-              >
-                <h2 class="text-primary fw-bolder mb-0">Experiências</h2>
-                <!-- Download resume button-->
-                
-                <a
-                  class="btn btn-primary px-1 py-2"
-                  href="assets/curriculo.pdf"
-                  target="_blank"
-                >
-                  <div class="d-inline-block bi bi-download me-2"></div>
-                  Download
-                </a>
-              </div>
-              <!-- Experience Card 1-->
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div
-                        class="bg-gradient-primary-to-secondary p-4 rounded-4"
-                      >
-                        <div class="text-light fw-bolder mb-2">2023 - 2024</div>
-                        <div class="small fw-bolder text-light">
-                          Desenvolvedor Web
-                        </div>
-                        <div class="small text-light">99jobs</div>
-                        <div class="small text-light">Salvador, BA</div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div>
-                        Desenvolver sites para clientes com intermediação da
-                        plataforma 99jobs e indicações
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Experience Card 2-->
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div
-                        class="bg-gradient-primary-to-secondary p-4 rounded-4"
-                      >
-                        <div class="text-light fw-bolder mb-2">
-                          2024 - 2025
-                        </div>
-                        <div class="small fw-bolder text-light">DBA</div>
-                        <div class="small text-muted text-light">
-                          Focus Tecnologia em Sistema
-                        </div>
-                        <div class="small text-muted text-light">
-                          Salvador, BA
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div>
-                        Atuar na migração do banco de dados e fazer as devidas
-                        correções ou implementações de novas funcionalidades,
-                        utilizando o Firebird, MySQL e Pentaho
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- Education Section-->
-            <section>
-              <h2 class="text-secondary fw-bolder mb-4">Formações</h2>
-              <!-- Education Card 1-->
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          2023 - Presente
-                        </div>
-                        <div class="mb-2">
-                          <div class="small fw-bolder">
-                            Faculdade Descomplica
-                          </div>
-                          <div class="small text-muted">Salvador, BA</div>
-                        </div>
-                        <div class="fst-italic">
-                          <div class="small text-muted">------</div>
-                          <div class="small text-muted">
-                            Análise e Desenvolvimento de Sistemas
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div>
-                        Até o momento, estou cursando a faculdade de Análise e
-                        Desenvolvimento de Sistemas, onde estou aprendendo sobre
-                        lógica de programação, banco de dados, desenvolvimento
-                        web, entre outros.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Education Card 2-->
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <div class="row align-items-center gx-5">
-                    <div class="col text-justify text-lg-start mb-4 mb-lg-0">
-                      <div class="bg-light p-4 rounded-4">
-                        <div class="text-secondary fw-bolder mb-2">
-                          2022 - 2022
-                        </div>
-                        <div class="mb-2">
-                          <div class="small fw-bolder">Senac</div>
-                          <div class="small text-muted">Salvador, BA</div>
-                        </div>
-                        <div class="fst-italic">
-                          <div class="small text-muted">------</div>
-                          <div class="small text-muted">
-                            Programador FullStack
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-8">
-                      <div>
-                        Curso onde aprendi um pouco de frontend e backend. Foi o
-                        qual desenvolvi a landing page para ser aprovado,
-                        desenvolvida apenas com o frontend em HTML, CSS e
-                        Bootstrap. Nome do projeto é EASYDATE
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <!-- Divider-->
-            <div class="pb-5"></div>
-            <!-- Skills Section-->
-            <section>
-              <!-- Skillset Card-->
-              <div class="card shadow border-0 rounded-4 mb-5">
-                <div class="card-body p-5">
-                  <!-- skills list-->
-                  <div class="mb-4">
-                    <div class="d-flex align-items-center mb-4">
-                      <div
-                        class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"
-                      >
-                        <i class="bi bi-tools"></i>
-                      </div>
-                      <h3 class="fw-bolder mb-0">
-                        <span class="text-gradient d-inline">Skills</span>
-                      </h3>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          UX/UI
-                        </div>
-                      </div>
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Figma
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Frontend
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3">
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Canva
-                        </div>
-                      </div>
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Pacote Office
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Backend
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Languages list-->
-                  <div class="mb-0">
-                    <div class="d-flex align-items-center mb-4">
-                      <div
-                        class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"
-                      >
-                        <i class="bi bi-code-slash"></i>
-                      </div>
-                      <h3 class="fw-bolder mb-0">
-                        <span class="text-gradient d-inline">Linguagens</span>
-                      </h3>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3 mb-4">
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          HTML
-                        </div>
-                      </div>
-
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          CSS
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          JavaScript
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row row-cols-1 row-cols-md-3">
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Git
-                        </div>
-                      </div>
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Bootstrap
-                        </div>
-                      </div>
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          React
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row row-cols-1 row-cols-md-3 mt-4">
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          SQL
-                        </div>
-                      </div>
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          PostgreSQL
-                        </div>
-                      </div>
-                      <div class="col mb-4 mb-md-0">
-                        <div
-                          class="d-flex align-items-center bg-light rounded-4 p-3 h-100"
-                        >
-                          Docker
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </main>
-    <!-- fim resumo -->
-
-    <!-- projetos -->
-    <main class="flex-shrink-0" id="projetos">
-      <!-- Projects section-->
-      <div class="container hidden-element">
-        <div class="row">
-          <div class="text-center mb-5">
-            <h1 class="display-5 fw-bolder mb-0">
-              <span class="text-gradient d-inline">Projetos</span>
-            </h1>
-          </div>
-          <!-- Project 1 -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-              <img
-                src="assets/img/take-ton.png"
-                class="card-img-top"
-                alt="ton maquininhas"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Ton Maquininhas</h5>
-                <p class="card-text">
-                  Landing Page para um cliente afiliado, intuito de capturar
-                  leads e levar ao checkout.
-                </p>
-                <a
-                  href="https://landing-page-ton-gabrielyandev.vercel.app/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-eye p-1"></i>Ver Projeto</a
-                >
-                <a
-                  href="https://github.com/gabrielyandev/landing-page-ton"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-github p-1"></i>GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- fim 1 -->
-          <!-- Project 2 -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-              <img
-                src="assets/img/my-portfolio.png"
-                class="card-img-top"
-                alt="Meu Portfolio"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Meu Portfólio</h5>
-                <p class="card-text">
-                  Meu portfolio, desenvolvido com HTML, CSS, Bootstrap e
-                  Javascritp
-                </p>
-                <a
-                  href="https://portfolio-gabrielyandev.vercel.app/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-eye p-1"></i>Ver Projeto</a
-                >
-                <a
-                  href="https://github.com/gabrielyandev/my-portifolio"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-github p-1"></i>GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- fim 2 -->
-          <!-- Project 3 -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-              <img
-                src="assets/img/tic-tac-toe.png"
-                class="card-img-top"
-                alt="Jogo da velha"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Tic Tac Toe</h5>
-                <p class="card-text">
-                  Projeto onde coloquei em prática alguns conhecimentos em
-                  Javascritp
-                </p>
-                <a
-                  href="https://tic-tac-toe-gabrielyandev.vercel.app/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-eye p-1"></i>Ver Projeto</a
-                >
-                <a
-                  href="https://github.com/gabrielyandev/tic-tac-toe"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-github p-1"></i>GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- fim 3 -->
-          <!-- em processo -->
-
-          <!-- Project 4 -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-              <img
-                src="assets/img/qr-code.png"
-                class="card-img-top"
-                alt="QR Code"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Gerador de QR Code</h5>
-                <p class="card-text">
-                  Projeto onde coloquei em prática alguns conhecimentos em
-                  Javascritp e consumi a API do
-                  <a href="https://goqr.me/" style="color: rgb(240, 6, 6)"
-                    >goqr</a
-                  >
-                </p>
-                <a
-                  href="https://gerador-qr-code-alpha.vercel.app/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-eye p-1"></i>Ver Projeto</a
-                >
-                <a
-                  href="https://github.com/gabrielyandev/gerador-qr-code"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-github p-1"></i>GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- fim 4 -->
-          <!-- Project 5 -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-              <img
-                src="assets/img/easy-date.png"
-                class="card-img-top"
-                alt="Easy Date"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Landing Page Easy Date</h5>
-                <p class="card-text">
-                  Esse projeto foi desenvolvido para ser aprovado no curso de
-                  FullStack do Senac, onde foi desenvolvido apenas com o
-                  frontend em HTML, CSS, Bootstrap e JavaScript para o modo
-                  Dark. Totalmente responsivo.
-                </p>
-                <a
-                  href="https://landing-page-easy-date-gabrielyandev.vercel.app/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-eye p-1"></i>Ver Projeto</a
-                >
-                <a
-                  href="https://github.com/gabrielyandev/landing-page-easy-date"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-github p-1"></i>GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- fim 5 -->
-          <!-- Project 6 -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-              <img
-                src="assets/img/form-responsive.png"
-                class="card-img-top"
-                alt="Formulário Responsivo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Formulário Responsivo</h5>
-                <p class="card-text">
-                  Formulário onde coloquei em prática alguns conhecimentos em
-                  resposividade e validação de formulário com HTML, CSS e
-                  JavaScript
-                </p>
-                <a
-                  href="https://form-responsive-gabrielyandev.vercel.app/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-eye p-1"></i>Ver Projeto</a
-                >
-                <a
-                  href="https://github.com/gabrielyandev/form-responsive"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-github p-1"></i>GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- fim 6 -->
-          <!-- project 7 -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-              <img
-                src="assets/img/calc-react.png"
-                class="card-img-top"
-                alt="Formulário Responsivo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Calculadora em React</h5>
-                <p class="card-text">
-                  Calculadora com design inspirado na calculadora do iOS,
-                  desenvolvida com react
-                </p>
-                <a
-                  href="https://calculadora-react-kappa-tan.vercel.app/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-eye p-1"></i>Ver Projeto</a
-                >
-                <a
-                  href="https://github.com/gabrielyandev/calculadora-react"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-github p-1"></i>GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- fim 7 -->
-          <!-- project 8 -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
-            <div class="card">
-              <img
-                src="assets/img/gerador-de-senhas.png"
-                class="card-img-top"
-                alt="Formulário Responsivo"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Gerador de Senhas</h5>
-                <p class="card-text">
-                  Gerador de senha desenvolvido com JS contendo opção para
-                  selecionar a quantidade de caracteres e se vai conter simbolos
-                  e números
-                </p>
-                <a
-                  href="https://gerador-de-senhas-black-gamma.vercel.app/"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-eye p-1"></i>Ver Projeto</a
-                >
-                <a
-                  href="https://github.com/gabrielyandev/gerador-de-senha"
-                  class="btn btn-primary"
-                  target="_blank"
-                  ><i class="bi bi-github p-1"></i>GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-          <!-- fim 8 -->
-        </div>
-      </div>
-    </main>
-    <!-- fim projetos -->
-    <!-- Footer-->
     <footer class="bg-black py-4 mt-auto">
-      <div class="container px-5">
-        <div
-          class="row align-items-center justify-content-between flex-column flex-sm-row"
-        >
-          <div class="col-auto">
-            <div class="small m-0 text-light">
-              Copyright &copy; gabrielyandev 2024
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><div class="small m-0 text-light">Copyright &copy; gabrielyandev 2024 - 2025</div></div>
+                <div class="col-auto"><a href="#inicio" class="icon-top text-light"><i class="bi bi-arrow-up-circle-fill fs-2"></i></a></div>
             </div>
-          </div>
-          <div class="col-auto">
-            <a href="#inicio" class="icon-top"
-              ><i class="bi bi-arrow-up-circle-fill"></i
-            ></a>
-          </div>
         </div>
-      </div>
     </footer>
-    <!-- Bootstrap core JS-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JS do Bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <!-- script -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
