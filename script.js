@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
                 elemento.innerHTML += letra;
                 if (i === textoArray.length - 1) {
-                    setTimeout(() => typeWrite(elemento), 3000);
+                    setTimeout(() => typeWrite(elemento), 2000);
                 }
             }, 75 * i);
         });
