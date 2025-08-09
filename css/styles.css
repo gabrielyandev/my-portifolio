@@ -1,10 +1,7 @@
-/* --- VARIÁVEIS DE COR E TEMA --- */
 :root {
   --primary-color: #37206b;
   --secondary-color: #e21e80;
   --gradient: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
-  
-  /* Light Mode (Padrão) */
   --bg-color: #ffffff;
   --bg-secondary-color: #f8f9fa;
   --text-color: #212529;
@@ -15,7 +12,6 @@
 }
 
 html.dark-mode {
-  /* Dark Mode */
   --bg-color: #121212;
   --bg-secondary-color: #1e1e1e;
   --text-color: #e0e0e0;
@@ -25,8 +21,9 @@ html.dark-mode {
   --navbar-bg: rgba(18, 18, 18, 0.8);
 }
 
-/* --- ESTILOS GERAIS --- */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -34,59 +31,150 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* --- COMPONENTES CUSTOMIZADOS --- */
-.bg-light-custom { background-color: var(--bg-secondary-color) !important; transition: background-color 0.4s ease; }
-.text-muted-custom { color: var(--text-muted-color) !important; }
-.text-gradient { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.bg-gradient-primary-to-secondary { background: var(--gradient); }
-.feature { display: inline-flex; align-items: center; justify-content: center; height: 3rem; width: 3rem; font-size: 1.5rem; }
-
-/* Navbar */
-.navbar {
-    background-color: var(--navbar-bg);
-    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--card-border-color);
-    transition: background-color 0.4s ease, border-color 0.4s ease;
+.bg-light-custom {
+  background-color: var(--bg-secondary-color) !important;
+  transition: background-color 0.4s ease;
 }
-.navbar-brand .text-primary { color: var(--primary-color) !important; }
-.navbar .nav-link { color: var(--text-color); }
-.navbar .nav-link:hover { color: var(--primary-color); }
-.navbar-toggler { border: none; }
-.navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(55, 32, 107, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
-html.dark-mode .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(224, 224, 224, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+.text-muted-custom {
+  color: var(--text-muted-color) !important;
+}
+.text-gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bg-gradient-primary-to-secondary {
+  background: var(--gradient);
+}
+.feature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.5rem;
+}
 
-/* Efeito Máquina de Escrever */
-.titulo-principal::after { content: "|"; margin-left: 5px; opacity: 1; color: var(--secondary-color); animation: pisca 0.7s infinite; }
-@keyframes pisca { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.navbar {
+  background-color: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--card-border-color);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+.navbar-brand .text-primary {
+  color: var(--primary-color) !important;
+}
+.navbar .nav-link {
+  color: var(--text-color);
+}
+.navbar .nav-link:hover {
+  color: var(--primary-color);
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(55, 32, 107, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+html.dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(224, 224, 224, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
 
-/* Botões */
-.btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
-.btn-primary:hover { background-color: #51398a; border-color: #51398a; }
-.btn-outline-primary { color: var(--primary-color); border-color: var(--primary-color); }
-.btn-outline-primary:hover { color: #fff; background-color: var(--primary-color); border-color: var(--primary-color); }
-.btn-outline-secondary { color: var(--text-muted-color); border-color: var(--text-muted-color); }
-.btn-outline-secondary:hover { color: #fff; background-color: var(--secondary-color); border-color: var(--secondary-color); }
+.titulo-principal::after {
+  content: "|";
+  margin-left: 5px;
+  opacity: 1;
+  color: var(--secondary-color);
+  animation: pisca 0.7s infinite;
+}
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 
-/* Seção do Perfil (COM CORREÇÃO DE RESPONSIVIDADE) */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: #51398a;
+  border-color: #51398a;
+}
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-outline-secondary {
+  color: var(--text-muted-color);
+  border-color: var(--text-muted-color);
+}
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
 .profile {
   position: relative;
   margin: 0 auto;
-  width: 280px; height: 280px;
+  width: 280px;
+  height: 280px;
   border-radius: 40px;
   animation: flutuar 4s ease-in-out infinite;
   overflow: hidden;
 }
-.profile .profile-img { width: auto; height: 100%; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+.profile .profile-img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-@keyframes flutuar { 0% { transform: translateY(0); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0); } }
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
-/* Tablet */
-@media (min-width: 768px) { .profile { width: 350px; height: 350px; } }
+@media (min-width: 768px) {
+  .profile {
+    width: 350px;
+    height: 350px;
+  }
+}
 
-/* Desktop */
-@media (min-width: 992px) { .profile { width: 100%; height: auto; padding-top: 100%; max-width: 400px; } .profile .profile-img { height: 100%; width: auto; } }
+@media (min-width: 992px) {
+  .profile {
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
+    max-width: 400px;
+  }
+  .profile .profile-img {
+    height: 100%;
+    width: auto;
+  }
+}
 
-/* Card */
 .card {
   background-color: var(--card-bg-color);
   border: 1px solid var(--card-border-color);
@@ -94,23 +182,96 @@ html.dark-mode .navbar-toggler-icon { background-image: url("data:image/svg+xml,
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
-html.dark-mode .card { box-shadow: none; color: var(--text-color); }
-html.dark-mode .card .text-body { color: var(--text-color) !important; }
-.card:hover { transform: translateY(-8px); box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
-html.dark-mode .card:hover { box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+html.dark-mode .card {
+  box-shadow: none;
+  color: var(--text-color);
+}
+html.dark-mode .card .text-body {
+  color: var(--text-color) !important;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+html.dark-mode .card:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
 
-/* Skills */
-.skill-item { background-color: var(--bg-color); border-radius: 0.5rem; border: 1px solid var(--card-border-color); color: var(--text-color); font-weight: 500; }
-html.dark-mode .skill-item .colored { filter: brightness(1.2); }
+.skill-item {
+  background-color: var(--bg-color);
+  border-radius: 0.5rem;
+  border: 1px solid var(--card-border-color);
+  color: var(--text-color);
+  font-weight: 500;
+}
+html.dark-mode .skill-item .colored {
+  filter: brightness(1.2);
+}
 
-/* Particles.js */
-#particles-js { position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; }
-header .container { position: relative; z-index: 1; }
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+header .container {
+  position: relative;
+  z-index: 1;
+}
 
-/* Ícone Dark Mode */
-#darkModeToggle { cursor: pointer; color: var(--primary-color); transition: color 0.4s ease; }
-html.dark-mode #darkModeToggle { color: #ffc107; }
+#darkModeToggle {
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: color 0.4s ease;
+}
+html.dark-mode #darkModeToggle {
+  color: #ffc107;
+}
 
-/* Footer */
-.icon-top { transition: transform 0.3s ease; }
-.icon-top:hover { transform: scale(1.1); }
+.icon-top {
+  transition: transform 0.3s ease;
+}
+.icon-top:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para o Carrossel Swiper.js */
+.projects-swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px; /* Espaço para as setas não colidirem com conteúdo abaixo */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Adiciona um respiro para os cards */
+}
+
+.swiper-slide .card {
+  width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+html.dark-mode .swiper-button-next,
+html.dark-mode .swiper-button-prev {
+  color: var(--secondary-color);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: var(--secondary-color);
+}
+
+html.dark-mode .swiper-button-next:hover,
+html.dark-mode .swiper-button-prev:hover {
+  color: #fff;
+}
