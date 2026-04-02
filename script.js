@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // --- LÓGICA DO MODO ESCURO ---
+  initDarkMode();
+  initTypeWriter();
+  initScrollReveal();
+  initSwiper();
+  initParticles();
+});
+
+// --- LÓGICA DO MODO ESCURO ---
+function initDarkMode() {
   const darkModeToggle = document.getElementById("darkModeToggle");
   const htmlElement = document.documentElement;
 
@@ -30,36 +38,44 @@ document.addEventListener("DOMContentLoaded", function () {
     darkModeToggle.addEventListener("click", toggleTheme);
 
     const savedTheme = localStorage.getItem("theme");
-    const systemPrefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
+    const systemPrefersDarkMedia = window.matchMedia("(prefers-color-scheme: dark)");
 
     if (savedTheme) {
       applyTheme(savedTheme);
-    } else if (systemPrefersDark) {
+    } else if (systemPrefersDarkMedia.matches) {
       applyTheme("dark");
     } else {
       applyTheme("light");
     }
+
+    // Atualiza o tema automaticamente se a preferência do sistema mudar em tempo real
+    systemPrefersDarkMedia.addEventListener("change", (e) => {
+      if (!localStorage.getItem("theme")) {
+        applyTheme(e.matches ? "dark" : "light");
+      }
+    });
+
   } else {
     console.error("Botão de modo escuro não encontrado!");
   }
+}
 
-  // --- EFEITO MÁQUINA DE ESCREVER ---
+// --- EFEITO MÁQUINA DE ESCREVER ---
+function initTypeWriter() {
   function typeWrite(elemento) {
     if (!elemento) {
       return;
     }
     const textoOriginal =
-      elemento.getAttribute("data-text") || elemento.innerHTML;
+      elemento.getAttribute("data-text") || elemento.textContent.trim();
     if (!elemento.getAttribute("data-text")) {
       elemento.setAttribute("data-text", textoOriginal);
     }
     const textoArray = textoOriginal.split("");
-    elemento.innerHTML = " ";
+    elemento.textContent = "";
     textoArray.forEach((letra, i) => {
       setTimeout(() => {
-        elemento.innerHTML += letra;
+        elemento.textContent += letra;
         if (i === textoArray.length - 1) {
           setTimeout(() => typeWrite(elemento), 3000);
         }
@@ -71,8 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
   if (titulo) {
     typeWrite(titulo);
   }
+}
 
-  // --- ANIMAÇÃO DE SCROLL (SCROLLREVEAL) ---
+// --- ANIMAÇÃO DE SCROLL (SCROLLREVEAL) ---
+function initScrollReveal() {
   if (typeof ScrollReveal !== "undefined") {
     const sr = ScrollReveal({
       origin: "bottom",
@@ -83,8 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     sr.reveal(".hidden-element");
   }
+}
 
-  // --- INICIALIZAÇÃO DO SWIPER.JS ---
+// --- INICIALIZAÇÃO DO SWIPER.JS ---
+function initSwiper() {
   if (typeof Swiper !== "undefined") {
     const swiper = new Swiper(".projects-swiper", {
       // Quantidade de slides
@@ -112,8 +132,10 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
+}
 
-  // --- PARTICLES.JS ---
+// --- PARTICLES.JS ---
+function initParticles() {
   if (typeof particlesJS !== "undefined") {
     particlesJS("particles-js", {
       particles: {
@@ -154,4 +176,4 @@ document.addEventListener("DOMContentLoaded", function () {
       retina_detect: true,
     });
   }
-});
+}
