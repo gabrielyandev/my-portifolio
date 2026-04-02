@@ -36,6 +36,12 @@ function initDarkMode() {
     };
 
     darkModeToggle.addEventListener("click", toggleTheme);
+    
+    darkModeToggle.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        toggleTheme();
+      }
+    });
 
     const savedTheme = localStorage.getItem("theme");
     const systemPrefersDarkMedia = window.matchMedia("(prefers-color-scheme: dark)");
