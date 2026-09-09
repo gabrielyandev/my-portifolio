@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp, Github, Linkedin, MessageCircle, Heart } from "lucide-react";
+import { ArrowUp, Github, Linkedin, MessageCircle, Terminal } from "lucide-react";
 import { personalInfo } from "@/data/portfolioData";
 
 export default function Footer() {
@@ -12,9 +12,11 @@ export default function Footer() {
     <footer
       style={{
         borderTop: "1px solid var(--border-color)",
-        background: "var(--bg-primary)",
-        paddingTop: "3.5rem",
-        paddingBottom: "2.5rem"
+        background: "#030305",
+        paddingTop: "4rem",
+        paddingBottom: "3rem",
+        position: "relative",
+        zIndex: 1
       }}
     >
       <div className="container">
@@ -24,40 +26,57 @@ export default function Footer() {
             alignItems: "center",
             justifyContent: "space-between",
             flexWrap: "wrap",
-            gap: "1.5rem",
-            marginBottom: "2rem"
+            gap: "2rem",
+            marginBottom: "2.5rem"
           }}
         >
           <div>
-            <span
-              style={{
-                fontSize: "1.25rem",
-                fontWeight: 800,
-                letterSpacing: "-0.03em"
-              }}
-              className="text-gradient"
-            >
-              {personalInfo.handle}
-            </span>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+              <div
+                style={{
+                  width: "1.75rem",
+                  height: "1.75rem",
+                  borderRadius: "4px",
+                  background: "rgba(237, 20, 91, 0.15)",
+                  border: "1px solid var(--fiap-magenta)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "var(--fiap-magenta)"
+                }}
+              >
+                <Terminal size={12} />
+              </div>
+              <span
+                style={{
+                  fontSize: "1.2rem",
+                  fontWeight: 800,
+                  letterSpacing: "-0.02em",
+                  color: "#fff"
+                }}
+              >
+                gabrielyan<span style={{ color: "var(--fiap-magenta)" }}>.dev</span>
+              </span>
+            </div>
             <p
               style={{
                 fontSize: "0.9rem",
                 color: "var(--text-secondary)",
-                marginTop: "0.25rem"
+                maxWidth: "450px"
               }}
             >
-              Desenvolvedor Full-Stack, DBA e entusiasta de interfaces modernas.
+              Desenvolvimento Full-Stack, Administração de Banco de Dados e Engenharia de Software.
             </p>
           </div>
 
-          <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "0.85rem" }}>
             <a
               href={personalInfo.github}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary btn-sm"
               aria-label="GitHub"
-              style={{ padding: "0.6rem" }}
+              style={{ padding: "0.65rem" }}
             >
               <Github size={18} />
             </a>
@@ -67,7 +86,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn-secondary btn-sm"
               aria-label="LinkedIn"
-              style={{ padding: "0.6rem" }}
+              style={{ padding: "0.65rem" }}
             >
               <Linkedin size={18} />
             </a>
@@ -77,7 +96,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn-secondary btn-sm"
               aria-label="WhatsApp"
-              style={{ padding: "0.6rem" }}
+              style={{ padding: "0.65rem" }}
             >
               <MessageCircle size={18} />
             </a>
@@ -86,21 +105,27 @@ export default function Footer() {
               onClick={scrollToTop}
               aria-label="Voltar ao topo"
               style={{
-                background: "var(--gradient-main)",
+                background: "var(--fiap-magenta)",
                 border: "none",
                 color: "#ffffff",
-                borderRadius: "50%",
-                width: "2.5rem",
-                height: "2.5rem",
+                borderRadius: "4px",
+                width: "2.6rem",
+                height: "2.6rem",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 cursor: "pointer",
-                transition: "transform 0.2s ease",
-                boxShadow: "0 4px 14px rgba(168, 85, 247, 0.4)"
+                transition: "all 0.2s ease",
+                boxShadow: "0 0 15px rgba(237, 20, 91, 0.4)"
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-3px)")}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-3px)";
+                e.currentTarget.style.boxShadow = "0 0 25px rgba(237, 20, 91, 0.8)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 0 15px rgba(237, 20, 91, 0.4)";
+              }}
             >
               <ArrowUp size={18} />
             </button>
@@ -109,23 +134,23 @@ export default function Footer() {
 
         <div
           style={{
-            paddingTop: "1.5rem",
+            paddingTop: "2rem",
             borderTop: "1px solid var(--border-color)",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             flexWrap: "wrap",
             gap: "1rem",
-            fontSize: "0.85rem",
+            fontSize: "0.82rem",
+            fontFamily: "monospace",
             color: "var(--text-muted)"
           }}
         >
           <div>
-            &copy; {new Date().getFullYear()} {personalInfo.name}. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} GABRIEL YAN &middot; ALL RIGHTS RESERVED
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
-            Construído com Next.js, React e TypeScript{" "}
-            <Heart size={13} color="#ec4899" fill="#ec4899" />
+          <div style={{ color: "var(--fiap-magenta)" }}>
+            [ NEXT.JS 15 // TYPESCRIPT // REACT 19 ]
           </div>
         </div>
       </div>

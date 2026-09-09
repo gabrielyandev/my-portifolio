@@ -1,4 +1,4 @@
-import { Code, Database, Wrench, Layers } from "lucide-react";
+import { Code, Database, Wrench, Terminal } from "lucide-react";
 import { skills } from "@/data/portfolioData";
 
 export default function Skills() {
@@ -8,91 +8,106 @@ export default function Skills() {
 
   const categories = [
     {
-      title: "Front-End & Interface",
-      icon: <Code size={22} color="#a855f7" />,
+      title: "FRONT-END & INTERFACE",
+      icon: <Code size={20} color="var(--fiap-magenta)" />,
       items: frontendSkills,
-      color: "var(--accent-purple)"
+      color: "var(--fiap-magenta)",
+      borderGlow: "rgba(237, 20, 91, 0.4)"
     },
     {
-      title: "Bancos de Dados & DBA",
-      icon: <Database size={22} color="#ec4899" />,
+      title: "BANCOS DE DADOS & DBA",
+      icon: <Database size={20} color="var(--fiap-cyan)" />,
       items: dbSkills,
-      color: "var(--accent-pink)"
+      color: "var(--fiap-cyan)",
+      borderGlow: "rgba(0, 210, 255, 0.4)"
     },
     {
-      title: "Ferramentas & DevOps",
-      icon: <Wrench size={22} color="#3b82f6" />,
+      title: "DEVOPS & WORKFLOW",
+      icon: <Wrench size={20} color="#a855f7" />,
       items: toolSkills,
-      color: "var(--accent-blue)"
+      color: "#a855f7",
+      borderGlow: "rgba(168, 85, 247, 0.4)"
     }
   ];
 
   return (
-    <section id="habilidades" className="section-py" style={{ background: "var(--bg-secondary)" }}>
+    <section id="habilidades" className="section-py" style={{ background: "transparent" }}>
       <div className="container">
         <div className="section-header">
-          <span className="badge-pill">Tecnologias</span>
+          <div className="section-tag">// 03 . HARD SKILLS & STACK</div>
           <h2 className="section-title">
-            <span className="text-gradient">Hard Skills</span>
+            <span className="text-gradient">TECNOLOGIAS DE DOMÍNIO</span>
           </h2>
           <p className="section-subtitle">
-            Linguagens, frameworks e tecnologias que utilizo diariamente para criar soluções eficientes.
+            Ferramentas, linguagens e bancos de dados que utilizo para construir aplicações escaláveis.
           </p>
         </div>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
             gap: "2rem",
             maxWidth: "1100px",
             margin: "0 auto"
           }}
         >
           {categories.map((cat, idx) => (
-            <div key={idx} className="glass-card" style={{ padding: "2rem" }}>
+            <div key={idx} className="glass-card" style={{ padding: "2.25rem 2rem" }}>
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
                   gap: "0.75rem",
-                  marginBottom: "1.5rem"
+                  marginBottom: "1.75rem"
                 }}
               >
                 <div
                   style={{
                     padding: "0.6rem",
-                    borderRadius: "0.75rem",
-                    background: "rgba(255, 255, 255, 0.04)",
+                    borderRadius: "6px",
+                    background: "rgba(255, 255, 255, 0.03)",
+                    border: `1px solid ${cat.color}`,
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "center"
+                    justifyContent: "center",
+                    boxShadow: `0 0 12px ${cat.borderGlow}`
                   }}
                 >
                   {cat.icon}
                 </div>
-                <h3 style={{ fontSize: "1.25rem", fontWeight: 700 }}>{cat.title}</h3>
+                <h3
+                  style={{
+                    fontSize: "1.1rem",
+                    fontWeight: 800,
+                    letterSpacing: "0.05em",
+                    fontFamily: "monospace"
+                  }}
+                >
+                  {cat.title}
+                </h3>
               </div>
 
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.65rem" }}>
                 {cat.items.map((skill, sIdx) => (
                   <div
                     key={sIdx}
                     style={{
                       display: "inline-flex",
                       alignItems: "center",
-                      gap: "0.5rem",
-                      padding: "0.6rem 1rem",
-                      borderRadius: "0.75rem",
-                      background: "rgba(255, 255, 255, 0.03)",
-                      border: "1px solid var(--border-color)",
-                      fontSize: "0.9rem",
+                      gap: "0.45rem",
+                      padding: "0.55rem 0.95rem",
+                      borderRadius: "4px",
+                      background: "rgba(255, 255, 255, 0.02)",
+                      border: "1px solid rgba(255, 255, 255, 0.08)",
+                      fontSize: "0.85rem",
+                      fontFamily: "monospace",
                       fontWeight: 600,
-                      color: "var(--text-primary)",
+                      color: "#ffffff",
                       transition: "all 0.2s ease"
                     }}
                   >
-                    <Layers size={14} color={cat.color} />
+                    <span style={{ color: cat.color }}>#</span>
                     <span>{skill.name}</span>
                   </div>
                 ))}

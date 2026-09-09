@@ -4,68 +4,62 @@ import { personalInfo } from "@/data/portfolioData";
 export default function About() {
   const highlights = [
     {
-      icon: <Code2 size={20} color="#a855f7" />,
-      title: "Desenvolvimento",
+      icon: <Code2 size={20} color="var(--fiap-magenta)" />,
+      title: "DESENVOLVIMENTO",
       desc: "Front-End & Back-End"
     },
     {
-      icon: <Database size={20} color="#ec4899" />,
-      title: "Bancos de Dados",
+      icon: <Database size={20} color="var(--fiap-cyan)" />,
+      title: "BANCOS DE DADOS",
       desc: "MySQL, Postgres, Firebird"
     },
     {
-      icon: <MapPin size={20} color="#3b82f6" />,
-      title: "Origem",
+      icon: <MapPin size={20} color="#a855f7" />,
+      title: "LOCALIZAÇÃO",
       desc: "Salvador, BA - Brasil"
     },
     {
       icon: <Target size={20} color="#10b981" />,
-      title: "Próximo Passo",
+      title: "FOCO DE CARREIRA",
       desc: "Engenharia de Software"
     }
   ];
 
   return (
-    <section id="sobre" className="section-py" style={{ background: "var(--bg-secondary)" }}>
+    <section id="sobre" className="section-py" style={{ background: "transparent" }}>
       <div className="container">
         <div className="section-header">
-          <span className="badge-pill">Conheça minha história</span>
+          <div className="section-tag">// 01 . SOBRE MIM</div>
           <h2 className="section-title">
-            <span className="text-gradient">Sobre mim</span>
+            <span className="text-gradient">TRAJETÓRIA & IDENTIDADE</span>
           </h2>
           <p className="section-subtitle">
             {personalInfo.bioTitle}
           </p>
         </div>
 
-        <div
-          style={{
-            maxWidth: "880px",
-            margin: "0 auto"
-          }}
-        >
-          {/* Main Bio Card */}
-          <div className="glass-card" style={{ padding: "2.5rem" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <div className="glass-card" style={{ padding: "2.75rem 2.25rem" }}>
             <p
               style={{
                 fontSize: "1.1rem",
-                lineHeight: "1.85",
+                lineHeight: "1.9",
                 color: "var(--text-secondary)",
-                marginBottom: "2rem"
+                marginBottom: "2.25rem"
               }}
             >
               {personalInfo.bioDescription}
             </p>
 
-            {/* Mini Highlights Grid */}
+            {/* Highlights Grid with Tech styling */}
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(190px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
                 gap: "1.25rem",
-                paddingTop: "1.5rem",
+                paddingTop: "2rem",
                 borderTop: "1px solid var(--border-color)",
-                marginBottom: "2rem"
+                marginBottom: "2.25rem"
               }}
             >
               {highlights.map((item, idx) => (
@@ -74,17 +68,18 @@ export default function About() {
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    gap: "0.75rem",
-                    padding: "0.75rem",
-                    borderRadius: "0.75rem",
-                    background: "rgba(255, 255, 255, 0.02)"
+                    gap: "0.85rem",
+                    padding: "0.85rem 1rem",
+                    borderRadius: "6px",
+                    background: "rgba(255, 255, 255, 0.02)",
+                    border: "1px solid rgba(255, 255, 255, 0.05)"
                   }}
                 >
                   <div
                     style={{
-                      padding: "0.6rem",
-                      borderRadius: "0.5rem",
-                      background: "rgba(255, 255, 255, 0.05)",
+                      padding: "0.5rem",
+                      borderRadius: "4px",
+                      background: "rgba(255, 255, 255, 0.03)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center"
@@ -93,10 +88,17 @@ export default function About() {
                     {item.icon}
                   </div>
                   <div>
-                    <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontWeight: 500 }}>
+                    <div
+                      style={{
+                        fontSize: "0.72rem",
+                        fontFamily: "monospace",
+                        color: "var(--text-muted)",
+                        letterSpacing: "0.08em"
+                      }}
+                    >
                       {item.title}
                     </div>
-                    <div style={{ fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: 700 }}>
+                    <div style={{ fontSize: "0.95rem", color: "#ffffff", fontWeight: 700 }}>
                       {item.desc}
                     </div>
                   </div>
@@ -104,12 +106,13 @@ export default function About() {
               ))}
             </div>
 
-            {/* Social Connect Links */}
+            {/* Connect Buttons */}
             <div
               style={{
                 display: "flex",
                 justifyContent: "center",
-                gap: "1.5rem",
+                flexWrap: "wrap",
+                gap: "1.25rem",
                 alignItems: "center"
               }}
             >
@@ -120,7 +123,7 @@ export default function About() {
                 className="btn-secondary btn-sm"
               >
                 <Linkedin size={16} />
-                <span>Conectar no LinkedIn</span>
+                <span>Perfil no LinkedIn</span>
               </a>
               <a
                 href={personalInfo.github}
@@ -129,7 +132,7 @@ export default function About() {
                 className="btn-secondary btn-sm"
               >
                 <Github size={16} />
-                <span>Seguir no GitHub</span>
+                <span>Repositórios GitHub</span>
               </a>
             </div>
           </div>

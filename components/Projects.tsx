@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Terminal } from "lucide-react";
 import { projects } from "@/data/portfolioData";
 
 export default function Projects() {
@@ -18,25 +18,25 @@ export default function Projects() {
         );
 
   return (
-    <section id="projetos" className="section-py">
+    <section id="projetos" className="section-py" style={{ background: "transparent" }}>
       <div className="container">
         <div className="section-header">
-          <span className="badge-pill">Showcase</span>
+          <div className="section-tag">// 04 . PROJETOS EM DESTAQUE</div>
           <h2 className="section-title">
-            <span className="text-gradient">Projetos em Destaque</span>
+            <span className="text-gradient">SHOWCASE DE APLICAÇÕES</span>
           </h2>
           <p className="section-subtitle">
-            Aplicações reais, interfaces responsivas e utilitários que desenvolvi com foco em usabilidade e performance.
+            Soluções completas com deploy ativo, código versionado e foco em usabilidade.
           </p>
 
-          {/* Filter Pills */}
+          {/* Filter Pills with Tech styling */}
           <div
             style={{
               display: "flex",
               justifyContent: "center",
               flexWrap: "wrap",
-              gap: "0.5rem",
-              marginTop: "2rem"
+              gap: "0.6rem",
+              marginTop: "2.25rem"
             }}
           >
             {filterOptions.map((filter) => {
@@ -47,14 +47,18 @@ export default function Projects() {
                   onClick={() => setActiveFilter(filter)}
                   style={{
                     padding: "0.5rem 1.25rem",
-                    borderRadius: "9999px",
-                    border: isActive ? "1px solid var(--accent-purple)" : "1px solid var(--border-color)",
-                    background: isActive ? "var(--gradient-main)" : "var(--bg-card)",
-                    color: isActive ? "#ffffff" : "var(--text-secondary)",
-                    fontSize: "0.85rem",
-                    fontWeight: 600,
+                    borderRadius: "4px",
+                    border: isActive ? "1px solid var(--fiap-magenta)" : "1px solid rgba(255, 255, 255, 0.1)",
+                    background: isActive ? "var(--fiap-magenta)" : "rgba(255, 255, 255, 0.03)",
+                    color: "#ffffff",
+                    fontSize: "0.82rem",
+                    fontWeight: 700,
+                    fontFamily: "monospace",
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
                     cursor: "pointer",
-                    transition: "all 0.2s ease"
+                    transition: "all 0.2s ease",
+                    boxShadow: isActive ? "0 0 15px rgba(237, 20, 91, 0.5)" : "none"
                   }}
                 >
                   {filter}
@@ -69,7 +73,7 @@ export default function Projects() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-            gap: "2rem"
+            gap: "2.25rem"
           }}
         >
           {filteredProjects.map((project) => (
@@ -82,13 +86,13 @@ export default function Projects() {
                 overflow: "hidden"
               }}
             >
-              {/* Project Image Preview */}
+              {/* Image Preview with overlay */}
               <div
                 style={{
                   position: "relative",
                   width: "100%",
                   height: "210px",
-                  background: "var(--bg-secondary)",
+                  background: "#08080d",
                   overflow: "hidden"
                 }}
               >
@@ -102,18 +106,25 @@ export default function Projects() {
                   }}
                   className="project-img-preview"
                 />
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(180deg, transparent 60%, rgba(12, 12, 18, 0.95) 100%)"
+                  }}
+                />
               </div>
 
-              {/* Card Content */}
+              {/* Card Body */}
               <div
                 style={{
-                  padding: "1.5rem",
+                  padding: "1.75rem",
                   display: "flex",
                   flexDirection: "column",
                   flex: 1
                 }}
               >
-                {/* Tags */}
+                {/* Tech Tags */}
                 <div
                   style={{
                     display: "flex",
@@ -126,15 +137,17 @@ export default function Projects() {
                     <span
                       key={tIdx}
                       style={{
-                        fontSize: "0.75rem",
-                        fontWeight: 600,
+                        fontSize: "0.72rem",
+                        fontFamily: "monospace",
+                        fontWeight: 700,
                         padding: "0.2rem 0.6rem",
-                        borderRadius: "9999px",
-                        background: "rgba(168, 85, 247, 0.12)",
-                        color: "var(--accent-purple)"
+                        borderRadius: "3px",
+                        background: "rgba(237, 20, 91, 0.12)",
+                        color: "var(--fiap-magenta)",
+                        border: "1px solid rgba(237, 20, 91, 0.3)"
                       }}
                     >
-                      {tag}
+                      #{tag}
                     </span>
                   ))}
                 </div>
@@ -143,7 +156,8 @@ export default function Projects() {
                   style={{
                     fontSize: "1.25rem",
                     fontWeight: 700,
-                    marginBottom: "0.5rem"
+                    marginBottom: "0.5rem",
+                    color: "#ffffff"
                   }}
                 >
                   {project.title}
@@ -153,8 +167,8 @@ export default function Projects() {
                   style={{
                     fontSize: "0.92rem",
                     color: "var(--text-secondary)",
-                    lineHeight: 1.6,
-                    marginBottom: "1.5rem",
+                    lineHeight: 1.65,
+                    marginBottom: "1.75rem",
                     flex: 1
                   }}
                 >
@@ -168,7 +182,7 @@ export default function Projects() {
                     alignItems: "center",
                     gap: "0.75rem",
                     marginTop: "auto",
-                    paddingTop: "1rem",
+                    paddingTop: "1.25rem",
                     borderTop: "1px solid var(--border-color)"
                   }}
                 >
@@ -189,7 +203,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="btn-secondary btn-sm"
                     aria-label={`Código fonte de ${project.title}`}
-                    style={{ padding: "0.5rem 0.75rem" }}
+                    style={{ padding: "0.55rem 0.85rem" }}
                   >
                     <Github size={17} />
                   </a>

@@ -3,18 +3,18 @@ import { experiences, educations, personalInfo } from "@/data/portfolioData";
 
 export default function Experience() {
   return (
-    <section id="resumo" className="section-py">
+    <section id="resumo" className="section-py" style={{ background: "transparent" }}>
       <div className="container">
         <div className="section-header">
-          <span className="badge-pill">Trajetória</span>
+          <div className="section-tag">// 02 . EXPERIÊNCIA & FORMAÇÃO</div>
           <h2 className="section-title">
-            <span className="text-gradient">Resumo Profissional</span>
+            <span className="text-gradient">RESUMO PROFISSIONAL</span>
           </h2>
           <p className="section-subtitle">
-            Minha experiência de atuação no mercado e a base acadêmica que construí ao longo dos anos.
+            Atuação técnica no mercado corporativo e desenvolvimento acadêmico contínuo.
           </p>
 
-          <div style={{ marginTop: "1.75rem" }}>
+          <div style={{ marginTop: "2rem" }}>
             <a
               href={personalInfo.cvPath}
               download="Curriculo_Gabriel_Yan.pdf"
@@ -28,16 +28,7 @@ export default function Experience() {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gap: "3rem",
-            maxWidth: "1050px",
-            margin: "0 auto"
-          }}
-          className="experience-grid"
-        >
+        <div className="experience-grid">
           {/* Column 1: Experiências */}
           <div>
             <div
@@ -52,22 +43,26 @@ export default function Experience() {
                 style={{
                   width: "2.5rem",
                   height: "2.5rem",
-                  borderRadius: "0.75rem",
-                  background: "var(--gradient-main)",
+                  borderRadius: "6px",
+                  background: "rgba(237, 20, 91, 0.15)",
+                  border: "1px solid var(--fiap-magenta)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "#fff"
+                  color: "var(--fiap-magenta)",
+                  boxShadow: "0 0 15px rgba(237, 20, 91, 0.4)"
                 }}
               >
-                <Briefcase size={20} />
+                <Briefcase size={18} />
               </div>
-              <h3 style={{ fontSize: "1.5rem", fontWeight: 800 }}>Experiências</h3>
+              <h3 style={{ fontSize: "1.4rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
+                EXPERIÊNCIAS
+              </h3>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               {experiences.map((exp, idx) => (
-                <div key={idx} className="glass-card" style={{ padding: "1.75rem" }}>
+                <div key={idx} className="glass-card" style={{ padding: "1.85rem" }}>
                   <div
                     style={{
                       display: "flex",
@@ -75,53 +70,57 @@ export default function Experience() {
                       justifyContent: "space-between",
                       flexWrap: "wrap",
                       gap: "0.5rem",
-                      marginBottom: "0.75rem"
+                      marginBottom: "0.85rem"
                     }}
                   >
                     <span
                       style={{
-                        fontSize: "0.8rem",
+                        fontSize: "0.75rem",
+                        fontFamily: "monospace",
                         fontWeight: 700,
-                        padding: "0.25rem 0.75rem",
-                        borderRadius: "9999px",
-                        background: "rgba(168, 85, 247, 0.15)",
-                        color: "var(--accent-purple)",
+                        padding: "0.25rem 0.65rem",
+                        borderRadius: "4px",
+                        background: "rgba(237, 20, 91, 0.15)",
+                        color: "var(--fiap-magenta)",
+                        border: "1px solid rgba(237, 20, 91, 0.3)",
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.35rem"
                       }}
                     >
-                      <Calendar size={13} />
+                      <Calendar size={12} />
                       {exp.period}
                     </span>
                     <span
                       style={{
-                        fontSize: "0.85rem",
+                        fontSize: "0.82rem",
                         color: "var(--text-muted)",
+                        fontFamily: "monospace",
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.25rem"
                       }}
                     >
-                      <MapPin size={13} />
+                      <MapPin size={12} />
                       {exp.location}
                     </span>
                   </div>
 
-                  <h4 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.25rem" }}>
+                  <h4 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.25rem", color: "#fff" }}>
                     {exp.role}
                   </h4>
                   <div
                     style={{
                       fontSize: "0.95rem",
-                      color: "var(--accent-pink)",
+                      color: "var(--fiap-cyan)",
                       fontWeight: 600,
-                      marginBottom: "0.75rem"
+                      marginBottom: "0.85rem",
+                      fontFamily: "monospace"
                     }}
                   >
-                    {exp.company}
+                    @{exp.company}
                   </div>
-                  <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+                  <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>
                     {exp.description}
                   </p>
                 </div>
@@ -143,22 +142,26 @@ export default function Experience() {
                 style={{
                   width: "2.5rem",
                   height: "2.5rem",
-                  borderRadius: "0.75rem",
-                  background: "var(--gradient-main)",
+                  borderRadius: "6px",
+                  background: "rgba(0, 210, 255, 0.15)",
+                  border: "1px solid var(--fiap-cyan)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "#fff"
+                  color: "var(--fiap-cyan)",
+                  boxShadow: "0 0 15px rgba(0, 210, 255, 0.35)"
                 }}
               >
-                <GraduationCap size={20} />
+                <GraduationCap size={18} />
               </div>
-              <h3 style={{ fontSize: "1.5rem", fontWeight: 800 }}>Formações</h3>
+              <h3 style={{ fontSize: "1.4rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
+                FORMAÇÕES
+              </h3>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               {educations.map((edu, idx) => (
-                <div key={idx} className="glass-card" style={{ padding: "1.75rem" }}>
+                <div key={idx} className="glass-card" style={{ padding: "1.85rem" }}>
                   <div
                     style={{
                       display: "flex",
@@ -166,53 +169,57 @@ export default function Experience() {
                       justifyContent: "space-between",
                       flexWrap: "wrap",
                       gap: "0.5rem",
-                      marginBottom: "0.75rem"
+                      marginBottom: "0.85rem"
                     }}
                   >
                     <span
                       style={{
-                        fontSize: "0.8rem",
+                        fontSize: "0.75rem",
+                        fontFamily: "monospace",
                         fontWeight: 700,
-                        padding: "0.25rem 0.75rem",
-                        borderRadius: "9999px",
-                        background: "rgba(59, 130, 246, 0.15)",
-                        color: "var(--accent-blue)",
+                        padding: "0.25rem 0.65rem",
+                        borderRadius: "4px",
+                        background: "rgba(0, 210, 255, 0.15)",
+                        color: "var(--fiap-cyan)",
+                        border: "1px solid rgba(0, 210, 255, 0.3)",
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.35rem"
                       }}
                     >
-                      <Calendar size={13} />
+                      <Calendar size={12} />
                       {edu.period}
                     </span>
                     <span
                       style={{
-                        fontSize: "0.85rem",
+                        fontSize: "0.82rem",
                         color: "var(--text-muted)",
+                        fontFamily: "monospace",
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.25rem"
                       }}
                     >
-                      <MapPin size={13} />
+                      <MapPin size={12} />
                       {edu.location}
                     </span>
                   </div>
 
-                  <h4 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.25rem" }}>
+                  <h4 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.25rem", color: "#fff" }}>
                     {edu.degree}
                   </h4>
                   <div
                     style={{
                       fontSize: "0.95rem",
-                      color: "var(--accent-blue)",
+                      color: "var(--fiap-cyan)",
                       fontWeight: 600,
-                      marginBottom: "0.75rem"
+                      marginBottom: "0.85rem",
+                      fontFamily: "monospace"
                     }}
                   >
-                    {edu.institution}
+                    @{edu.institution}
                   </div>
-                  <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+                  <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>
                     {edu.description}
                   </p>
                 </div>

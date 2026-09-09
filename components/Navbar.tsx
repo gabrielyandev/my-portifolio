@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Moon, Sun, Menu, X, MessageCircle } from "lucide-react";
+import { Moon, Sun, Menu, X, MessageCircle, Terminal } from "lucide-react";
 import { personalInfo } from "@/data/portfolioData";
 
 export default function Navbar() {
@@ -12,8 +12,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const saved = localStorage.getItem("theme") as "dark" | "light" | null;
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initial = saved || (systemPrefersDark ? "dark" : "light");
+    const initial = saved || "dark";
     setTheme(initial);
     document.documentElement.setAttribute("data-theme", initial);
 
@@ -33,11 +32,11 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: "Início", href: "#inicio" },
-    { name: "Sobre mim", href: "#sobre" },
-    { name: "Resumo", href: "#resumo" },
-    { name: "Habilidades", href: "#habilidades" },
-    { name: "Projetos", href: "#projetos" }
+    { index: "01", name: "Início", href: "#inicio" },
+    { index: "02", name: "Sobre", href: "#sobre" },
+    { index: "03", name: "Resumo", href: "#resumo" },
+    { index: "04", name: "Skills", href: "#habilidades" },
+    { index: "05", name: "Projetos", href: "#projetos" }
   ];
 
   return (
@@ -48,10 +47,10 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 50,
-        background: isScrolled ? "var(--navbar-bg)" : "transparent",
-        backdropFilter: isScrolled ? "blur(12px)" : "none",
-        WebkitBackdropFilter: isScrolled ? "blur(12px)" : "none",
-        borderBottom: isScrolled ? "1px solid var(--border-color)" : "1px solid transparent",
+        background: isScrolled ? "var(--navbar-bg)" : "rgba(3, 3, 5, 0.4)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        borderBottom: isScrolled ? "1px solid var(--border-color)" : "1px solid rgba(255, 255, 255, 0.05)",
         transition: "all 0.3s ease"
       }}
     >
@@ -61,31 +60,49 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          height: "4.5rem"
+          height: "4.75rem"
         }}
       >
-        {/* Brand */}
+        {/* Brand with cyber logo */}
         <Link
           href="#inicio"
           style={{
             textDecoration: "none",
-            fontSize: "1.25rem",
+            fontSize: "1.2rem",
             fontWeight: 800,
-            letterSpacing: "-0.03em",
+            letterSpacing: "-0.02em",
             display: "flex",
             alignItems: "center",
-            gap: "0.25rem"
+            gap: "0.5rem"
           }}
         >
-          <span className="text-gradient">{personalInfo.handle}</span>
+          <div
+            style={{
+              width: "2rem",
+              height: "2rem",
+              borderRadius: "4px",
+              background: "rgba(237, 20, 91, 0.15)",
+              border: "1px solid var(--fiap-magenta)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "var(--fiap-magenta)",
+              boxShadow: "0 0 10px rgba(237, 20, 91, 0.3)"
+            }}
+          >
+            <Terminal size={14} />
+          </div>
+          <span style={{ color: "#fff", fontWeight: 800 }}>
+            gabrielyan<span style={{ color: "var(--fiap-magenta)" }}>.dev</span>
+          </span>
         </Link>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links with Tech Indexes */}
         <div
           style={{
             display: "none",
             alignItems: "center",
-            gap: "2rem"
+            gap: "2.25rem"
           }}
           className="desktop-nav"
         >
@@ -95,29 +112,42 @@ export default function Navbar() {
               href={link.href}
               style={{
                 textDecoration: "none",
+                fontSize: "0.88rem",
+                fontWeight: 600,
                 color: "var(--text-secondary)",
-                fontSize: "0.95rem",
-                fontWeight: 500,
+                letterSpacing: "0.05em",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.4rem",
                 transition: "color 0.2s ease"
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--text-primary)")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
             >
-              {link.name}
+              <span
+                style={{
+                  fontFamily: "monospace",
+                  fontSize: "0.75rem",
+                  color: "var(--fiap-magenta)"
+                }}
+              >
+                //{link.index}
+              </span>
+              <span>{link.name}</span>
             </a>
           ))}
         </div>
 
-        {/* Right Actions: Theme Toggle + WhatsApp CTA + Mobile Menu */}
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+        {/* Right Actions: Theme Toggle + Contact CTA */}
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
           <button
             onClick={toggleTheme}
             aria-label="Alternar tema"
             style={{
-              background: "var(--bg-card)",
+              background: "rgba(255, 255, 255, 0.04)",
               border: "1px solid var(--border-color)",
               color: "var(--text-primary)",
-              borderRadius: "50%",
+              borderRadius: "4px",
               width: "2.5rem",
               height: "2.5rem",
               display: "flex",
@@ -126,8 +156,10 @@ export default function Navbar() {
               cursor: "pointer",
               transition: "all 0.2s ease"
             }}
+            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--fiap-magenta)")}
+            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-color)")}
           >
-            {theme === "dark" ? <Sun size={18} color="#eab308" /> : <Moon size={18} color="#7e22ce" />}
+            {theme === "dark" ? <Sun size={17} color="#00d2ff" /> : <Moon size={17} color="#ed145b" />}
           </button>
 
           <a
@@ -137,8 +169,8 @@ export default function Navbar() {
             className="btn-primary btn-sm desktop-only"
             style={{ display: "none" }}
           >
-            <MessageCircle size={16} />
-            <span>Contato</span>
+            <MessageCircle size={15} />
+            <span>Falar Comigo</span>
           </a>
 
           {/* Mobile Menu Button */}
@@ -155,7 +187,7 @@ export default function Navbar() {
               padding: "0.25rem"
             }}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={24} color="var(--fiap-magenta)" /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -165,16 +197,16 @@ export default function Navbar() {
         <div
           style={{
             position: "absolute",
-            top: "4.5rem",
+            top: "4.75rem",
             left: 0,
             right: 0,
-            background: "var(--bg-primary)",
-            borderBottom: "1px solid var(--border-color)",
-            padding: "1.5rem",
+            background: "rgba(3, 3, 5, 0.98)",
+            borderBottom: "1px solid var(--fiap-magenta)",
+            padding: "2rem 1.5rem",
             display: "flex",
             flexDirection: "column",
             gap: "1.25rem",
-            boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
+            boxShadow: "0 10px 40px rgba(0,0,0,0.8)"
           }}
         >
           {navLinks.map((link) => (
@@ -184,13 +216,18 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               style={{
                 textDecoration: "none",
-                color: "var(--text-primary)",
+                color: "#ffffff",
                 fontSize: "1.1rem",
                 fontWeight: 600,
-                padding: "0.5rem 0"
+                display: "flex",
+                alignItems: "center",
+                gap: "0.75rem"
               }}
             >
-              {link.name}
+              <span style={{ color: "var(--fiap-magenta)", fontFamily: "monospace", fontSize: "0.9rem" }}>
+                //{link.index}
+              </span>
+              <span>{link.name}</span>
             </a>
           ))}
           <a
@@ -199,7 +236,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="btn-primary"
             onClick={() => setIsMenuOpen(false)}
-            style={{ marginTop: "0.5rem", width: "100%" }}
+            style={{ marginTop: "1rem", width: "100%" }}
           >
             <MessageCircle size={18} />
             <span>Falar no WhatsApp</span>
