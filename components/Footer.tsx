@@ -65,7 +65,7 @@ export default function Footer() {
                 maxWidth: "450px"
               }}
             >
-              Desenvolvimento Full-Stack, Administração de Banco de Dados e Engenharia de Software.
+              Desenvolvimento Full-Stack, Engenharia de Software e Interfaces Modernas.
             </p>
           </div>
 

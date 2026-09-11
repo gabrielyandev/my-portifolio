@@ -33,14 +33,14 @@ export interface Skill {
 export const personalInfo = {
   name: "Gabriel Yan",
   handle: "@gabrielyandev",
-  badge: "Frontend · UX/UI · DBA",
+  badge: "Full-Stack · Front-End · Back-End",
   typingTexts: [
     "Em desenvolver para o mundo",
     "Em transformar ideias em código",
     "Em criar interfaces de alto impacto",
     "Em arquitetar soluções completas"
   ],
-  bioTitle: "DBA em TI, Desenvolvedor Web, Programador Front-End e Back-End",
+  bioTitle: "Desenvolvedor Full-Stack · Front-End, Back-End & Bancos de Dados",
   bioDescription:
     "Sou brasileiro, baiano e soteropolitano. Desde a infância, aos 13 anos, me tornei amante da tecnologia depois de ver um computador pela primeira vez. Sou um pesquisador nato, autodidata, e trabalhei como freelancer em suporte de TI. Aos 22 anos, descobri minha paixão pela programação, que é minha trilha atual. Estou cursando o 3º período de Análise e Desenvolvimento de Sistemas na Descomplica. Meu próximo passo é Engenharia de Software, com o objetivo de morar no Canadá.",
   profileImage: "/assets/profile1.png",
@@ -71,7 +71,7 @@ export const experiences: Experience[] = [
 
 export const educations: Education[] = [
   {
-    period: "2023 - Atualmente",
+    period: "2023 - 2026",
     degree: "Análise e Desenvolvimento de Sistemas",
     institution: "Faculdade Descomplica",
     location: "Salvador, BA",
@@ -96,11 +96,19 @@ export const skills: Skill[] = [
   { name: "HTML5 / Semantic", category: "frontend" },
   { name: "CSS3 / Modern Layouts", category: "frontend" },
   { name: "Bootstrap", category: "frontend" },
+  { name: "Node.js", category: "backend" },
+  { name: "APIs RESTful", category: "backend" },
   { name: "MySQL", category: "database" },
   { name: "PostgreSQL", category: "database" },
   { name: "Firebird", category: "database" },
   { name: "Docker", category: "tools" },
-  { name: "Git & GitHub", category: "tools" }
+  { name: "Git & GitHub", category: "tools" },
+  { name: "Python", category: "backend" },
+  { name: "APIs RESTful", category: "backend" },
+  { name: "Laravel", category: "backend" },
+  { name: "PHP", category: "backend" },
+  { name: "Tailwind CSS", category: "frontend" },
+  { name: "SQL Server", category: "database" },  
 ];
 
 export const projects: Project[] = [

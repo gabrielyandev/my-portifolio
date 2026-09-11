@@ -13,14 +13,14 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio-gabrielyandev.vercel.app"),
   title: "@gabrielyandev - Portfólio",
-  description: "Desenvolvedor Web Full-Stack, DBA e entusiasta de UX/UI. Conheça meus projetos!",
+  description: "Desenvolvedor Web Full-Stack e entusiasta de UX/UI. Conheça meus projetos!",
   authors: [{ name: "Gabriel Yan", url: "https://github.com/gabrielyandev" }],
   keywords: [
     "Gabriel Yan",
     "Desenvolvedor Web",
     "Full-Stack",
     "Front-End",
-    "DBA",
+    "Back-End",
     "Next.js",
     "React",
     "TypeScript"
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "@gabrielyandev - Portfólio",
-    description: "Desenvolvedor Web Full-Stack, DBA e entusiasta de UX/UI. Conheça meus projetos!",
+    description: "Desenvolvedor Web Full-Stack e entusiasta de UX/UI. Conheça meus projetos!",
     url: "https://portfolio-gabrielyandev.vercel.app/",
     siteName: "@gabrielyandev - Portfólio",
     images: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "@gabrielyandev - Portfólio",
-    description: "Desenvolvedor Web Full-Stack, DBA e entusiasta de UX/UI. Conheça meus projetos!",
+    description: "Desenvolvedor Web Full-Stack e entusiasta de UX/UI. Conheça meus projetos!",
     images: ["/assets/img/my-portfolio.png"]
   }
 };

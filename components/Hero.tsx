@@ -71,7 +71,7 @@ export default function Hero() {
               }}
             >
               <Terminal size={14} />
-              <span>// FRONTEND &middot; UX/UI &middot; DBA</span>
+              <span>// FULL-STACK &middot; FRONT-END &middot; BACK-END</span>
             </div>
 
             <p

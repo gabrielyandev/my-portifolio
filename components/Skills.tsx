@@ -3,7 +3,7 @@ import { skills } from "@/data/portfolioData";
 
 export default function Skills() {
   const frontendSkills = skills.filter((s) => s.category === "frontend");
-  const dbSkills = skills.filter((s) => s.category === "database");
+  const backendAndDbSkills = skills.filter((s) => s.category === "backend" || s.category === "database");
   const toolSkills = skills.filter((s) => s.category === "tools");
 
   const categories = [
@@ -15,9 +15,9 @@ export default function Skills() {
       borderGlow: "rgba(237, 20, 91, 0.4)"
     },
     {
-      title: "BANCOS DE DADOS & DBA",
+      title: "BACK-END & BANCOS DE DADOS",
       icon: <Database size={20} color="var(--fiap-cyan)" />,
-      items: dbSkills,
+      items: backendAndDbSkills,
       color: "var(--fiap-cyan)",
       borderGlow: "rgba(0, 210, 255, 0.4)"
     },
