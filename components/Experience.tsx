@@ -1,20 +1,25 @@
+"use client";
+
 import { Briefcase, GraduationCap, Download, Calendar, MapPin } from "lucide-react";
 import { experiences, educations, personalInfo } from "@/data/portfolioData";
 
 export default function Experience() {
   return (
-    <section id="resumo" className="section-py" style={{ background: "transparent" }}>
+    <section id="resumo" className="section-py" style={{ position: "relative" }}>
       <div className="container">
         <div className="section-header">
-          <div className="section-tag">// 02 . EXPERIÊNCIA & FORMAÇÃO</div>
+          <div className="section-tag">
+            <span className="section-tag-dot" />
+            <span>TRAJETÓRIA TÉCNICA</span>
+          </div>
           <h2 className="section-title">
-            <span className="text-gradient">RESUMO PROFISSIONAL</span>
+            EXPERIÊNCIA & <span className="text-gradient">FORMAÇÃO</span>
           </h2>
           <p className="section-subtitle">
-            Atuação técnica no mercado corporativo e desenvolvimento acadêmico contínuo.
+            Histórico profissional no mercado de tecnologia e base acadêmica sólida em Engenharia de Software.
           </p>
 
-          <div style={{ marginTop: "2rem" }}>
+          <div style={{ marginTop: "1.75rem" }}>
             <a
               href={personalInfo.cvPath}
               download="Curriculo_Gabriel_Yan.pdf"
@@ -36,27 +41,27 @@ export default function Experience() {
                 display: "flex",
                 alignItems: "center",
                 gap: "0.75rem",
-                marginBottom: "2rem"
+                marginBottom: "1.75rem"
               }}
             >
               <div
                 style={{
-                  width: "2.5rem",
-                  height: "2.5rem",
-                  borderRadius: "6px",
-                  background: "rgba(237, 20, 91, 0.15)",
-                  border: "1px solid var(--fiap-magenta)",
+                  width: "2.75rem",
+                  height: "2.75rem",
+                  borderRadius: "10px",
+                  background: "var(--purple-subtle)",
+                  border: "1px solid var(--purple-primary)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--fiap-magenta)",
-                  boxShadow: "0 0 15px rgba(237, 20, 91, 0.4)"
+                  color: "var(--purple-primary)",
+                  boxShadow: "0 0 14px var(--purple-glow)"
                 }}
               >
-                <Briefcase size={18} />
+                <Briefcase size={20} />
               </div>
-              <h3 style={{ fontSize: "1.4rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
-                EXPERIÊNCIAS
+              <h3 style={{ fontSize: "1.35rem", fontWeight: 800, color: "var(--text-primary)" }}>
+                EXPERIÊNCIAS PROFISSIONAIS
               </h3>
             </div>
 
@@ -75,14 +80,13 @@ export default function Experience() {
                   >
                     <span
                       style={{
-                        fontSize: "0.75rem",
-                        fontFamily: "monospace",
+                        fontSize: "0.76rem",
                         fontWeight: 700,
-                        padding: "0.25rem 0.65rem",
-                        borderRadius: "4px",
-                        background: "rgba(237, 20, 91, 0.15)",
-                        color: "var(--fiap-magenta)",
-                        border: "1px solid rgba(237, 20, 91, 0.3)",
+                        padding: "0.25rem 0.7rem",
+                        borderRadius: "6px",
+                        background: "var(--purple-subtle)",
+                        color: "var(--purple-primary)",
+                        border: "1px solid var(--border-color)",
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.35rem"
@@ -95,7 +99,6 @@ export default function Experience() {
                       style={{
                         fontSize: "0.82rem",
                         color: "var(--text-muted)",
-                        fontFamily: "monospace",
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.25rem"
@@ -106,21 +109,27 @@ export default function Experience() {
                     </span>
                   </div>
 
-                  <h4 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.25rem", color: "#fff" }}>
+                  <h4
+                    style={{
+                      fontSize: "1.18rem",
+                      fontWeight: 700,
+                      marginBottom: "0.25rem",
+                      color: "var(--text-primary)"
+                    }}
+                  >
                     {exp.role}
                   </h4>
                   <div
                     style={{
-                      fontSize: "0.95rem",
-                      color: "var(--fiap-cyan)",
+                      fontSize: "0.92rem",
+                      color: "var(--purple-primary)",
                       fontWeight: 600,
-                      marginBottom: "0.85rem",
-                      fontFamily: "monospace"
+                      marginBottom: "0.85rem"
                     }}
                   >
                     @{exp.company}
                   </div>
-                  <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>
+                  <p style={{ fontSize: "0.92rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>
                     {exp.description}
                   </p>
                 </div>
@@ -135,27 +144,27 @@ export default function Experience() {
                 display: "flex",
                 alignItems: "center",
                 gap: "0.75rem",
-                marginBottom: "2rem"
+                marginBottom: "1.75rem"
               }}
             >
               <div
                 style={{
-                  width: "2.5rem",
-                  height: "2.5rem",
-                  borderRadius: "6px",
-                  background: "rgba(0, 210, 255, 0.15)",
-                  border: "1px solid var(--fiap-cyan)",
+                  width: "2.75rem",
+                  height: "2.75rem",
+                  borderRadius: "10px",
+                  background: "var(--purple-subtle)",
+                  border: "1px solid var(--purple-primary)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--fiap-cyan)",
-                  boxShadow: "0 0 15px rgba(0, 210, 255, 0.35)"
+                  color: "var(--purple-primary)",
+                  boxShadow: "0 0 14px var(--purple-glow)"
                 }}
               >
-                <GraduationCap size={18} />
+                <GraduationCap size={20} />
               </div>
-              <h3 style={{ fontSize: "1.4rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
-                FORMAÇÕES
+              <h3 style={{ fontSize: "1.35rem", fontWeight: 800, color: "var(--text-primary)" }}>
+                FORMAÇÃO ACADÊMICA
               </h3>
             </div>
 
@@ -174,14 +183,13 @@ export default function Experience() {
                   >
                     <span
                       style={{
-                        fontSize: "0.75rem",
-                        fontFamily: "monospace",
+                        fontSize: "0.76rem",
                         fontWeight: 700,
-                        padding: "0.25rem 0.65rem",
-                        borderRadius: "4px",
-                        background: "rgba(0, 210, 255, 0.15)",
-                        color: "var(--fiap-cyan)",
-                        border: "1px solid rgba(0, 210, 255, 0.3)",
+                        padding: "0.25rem 0.7rem",
+                        borderRadius: "6px",
+                        background: "var(--purple-subtle)",
+                        color: "var(--purple-primary)",
+                        border: "1px solid var(--border-color)",
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.35rem"
@@ -194,7 +202,6 @@ export default function Experience() {
                       style={{
                         fontSize: "0.82rem",
                         color: "var(--text-muted)",
-                        fontFamily: "monospace",
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.25rem"
@@ -205,21 +212,27 @@ export default function Experience() {
                     </span>
                   </div>
 
-                  <h4 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.25rem", color: "#fff" }}>
+                  <h4
+                    style={{
+                      fontSize: "1.18rem",
+                      fontWeight: 700,
+                      marginBottom: "0.25rem",
+                      color: "var(--text-primary)"
+                    }}
+                  >
                     {edu.degree}
                   </h4>
                   <div
                     style={{
-                      fontSize: "0.95rem",
-                      color: "var(--fiap-cyan)",
+                      fontSize: "0.92rem",
+                      color: "var(--purple-primary)",
                       fontWeight: 600,
-                      marginBottom: "0.85rem",
-                      fontFamily: "monospace"
+                      marginBottom: "0.85rem"
                     }}
                   >
                     @{edu.institution}
                   </div>
-                  <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>
+                  <p style={{ fontSize: "0.92rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>
                     {edu.description}
                   </p>
                 </div>

@@ -12,34 +12,40 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio-gabrielyandev.vercel.app"),
-  title: "@gabrielyandev - Portfólio",
-  description: "Desenvolvedor Web Full-Stack e entusiasta de UX/UI. Conheça meus projetos!",
+  title: "Gabriel Yan | Sistemas Web Sob Medida, PWAs & Landing Pages de Alta Conversão",
+  description:
+    "Desenvolvedor Full-Stack especializado em sistemas web corporativos, dashboards interativos, PWAs com suporte a APK Android e landing pages de alta conversão. Solicite seu orçamento.",
   authors: [{ name: "Gabriel Yan", url: "https://github.com/gabrielyandev" }],
   keywords: [
     "Gabriel Yan",
-    "Desenvolvedor Web",
-    "Full-Stack",
-    "Front-End",
-    "Back-End",
+    "Desenvolvedor Full-Stack",
+    "Sistemas Web Sob Medida",
+    "Desenvolvimento de Software",
+    "PWAs",
+    "Capacitor Android",
+    "Laravel",
+    "Vue.js",
     "Next.js",
     "React",
-    "TypeScript"
+    "Landing Pages de Alta Conversão",
+    "Contratar Desenvolvedor Web"
   ],
   icons: {
     icon: "/assets/favicon.png",
     shortcut: "/assets/favicon.ico"
   },
   openGraph: {
-    title: "@gabrielyandev - Portfólio",
-    description: "Desenvolvedor Web Full-Stack e entusiasta de UX/UI. Conheça meus projetos!",
+    title: "Gabriel Yan | Sistemas Web Sob Medida, PWAs & Landing Pages",
+    description:
+      "Desenvolvedor Full-Stack especializado em sistemas web corporativos, dashboards interativos, PWAs e landing pages de alta conversão. Solicite uma proposta comercial.",
     url: "https://portfolio-gabrielyandev.vercel.app/",
-    siteName: "@gabrielyandev - Portfólio",
+    siteName: "Gabriel Yan - Engenharia de Software & Desenvolvimento Web",
     images: [
       {
-        url: "/assets/img/my-portfolio.png",
+        url: "/assets/img/projects/taskhub-kanban.png",
         width: 1200,
         height: 630,
-        alt: "Preview do Portfólio de Gabriel Yan"
+        alt: "Cases de Sistemas Web por Gabriel Yan"
       }
     ],
     locale: "pt_BR",
@@ -47,9 +53,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "@gabrielyandev - Portfólio",
-    description: "Desenvolvedor Web Full-Stack e entusiasta de UX/UI. Conheça meus projetos!",
-    images: ["/assets/img/my-portfolio.png"]
+    title: "Gabriel Yan | Sistemas Web Sob Medida, PWAs & Landing Pages",
+    description:
+      "Desenvolvedor Full-Stack especializado em sistemas corporativos, dashboards, PWAs e landing pages de conversão.",
+    images: ["/assets/img/projects/taskhub-kanban.png"]
   }
 };
 

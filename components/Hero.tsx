@@ -2,9 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Github, Linkedin, ArrowDown, Terminal } from "lucide-react";
+import { Github, Linkedin, ArrowDown, ArrowRight, MessageCircle, Sparkles, Code2 } from "lucide-react";
 import { personalInfo } from "@/data/portfolioData";
-import ParticleBackground from "./ParticleBackground";
 
 export default function Hero() {
   const [textIndex, setTextIndex] = useState(0);
@@ -13,13 +12,13 @@ export default function Hero() {
 
   useEffect(() => {
     const fullText = personalInfo.typingTexts[textIndex];
-    const typingSpeed = isDeleting ? 35 : 65;
+    const typingSpeed = isDeleting ? 30 : 65;
 
     const timer = setTimeout(() => {
       if (!isDeleting) {
         setCurrentText(fullText.substring(0, currentText.length + 1));
         if (currentText.length === fullText.length) {
-          setTimeout(() => setIsDeleting(true), 2500);
+          setTimeout(() => setIsDeleting(true), 2400);
         }
       } else {
         setCurrentText(fullText.substring(0, currentText.length - 1));
@@ -47,99 +46,72 @@ export default function Hero() {
         overflow: "hidden"
       }}
     >
-      <ParticleBackground />
-
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="hero-grid">
-          {/* Left Column - Tech Introduction */}
+          {/* Left Column - Presentation & Conversion CTA */}
           <div>
-            {/* FIAP Style Cyber Tag */}
+            {/* Availability Status Badge */}
             <div
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "0.5rem",
-                padding: "0.35rem 0.85rem",
-                borderRadius: "4px",
-                background: "rgba(237, 20, 91, 0.12)",
-                border: "1px solid rgba(237, 20, 91, 0.35)",
-                fontFamily: "monospace",
+                gap: "0.55rem",
+                padding: "0.4rem 0.95rem",
+                borderRadius: "999px",
+                background: "var(--purple-subtle)",
+                border: "1px solid var(--border-color)",
                 fontSize: "0.82rem",
-                color: "var(--fiap-magenta)",
-                letterSpacing: "0.12em",
+                fontWeight: 700,
+                color: "var(--purple-primary)",
                 marginBottom: "1.5rem"
               }}
             >
-              <Terminal size={14} />
-              <span>// FULL-STACK &middot; FRONT-END &middot; BACK-END</span>
+              <div className="pulse-status" />
+              <span>{personalInfo.badge}</span>
             </div>
 
             <p
               style={{
                 fontSize: "1.15rem",
                 color: "var(--text-secondary)",
-                marginBottom: "0.75rem",
-                fontWeight: 500,
-                letterSpacing: "0.02em"
+                marginBottom: "0.6rem",
+                fontWeight: 600,
+                letterSpacing: "-0.01em"
               }}
             >
-              Gabriel Yan &middot; <span style={{ color: "#fff" }}>Desenvolvedor Full-Stack</span>
+              Olá, sou <span style={{ color: "var(--text-primary)" }}>{personalInfo.name}</span> &mdash; Full-Stack Developer
             </p>
 
-            {/* Main Headline with Underscores and Typewriter */}
-            <div style={{ marginBottom: "1.75rem" }}>
-              <div
-                style={{
-                  fontFamily: "monospace",
-                  fontSize: "0.8rem",
-                  color: "var(--fiap-magenta)",
-                  letterSpacing: "0.3em",
-                  marginBottom: "0.5rem"
-                }}
-              >
-                ______________________________
-              </div>
-
+            {/* Dynamic Typewriter Headline */}
+            <div style={{ marginBottom: "1.5rem" }}>
               <h1
                 style={{
-                  fontSize: "clamp(2.2rem, 5.2vw, 3.8rem)",
-                  fontWeight: 800,
+                  fontSize: "clamp(2.3rem, 5vw, 3.8rem)",
+                  fontWeight: 900,
                   lineHeight: 1.15,
                   letterSpacing: "-0.03em",
-                  minHeight: "4.5rem",
-                  textTransform: "uppercase"
+                  minHeight: "4.5rem"
                 }}
               >
+                Desenvolvo <br />
                 <span className="text-gradient">{currentText}</span>
                 <span className="cursor-blink">|</span>
               </h1>
-
-              <div
-                style={{
-                  fontFamily: "monospace",
-                  fontSize: "0.8rem",
-                  color: "var(--fiap-cyan)",
-                  letterSpacing: "0.3em",
-                  marginTop: "0.5rem"
-                }}
-              >
-                ______________________________
-              </div>
             </div>
 
             <p
               style={{
                 fontSize: "1.05rem",
                 color: "var(--text-secondary)",
-                maxWidth: "520px",
+                maxWidth: "540px",
                 marginBottom: "2.5rem",
                 lineHeight: 1.75
               }}
             >
-              Desenvolvimento de software de alta performance, arquitetura de bancos de dados relacionais e interfaces modernas focadas na experiência do usuário.
+              Engenharia de software aplicada para criar sistemas web completos, dashboards com métricas em tempo real, PWAs multiplataforma e landing pages de alta conversão.
             </p>
 
-            {/* Action buttons */}
+            {/* Action Buttons with Direct Conversion */}
             <div
               style={{
                 display: "flex",
@@ -149,50 +121,92 @@ export default function Hero() {
               }}
             >
               <a
-                href={personalInfo.github}
+                href={personalInfo.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                <Github size={18} />
-                <span>Ver GitHub</span>
+                <MessageCircle size={18} />
+                <span>Solicitar Orçamento de Projeto</span>
+              </a>
+
+              <a
+                href="#servicos"
+                className="btn-secondary"
+              >
+                <span>Conhecer Serviços</span>
+                <ArrowRight size={16} />
+              </a>
+            </div>
+
+            {/* Social Proof & Profiles */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "1.25rem",
+                marginTop: "2.5rem",
+                paddingTop: "1.5rem",
+                borderTop: "1px solid var(--border-color)"
+              }}
+            >
+              <span
+                style={{
+                  fontSize: "0.82rem",
+                  color: "var(--text-muted)",
+                  fontWeight: 600,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.05em"
+                }}
+              >
+                Conecte-se:
+              </span>
+
+              <a
+                href={personalInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "var(--text-secondary)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.35rem",
+                  textDecoration: "none",
+                  fontSize: "0.88rem",
+                  fontWeight: 600,
+                  transition: "color 0.2s"
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--purple-primary)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
+              >
+                <Github size={17} />
+                <span>GitHub</span>
               </a>
 
               <a
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                <Linkedin size={18} />
-                <span>LinkedIn</span>
-              </a>
-
-              <a
-                href="#projetos"
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.4rem",
                   color: "var(--text-secondary)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.35rem",
                   textDecoration: "none",
-                  fontWeight: 700,
-                  fontSize: "0.85rem",
-                  fontFamily: "monospace",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  marginLeft: "0.5rem",
-                  transition: "color 0.2s ease"
+                  fontSize: "0.88rem",
+                  fontWeight: 600,
+                  transition: "color 0.2s"
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--fiap-magenta)")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--purple-primary)")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
               >
-                <span>// Explorar Projetos</span>
+                <Linkedin size={17} />
+                <span>LinkedIn</span>
               </a>
             </div>
           </div>
 
-          {/* Right Column - Cyberpunk Profile Frame with Tech Corners */}
+          {/* Right Column - Profile Card in Purple Frame */}
           <div
             style={{
               display: "flex",
@@ -204,50 +218,22 @@ export default function Hero() {
               className="floating-element"
               style={{
                 position: "relative",
-                width: "min(350px, 85vw)",
-                height: "min(350px, 85vw)",
-                borderRadius: "16px",
+                width: "min(360px, 85vw)",
+                height: "min(360px, 85vw)",
+                borderRadius: "24px",
                 padding: "3px",
-                background: "linear-gradient(135deg, #ed145b 0%, rgba(0, 210, 255, 0.4) 50%, #7928ca 100%)",
-                boxShadow: "0 0 40px -5px rgba(237, 20, 91, 0.5)"
+                background: "var(--gradient-main)",
+                boxShadow: "var(--shadow-glow)"
               }}
             >
-              {/* Corner Tech Decorators */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "-8px",
-                  left: "-8px",
-                  color: "var(--fiap-magenta)",
-                  fontFamily: "monospace",
-                  fontSize: "1.2rem",
-                  fontWeight: 900
-                }}
-              >
-                +
-              </div>
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: "-8px",
-                  right: "-8px",
-                  color: "var(--fiap-cyan)",
-                  fontFamily: "monospace",
-                  fontSize: "1.2rem",
-                  fontWeight: 900
-                }}
-              >
-                +
-              </div>
-
               <div
                 style={{
                   width: "100%",
                   height: "100%",
-                  borderRadius: "14px",
+                  borderRadius: "21px",
                   overflow: "hidden",
                   position: "relative",
-                  background: "#08080d"
+                  background: "var(--bg-secondary)"
                 }}
               >
                 <Image
@@ -277,7 +263,7 @@ export default function Hero() {
         }}
       >
         <a
-          href="#sobre"
+          href="#servicos"
           style={{
             display: "inline-flex",
             flexDirection: "column",
@@ -285,17 +271,17 @@ export default function Hero() {
             gap: "0.5rem",
             textDecoration: "none",
             color: "var(--text-muted)",
-            fontSize: "0.75rem",
-            fontFamily: "monospace",
-            letterSpacing: "0.2em",
+            fontSize: "0.76rem",
+            fontWeight: 700,
+            letterSpacing: "0.15em",
             textTransform: "uppercase",
             transition: "color 0.2s ease"
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "var(--fiap-magenta)")}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "var(--purple-primary)")}
           onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
         >
-          <span>SCROLL DOWN</span>
-          <ArrowDown size={16} color="var(--fiap-magenta)" style={{ animation: "float 2s infinite" }} />
+          <span>CONHEÇA AS SOLUÇÕES</span>
+          <ArrowDown size={16} color="var(--purple-primary)" style={{ animation: "float 2s infinite" }} />
         </a>
       </div>
     </header>

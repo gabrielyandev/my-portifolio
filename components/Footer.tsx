@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUp, Github, Linkedin, MessageCircle, Terminal } from "lucide-react";
+import { ArrowUp, Github, Linkedin, MessageCircle, Code2 } from "lucide-react";
 import { personalInfo } from "@/data/portfolioData";
 
 export default function Footer() {
@@ -12,8 +12,8 @@ export default function Footer() {
     <footer
       style={{
         borderTop: "1px solid var(--border-color)",
-        background: "#030305",
-        paddingTop: "4rem",
+        background: "var(--bg-secondary)",
+        paddingTop: "4.5rem",
         paddingBottom: "3rem",
         position: "relative",
         zIndex: 1
@@ -31,41 +31,41 @@ export default function Footer() {
           }}
         >
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.5rem" }}>
               <div
                 style={{
-                  width: "1.75rem",
-                  height: "1.75rem",
-                  borderRadius: "4px",
-                  background: "rgba(237, 20, 91, 0.15)",
-                  border: "1px solid var(--fiap-magenta)",
+                  width: "2rem",
+                  height: "2rem",
+                  borderRadius: "6px",
+                  background: "var(--purple-subtle)",
+                  border: "1px solid var(--purple-primary)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "var(--fiap-magenta)"
+                  color: "var(--purple-primary)"
                 }}
               >
-                <Terminal size={12} />
+                <Code2 size={14} />
               </div>
               <span
                 style={{
-                  fontSize: "1.2rem",
+                  fontSize: "1.25rem",
                   fontWeight: 800,
                   letterSpacing: "-0.02em",
-                  color: "#fff"
+                  color: "var(--text-primary)"
                 }}
               >
-                gabrielyan<span style={{ color: "var(--fiap-magenta)" }}>.dev</span>
+                gabrielyan<span style={{ color: "var(--purple-primary)" }}>.dev</span>
               </span>
             </div>
             <p
               style={{
-                fontSize: "0.9rem",
+                fontSize: "0.92rem",
                 color: "var(--text-secondary)",
-                maxWidth: "450px"
+                maxWidth: "480px"
               }}
             >
-              Desenvolvimento Full-Stack, Engenharia de Software e Interfaces Modernas.
+              Desenvolvimento de Sistemas Web Sob Medida, Dashboards, PWAs e Landing Pages de Alta Conversão.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary btn-sm"
-              aria-label="GitHub"
+              aria-label="GitHub de Gabriel Yan"
               style={{ padding: "0.65rem" }}
             >
               <Github size={18} />
@@ -85,7 +85,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary btn-sm"
-              aria-label="LinkedIn"
+              aria-label="LinkedIn de Gabriel Yan"
               style={{ padding: "0.65rem" }}
             >
               <Linkedin size={18} />
@@ -95,7 +95,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary btn-sm"
-              aria-label="WhatsApp"
+              aria-label="WhatsApp de Gabriel Yan"
               style={{ padding: "0.65rem" }}
             >
               <MessageCircle size={18} />
@@ -103,28 +103,28 @@ export default function Footer() {
 
             <button
               onClick={scrollToTop}
-              aria-label="Voltar ao topo"
+              aria-label="Voltar ao topo da página"
               style={{
-                background: "var(--fiap-magenta)",
+                background: "var(--gradient-main)",
                 border: "none",
                 color: "#ffffff",
-                borderRadius: "4px",
-                width: "2.6rem",
-                height: "2.6rem",
+                borderRadius: "10px",
+                width: "2.75rem",
+                height: "2.75rem",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 cursor: "pointer",
-                transition: "all 0.2s ease",
-                boxShadow: "0 0 15px rgba(237, 20, 91, 0.4)"
+                transition: "all 0.25s ease",
+                boxShadow: "0 4px 15px var(--purple-glow)"
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-3px)";
-                e.currentTarget.style.boxShadow = "0 0 25px rgba(237, 20, 91, 0.8)";
+                e.currentTarget.style.boxShadow = "0 8px 25px var(--purple-glow)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 0 15px rgba(237, 20, 91, 0.4)";
+                e.currentTarget.style.boxShadow = "0 4px 15px var(--purple-glow)";
               }}
             >
               <ArrowUp size={18} />
@@ -142,15 +142,14 @@ export default function Footer() {
             flexWrap: "wrap",
             gap: "1rem",
             fontSize: "0.82rem",
-            fontFamily: "monospace",
             color: "var(--text-muted)"
           }}
         >
           <div>
-            &copy; {new Date().getFullYear()} GABRIEL YAN &middot; ALL RIGHTS RESERVED
+            &copy; {new Date().getFullYear()} Gabriel Yan &middot; Todos os direitos reservados.
           </div>
-          <div style={{ color: "var(--fiap-magenta)" }}>
-            [ NEXT.JS 15 // TYPESCRIPT // REACT 19 ]
+          <div style={{ color: "var(--purple-primary)", fontWeight: 600 }}>
+            Next.js &middot; TypeScript &middot; React &middot; Purple Theme
           </div>
         </div>
       </div>
