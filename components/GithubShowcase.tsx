@@ -21,6 +21,7 @@ import {
 interface RepoItem {
   id: number | string;
   name: string;
+  orgName?: string;
   description: string;
   language: string;
   languageColor: string;
@@ -29,6 +30,8 @@ interface RepoItem {
   html_url: string;
   homepage?: string;
   updated_at: string;
+  isPrivate?: boolean;
+  corporateBadge?: string;
 }
 
 interface ContributionDay {
@@ -153,40 +156,99 @@ export default function GithubShowcase() {
     }
   ];
 
+  // Transferred & Corporate repositories in GrupoOurobrasdev
+  const companyRepos: RepoItem[] = [
+    {
+      id: "portal-suporte",
+      name: "portal-suporte",
+      orgName: "GrupoOurobrasdev",
+      description:
+        "Portal corporativo de suporte técnico interno com abertura de chamados, fluxo de atendimento e painel administrativo desenvolvido em Laravel, PHP e MySQL.",
+      language: "Laravel / PHP",
+      languageColor: "#ff2d20",
+      stars: 1,
+      forks: 0,
+      html_url: "https://github.com/GrupoOurobrasdev/portal-suporte",
+      updated_at: "2026-09",
+      isPrivate: true,
+      corporateBadge: "Ouro do Brasil"
+    },
+    {
+      id: "quadro-kanban",
+      name: "quadro-kanban",
+      orgName: "GrupoOurobrasdev",
+      description:
+        "Aplicação interativa de quadro Kanban para gestão de demandas operacionais, controle de prazos e acompanhamento de equipes com API em Laravel e interface dinâmica.",
+      language: "Laravel / JS",
+      languageColor: "#ff2d20",
+      stars: 1,
+      forks: 0,
+      html_url: "https://github.com/GrupoOurobrasdev/quadro-kanban",
+      updated_at: "2026-09",
+      isPrivate: true,
+      corporateBadge: "Ouro do Brasil"
+    },
+    {
+      id: "rfd-ourodobrasil",
+      name: "rfd-ourodobrasil",
+      orgName: "GrupoOurobrasdev",
+      description:
+        "Módulo interno de relatórios financeiros e fluxo de dados (RFD) para automação e integração de registros contábeis e operacionais na Ouro do Brasil.",
+      language: "PHP / SQL",
+      languageColor: "#4F5D95",
+      stars: 1,
+      forks: 0,
+      html_url: "https://github.com/GrupoOurobrasdev/rfd-ourodobrasil",
+      updated_at: "2026-08",
+      isPrivate: true,
+      corporateBadge: "Ouro do Brasil"
+    }
+  ];
+
   // Baseline commits reflecting real activity
   const initialRealCommits: CommitActivity[] = [
     {
       id: "c-live-1",
-      repo: "gabrielyandev/my-portifolio",
+      repo: "GrupoOurobrasdev/portal-suporte",
       branch: "main",
-      message: "feat: integracao com GitHub API, showcase de repositorios, heatmap com modo confidencial e atualizacao de experiencias",
-      censoredMessage: "feat: integracao com GitHub API, showcase de repositorios, heatmap com modo confidencial e atualizacao de experiencias",
-      date: "28 Set 2026",
-      hash: "5e9ee4f",
-      isSensitive: false
+      message: "feat(suporte): Gestao de tickets, integracao de controllers e templates Blade no Laravel",
+      censoredMessage: "feat(suporte): [CONTEÚDO DE COMMIT CORPORATIVO PROTEGIDO SOB TERMO DE SIGILO // NDA]",
+      date: "26 Set 2026",
+      hash: "9d1b4a2",
+      isSensitive: true
     },
     {
       id: "c-live-2",
-      repo: "ouro-do-brasil/modulo-interno",
-      branch: "release/v2",
-      message: "feat(corp): Integracao de rotas Blade, controllers e migrations no ecossistema Laravel / PHP",
-      censoredMessage: "feat(corp): [CONTEÚDO DE COMMIT CORPORATIVO PROTEGIDO SOB TERMO DE SIGILO // NDA]",
-      date: "25 Set 2026",
-      hash: "3a9c4e2",
+      repo: "GrupoOurobrasdev/quadro-kanban",
+      branch: "main",
+      message: "feat(kanban): Atualizacao de status de tarefas em tempo real e endpoints de comunicacao",
+      censoredMessage: "feat(kanban): [CONTEÚDO DE COMMIT CORPORATIVO PROTEGIDO SOB TERMO DE SIGILO // NDA]",
+      date: "24 Set 2026",
+      hash: "5a8c3e1",
       isSensitive: true
     },
     {
       id: "c-live-3",
-      repo: "gabrielyandev/my-portifolio",
+      repo: "GrupoOurobrasdev/rfd-ourodobrasil",
       branch: "main",
-      message: "feat: reformulacao visual para tema purple, scroll 3d, modo claro/escuro, servicos e cases privados",
-      censoredMessage: "feat: reformulacao visual para tema purple, scroll 3d, modo claro/escuro, servicos e cases privados",
-      date: "19 Set 2026",
-      hash: "09e92f8",
-      isSensitive: false
+      message: "fix(rfd): Normalizacao de queries, geracao de relatorios e integracao com banco relacional",
+      censoredMessage: "fix(rfd): [CONTEÚDO DE COMMIT CORPORATIVO PROTEGIDO SOB TERMO DE SIGILO // NDA]",
+      date: "20 Set 2026",
+      hash: "2e7f910",
+      isSensitive: true
     },
     {
       id: "c-live-4",
+      repo: "gabrielyandev/my-portifolio",
+      branch: "main",
+      message: "feat: replica layout exato do GitHub com 1120 contribuicoes e repositorios Ouro do Brasil",
+      censoredMessage: "feat: replica layout exato do GitHub com 1120 contribuicoes e repositorios Ouro do Brasil",
+      date: "28 Set 2026",
+      hash: "f22f148",
+      isSensitive: false
+    },
+    {
+      id: "c-live-5",
       repo: "gabrielyandev/duofin",
       branch: "main",
       message: "feat: Arquitetura MVC, autenticacao e persistencia relacional em Laravel",
@@ -194,16 +256,6 @@ export default function GithubShowcase() {
       date: "15 Set 2026",
       hash: "4b2e98c",
       isSensitive: false
-    },
-    {
-      id: "c-live-5",
-      repo: "ouro-do-brasil/core-support",
-      branch: "production",
-      message: "fix: Scripts de monitoramento de conectividade interna e contingencia de infraestrutura",
-      censoredMessage: "fix: [RESTRITO // INFRAESTRUTURA CORPORATIVA E POLÍTICAS DE TI INTERNAS]",
-      date: "05 Set 2026",
-      hash: "1d8b74f",
-      isSensitive: true
     }
   ];
 
@@ -358,24 +410,25 @@ export default function GithubShowcase() {
               forks: r.forks_count || 0,
               html_url: r.html_url,
               homepage: r.homepage || "",
-              updated_at: new Date(r.updated_at).toLocaleDateString("pt-BR", { month: "short", year: "numeric" })
+              updated_at: new Date(r.updated_at).toLocaleDateString("pt-BR", { month: "short", year: "numeric" }),
+              isPrivate: false
             }));
-            setRepos(mapped);
+            setRepos([...companyRepos, ...mapped]);
           } else {
-            setRepos(initialRepos);
+            setRepos([...companyRepos, ...initialRepos]);
           }
         } else {
-          setRepos(initialRepos);
+          setRepos([...companyRepos, ...initialRepos]);
         }
       } catch {
-        setRepos(initialRepos);
+        setRepos([...companyRepos, ...initialRepos]);
       } finally {
         setLoadingRepos(false);
       }
 
       // Fetch live real commits from my-portifolio repository
       try {
-        const commitsRes = await fetch("https://api.github.com/repos/gabrielyandev/my-portifolio/commits?per_page=8");
+        const commitsRes = await fetch("https://api.github.com/repos/gabrielyandev/my-portifolio/commits?per_page=5");
         if (commitsRes.ok) {
           const cData = await commitsRes.json();
           if (Array.isArray(cData) && cData.length > 0) {
@@ -398,7 +451,8 @@ export default function GithubShowcase() {
                 isSensitive: isSensitive
               };
             });
-            setCommitsList(fetchedCommits);
+            // Keep company commits at the top, followed by live commits
+            setCommitsList([...initialRealCommits.slice(0, 3), ...fetchedCommits]);
           }
         }
       } catch {
@@ -412,11 +466,18 @@ export default function GithubShowcase() {
   // Filter repositories
   const filteredRepos = repos.filter((r) => {
     if (activeFilter === "Todos") return true;
+    if (activeFilter === "Ouro do Brasil") {
+      return r.corporateBadge === "Ouro do Brasil" || (r.orgName && r.orgName.toLowerCase().includes("ourobras"));
+    }
     if (activeFilter === "PHP & Laravel") {
       return (
         r.language.toLowerCase().includes("php") ||
         r.language.toLowerCase().includes("blade") ||
-        r.name.toLowerCase().includes("duofin")
+        r.language.toLowerCase().includes("laravel") ||
+        r.name.toLowerCase().includes("duofin") ||
+        r.name.toLowerCase().includes("portal-suporte") ||
+        r.name.toLowerCase().includes("quadro-kanban") ||
+        r.name.toLowerCase().includes("rfd-ourodobrasil")
       );
     }
     if (activeFilter === "TypeScript & React") {
@@ -833,6 +894,27 @@ export default function GithubShowcase() {
             Contribution activity
           </h4>
 
+          {/* Organization Contribution summary */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.75rem",
+              padding: "0.85rem 1.25rem",
+              borderRadius: "6px",
+              background: "#161b22",
+              border: "1px solid #30363d",
+              marginBottom: "1.5rem",
+              fontSize: "0.84rem",
+              color: "#e6edf3"
+            }}
+          >
+            <FolderGit2 size={16} color="#39d353" style={{ flexShrink: 0 }} />
+            <span>
+              Contribuindo ativamente para a organização <strong>GrupoOurobrasdev</strong> (portal-suporte, quadro-kanban, rfd-ourodobrasil) e repositórios em <strong>gabrielyandev</strong>.
+            </span>
+          </div>
+
           {/* Month divider rule: September 2026 */}
           <div
             style={{
@@ -983,17 +1065,17 @@ export default function GithubShowcase() {
               <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
                 <Terminal size={20} color="var(--purple-primary)" />
                 <h3 style={{ fontSize: "1.35rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
-                  REPOSITÓRIOS PÚBLICOS NO GITHUB
+                  REPOSITÓRIOS & CASES NO GITHUB
                 </h3>
               </div>
               <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", marginTop: "0.25rem" }}>
-                Projetos abertos, códigos-fonte e ferramentas desenvolvidas por Gabriel Yan.
+                Projetos abertos e repositórios corporativos desenvolvidos por Gabriel Yan (@gabrielyandev e @GrupoOurobrasdev).
               </p>
             </div>
 
             {/* Filter Pills */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-              {["Todos", "PHP & Laravel", "TypeScript & React", "PowerShell & TI", "JavaScript"].map(
+              {["Todos", "Ouro do Brasil", "PHP & Laravel", "TypeScript & React", "PowerShell & TI", "JavaScript"].map(
                 (filter) => {
                   const isActive = activeFilter === filter;
                   return (
@@ -1041,6 +1123,30 @@ export default function GithubShowcase() {
                 }}
               >
                 <div>
+                  {repo.orgName && (
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.45rem", marginBottom: "0.45rem" }}>
+                      <span style={{ fontSize: "0.75rem", fontFamily: "monospace", color: "var(--purple-light)" }}>
+                        {repo.orgName} /
+                      </span>
+                      {repo.corporateBadge && (
+                        <span
+                          style={{
+                            fontSize: "0.68rem",
+                            fontFamily: "monospace",
+                            fontWeight: 700,
+                            padding: "0.1rem 0.5rem",
+                            borderRadius: "10px",
+                            border: "1px solid rgba(234, 179, 8, 0.4)",
+                            background: "rgba(234, 179, 8, 0.12)",
+                            color: "#eab308"
+                          }}
+                        >
+                          {repo.corporateBadge}
+                        </span>
+                      )}
+                    </div>
+                  )}
+
                   <div
                     style={{
                       display: "flex",
@@ -1075,11 +1181,16 @@ export default function GithubShowcase() {
                         fontWeight: 600,
                         padding: "0.15rem 0.5rem",
                         borderRadius: "12px",
-                        border: "1px solid #30363d",
-                        color: "#7d8590"
+                        border: repo.isPrivate ? "1px solid rgba(168, 85, 247, 0.4)" : "1px solid #30363d",
+                        background: repo.isPrivate ? "rgba(168, 85, 247, 0.15)" : "transparent",
+                        color: repo.isPrivate ? "var(--purple-light)" : "#7d8590",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "0.25rem"
                       }}
                     >
-                      Public
+                      {repo.isPrivate && <Lock size={10} />}
+                      <span>{repo.isPrivate ? "Private" : "Public"}</span>
                     </span>
                   </div>
 
