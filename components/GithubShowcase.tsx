@@ -409,9 +409,12 @@ export default function GithubShowcase() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <div className="section-tag">// 04 . GITHUB ECOSYSTEM & CONTRIBUIÇÕES</div>
+          <div className="section-tag">
+            <span className="section-tag-dot" />
+            <span>GITHUB ECOSYSTEM & REPOSITÓRIOS</span>
+          </div>
           <h2 className="section-title">
-            <span className="text-gradient">ATIVIDADE & REPOSITÓRIOS</span>
+            ATIVIDADE & <span className="text-gradient">REPOSITÓRIOS</span>
           </h2>
           <p className="section-subtitle">
             Sincronização com o perfil oficial @gabrielyandev, projetos versionados e esteira de desenvolvimento contínuo.
@@ -444,7 +447,7 @@ export default function GithubShowcase() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.35rem",
-                color: "var(--fiap-cyan)",
+                color: "var(--purple-light)",
                 fontSize: "0.85rem",
                 fontWeight: 600,
                 textDecoration: "none"
@@ -480,7 +483,7 @@ export default function GithubShowcase() {
           >
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.35rem" }}>
-                <FolderGit2 size={18} color="var(--fiap-cyan)" />
+                <FolderGit2 size={18} color="var(--purple-light)" />
                 <h3 style={{ fontSize: "1.15rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
                   GRÁFICO DE CONTRIBUIÇÕES NO GITHUB
                 </h3>
@@ -501,9 +504,9 @@ export default function GithubShowcase() {
                   gap: "0.55rem",
                   padding: "0.5rem 1rem",
                   borderRadius: "4px",
-                  background: isCensored ? "rgba(237, 20, 91, 0.15)" : "rgba(0, 210, 255, 0.15)",
-                  border: isCensored ? "1px solid var(--fiap-magenta)" : "1px solid var(--fiap-cyan)",
-                  color: isCensored ? "var(--fiap-magenta)" : "var(--fiap-cyan)",
+                  background: isCensored ? "rgba(168, 85, 247, 0.15)" : "rgba(99, 102, 241, 0.15)",
+                  border: isCensored ? "1px solid var(--purple-primary)" : "1px solid var(--purple-light)",
+                  color: isCensored ? "var(--purple-primary)" : "var(--purple-light)",
                   fontSize: "0.82rem",
                   fontWeight: 700,
                   fontFamily: "monospace",
@@ -525,15 +528,15 @@ export default function GithubShowcase() {
               gap: "0.75rem",
               padding: "0.75rem 1rem",
               borderRadius: "4px",
-              background: isCensored ? "rgba(237, 20, 91, 0.06)" : "rgba(0, 210, 255, 0.06)",
-              border: isCensored ? "1px dashed rgba(237, 20, 91, 0.3)" : "1px dashed rgba(0, 210, 255, 0.3)",
+              background: isCensored ? "rgba(168, 85, 247, 0.06)" : "rgba(99, 102, 241, 0.06)",
+              border: isCensored ? "1px dashed rgba(168, 85, 247, 0.3)" : "1px dashed rgba(99, 102, 241, 0.3)",
               marginBottom: "1.5rem"
             }}
           >
             {isCensored ? (
-              <Lock size={16} color="var(--fiap-magenta)" style={{ flexShrink: 0 }} />
+              <Lock size={16} color="var(--purple-primary)" style={{ flexShrink: 0 }} />
             ) : (
-              <Unlock size={16} color="var(--fiap-cyan)" style={{ flexShrink: 0 }} />
+              <Unlock size={16} color="var(--purple-light)" style={{ flexShrink: 0 }} />
             )}
             <span style={{ fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>
               {isCensored
@@ -588,7 +591,7 @@ export default function GithubShowcase() {
             <div>
               {hoveredDay ? (
                 <span style={{ color: "#ffffff" }}>
-                  <strong style={{ color: "var(--fiap-cyan)" }}>{hoveredDay.count} contribuições</strong> em {hoveredDay.date}
+                  <strong style={{ color: "var(--purple-light)" }}>{hoveredDay.count} contribuições</strong> em {hoveredDay.date}
                   {isCensored && hoveredDay.count > 0 && " (Detalhamento interno sob sigilo)"}
                 </span>
               ) : (
@@ -618,7 +621,7 @@ export default function GithubShowcase() {
               marginBottom: "1.5rem"
             }}
           >
-            <GitCommit size={20} color="var(--fiap-magenta)" />
+            <GitCommit size={20} color="var(--purple-primary)" />
             <h3 style={{ fontSize: "1.2rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
               FLUXO RECENTE DE COMMITS & VERSIONAMENTO
             </h3>
@@ -658,12 +661,12 @@ export default function GithubShowcase() {
                           padding: "0.2rem 0.55rem",
                           borderRadius: "4px",
                           background: shouldCensor
-                            ? "rgba(237, 20, 91, 0.15)"
-                            : "rgba(0, 210, 255, 0.15)",
-                          color: shouldCensor ? "var(--fiap-magenta)" : "var(--fiap-cyan)",
+                            ? "rgba(168, 85, 247, 0.15)"
+                            : "rgba(99, 102, 241, 0.15)",
+                          color: shouldCensor ? "var(--purple-primary)" : "var(--purple-light)",
                           border: shouldCensor
-                            ? "1px solid rgba(237, 20, 91, 0.35)"
-                            : "1px solid rgba(0, 210, 255, 0.35)",
+                            ? "1px solid rgba(168, 85, 247, 0.35)"
+                            : "1px solid rgba(99, 102, 241, 0.35)",
                           display: "inline-flex",
                           alignItems: "center",
                           gap: "0.3rem"
@@ -706,7 +709,7 @@ export default function GithubShowcase() {
                         style={{
                           fontSize: "0.75rem",
                           fontFamily: "monospace",
-                          color: "var(--fiap-cyan)",
+                          color: "var(--purple-light)",
                           padding: "0.15rem 0.45rem",
                           background: "rgba(255, 255, 255, 0.04)",
                           borderRadius: "3px"
@@ -750,7 +753,7 @@ export default function GithubShowcase() {
           >
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-                <Terminal size={20} color="var(--fiap-cyan)" />
+                <Terminal size={20} color="var(--purple-light)" />
                 <h3 style={{ fontSize: "1.35rem", fontWeight: 800, letterSpacing: "-0.01em" }}>
                   REPOSITÓRIOS PÚBLICOS NO GITHUB
                 </h3>
@@ -772,8 +775,8 @@ export default function GithubShowcase() {
                       style={{
                         padding: "0.45rem 1rem",
                         borderRadius: "4px",
-                        border: isActive ? "1px solid var(--fiap-cyan)" : "1px solid rgba(255, 255, 255, 0.1)",
-                        background: isActive ? "rgba(0, 210, 255, 0.15)" : "rgba(255, 255, 255, 0.02)",
+                        border: isActive ? "1px solid var(--purple-light)" : "1px solid rgba(255, 255, 255, 0.1)",
+                        background: isActive ? "rgba(99, 102, 241, 0.15)" : "rgba(255, 255, 255, 0.02)",
                         color: isActive ? "#ffffff" : "var(--text-secondary)",
                         fontSize: "0.8rem",
                         fontWeight: 700,
@@ -834,7 +837,7 @@ export default function GithubShowcase() {
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "0.5rem",
-                        color: "var(--fiap-cyan)",
+                        color: "var(--purple-light)",
                         fontWeight: 700,
                         fontSize: "1.05rem",
                         textDecoration: "none",

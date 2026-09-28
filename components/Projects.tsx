@@ -2,81 +2,39 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ExternalLink, Github, Terminal } from "lucide-react";
-import { projects } from "@/data/portfolioData";
+import { Lock, Eye, MessageCircle, Sparkles, CheckCircle } from "lucide-react";
+import { projects, Project } from "@/data/portfolioData";
+import ProjectModal from "./ProjectModal";
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState("Todos");
-
-  const filterOptions = ["Todos", "Landing Page", "React", "JavaScript", "Tools"];
-
-  const filteredProjects =
-    activeFilter === "Todos"
-      ? projects
-      : projects.filter((p) =>
-          p.tags.some((t) => t.toLowerCase().includes(activeFilter.toLowerCase()))
-        );
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
-    <section id="projetos" className="section-py" style={{ background: "transparent" }}>
+    <section id="projetos" className="section-py" style={{ position: "relative" }}>
       <div className="container">
+        {/* Header */}
         <div className="section-header">
-          <div className="section-tag">// 04 . PROJETOS EM DESTAQUE</div>
+          <div className="section-tag">
+            <span className="section-tag-dot" />
+            <span>PROJETOS EM DESTAQUE & CASES</span>
+          </div>
           <h2 className="section-title">
-            <span className="text-gradient">SHOWCASE DE APLICAÇÕES</span>
+            SOLUÇÕES REAIS <span className="text-gradient">DESENVOLVIDAS</span>
           </h2>
           <p className="section-subtitle">
-            Soluções completas com deploy ativo, código versionado e foco em usabilidade.
+            Aplicações corporativas completas, PWAs empacotados para mobile e landing pages de conversão construídas para resolver dores operacionais e comerciais.
           </p>
-
-          {/* Filter Pills with Tech styling */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              gap: "0.6rem",
-              marginTop: "2.25rem"
-            }}
-          >
-            {filterOptions.map((filter) => {
-              const isActive = activeFilter === filter;
-              return (
-                <button
-                  key={filter}
-                  onClick={() => setActiveFilter(filter)}
-                  style={{
-                    padding: "0.5rem 1.25rem",
-                    borderRadius: "4px",
-                    border: isActive ? "1px solid var(--fiap-magenta)" : "1px solid rgba(255, 255, 255, 0.1)",
-                    background: isActive ? "var(--fiap-magenta)" : "rgba(255, 255, 255, 0.03)",
-                    color: "#ffffff",
-                    fontSize: "0.82rem",
-                    fontWeight: 700,
-                    fontFamily: "monospace",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                    cursor: "pointer",
-                    transition: "all 0.2s ease",
-                    boxShadow: isActive ? "0 0 15px rgba(237, 20, 91, 0.5)" : "none"
-                  }}
-                >
-                  {filter}
-                </button>
-              );
-            })}
-          </div>
         </div>
 
         {/* Projects Grid */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-            gap: "2.25rem"
+            gridTemplateColumns: "repeat(auto-fill, minmax(350px, 1fr))",
+            gap: "2.5rem"
           }}
         >
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <div
               key={project.id}
               className="glass-card"
@@ -86,15 +44,17 @@ export default function Projects() {
                 overflow: "hidden"
               }}
             >
-              {/* Image Preview with overlay */}
+              {/* Image Thumbnail Container */}
               <div
                 style={{
                   position: "relative",
                   width: "100%",
-                  height: "210px",
-                  background: "#08080d",
-                  overflow: "hidden"
+                  height: "230px",
+                  background: "#06040b",
+                  overflow: "hidden",
+                  cursor: "pointer"
                 }}
+                onClick={() => setSelectedProject(project)}
               >
                 <Image
                   src={project.image}
@@ -102,6 +62,7 @@ export default function Projects() {
                   fill
                   style={{
                     objectFit: "cover",
+                    objectPosition: "top center",
                     transition: "transform 0.4s ease"
                   }}
                   className="project-img-preview"
@@ -110,54 +71,63 @@ export default function Projects() {
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "linear-gradient(180deg, transparent 60%, rgba(12, 12, 18, 0.95) 100%)"
+                    background: "linear-gradient(180deg, transparent 55%, var(--bg-card) 100%)"
                   }}
                 />
+
+                {/* Status Badge Over Image */}
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "1rem",
+                    right: "1rem",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.35rem",
+                    padding: "0.3rem 0.75rem",
+                    borderRadius: "999px",
+                    background: "rgba(9, 7, 20, 0.8)",
+                    backdropFilter: "blur(8px)",
+                    color: "#ffffff",
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    border: "1px solid var(--border-color)"
+                  }}
+                >
+                  <Lock size={12} color="var(--purple-primary)" />
+                  <span>{project.statusBadge}</span>
+                </div>
               </div>
 
               {/* Card Body */}
               <div
                 style={{
-                  padding: "1.75rem",
+                  padding: "1.85rem",
                   display: "flex",
                   flexDirection: "column",
                   flex: 1
                 }}
               >
-                {/* Tech Tags */}
+                {/* Category / Subtitle */}
                 <div
                   style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: "0.4rem",
-                    marginBottom: "0.85rem"
+                    fontSize: "0.78rem",
+                    fontWeight: 700,
+                    color: "var(--purple-primary)",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.06em",
+                    marginBottom: "0.4rem"
                   }}
                 >
-                  {project.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      style={{
-                        fontSize: "0.72rem",
-                        fontFamily: "monospace",
-                        fontWeight: 700,
-                        padding: "0.2rem 0.6rem",
-                        borderRadius: "3px",
-                        background: "rgba(237, 20, 91, 0.12)",
-                        color: "var(--fiap-magenta)",
-                        border: "1px solid rgba(237, 20, 91, 0.3)"
-                      }}
-                    >
-                      #{tag}
-                    </span>
-                  ))}
+                  {project.subtitle}
                 </div>
 
                 <h3
                   style={{
-                    fontSize: "1.25rem",
-                    fontWeight: 700,
-                    marginBottom: "0.5rem",
-                    color: "#ffffff"
+                    fontSize: "1.35rem",
+                    fontWeight: 800,
+                    marginBottom: "0.75rem",
+                    color: "var(--text-primary)"
                   }}
                 >
                   {project.title}
@@ -168,14 +138,77 @@ export default function Projects() {
                     fontSize: "0.92rem",
                     color: "var(--text-secondary)",
                     lineHeight: 1.65,
-                    marginBottom: "1.75rem",
+                    marginBottom: "1.25rem",
                     flex: 1
                   }}
                 >
                   {project.description}
                 </p>
 
-                {/* Card Action Links */}
+                {/* Differentiators Mini Box */}
+                <div
+                  style={{
+                    padding: "0.85rem 1rem",
+                    borderRadius: "8px",
+                    background: "var(--purple-subtle)",
+                    border: "1px solid var(--border-color)",
+                    marginBottom: "1.5rem"
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.4rem",
+                      fontSize: "0.75rem",
+                      fontWeight: 700,
+                      color: "var(--purple-primary)",
+                      textTransform: "uppercase",
+                      marginBottom: "0.25rem"
+                    }}
+                  >
+                    <Sparkles size={13} />
+                    <span>Destaque & Diferencial</span>
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "0.82rem",
+                      color: "var(--text-secondary)",
+                      lineHeight: 1.45
+                    }}
+                  >
+                    {project.diferenciais}
+                  </div>
+                </div>
+
+                {/* Tech Pills */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "0.4rem",
+                    marginBottom: "1.5rem"
+                  }}
+                >
+                  {project.tags.map((tag, tIdx) => (
+                    <span
+                      key={tIdx}
+                      style={{
+                        fontSize: "0.74rem",
+                        fontWeight: 600,
+                        padding: "0.25rem 0.65rem",
+                        borderRadius: "6px",
+                        background: "var(--bg-glass)",
+                        color: "var(--text-secondary)",
+                        border: "1px solid var(--border-color)"
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Card Actions */}
                 <div
                   style={{
                     display: "flex",
@@ -186,26 +219,26 @@ export default function Projects() {
                     borderTop: "1px solid var(--border-color)"
                   }}
                 >
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => setSelectedProject(project)}
                     className="btn-primary btn-sm"
-                    style={{ flex: 1 }}
+                    style={{ flex: 1, cursor: "pointer" }}
                   >
-                    <ExternalLink size={15} />
-                    <span>Ver Projeto</span>
-                  </a>
+                    <Eye size={16} />
+                    <span>Ver Detalhes do Case</span>
+                  </button>
 
                   <a
-                    href={project.githubUrl}
+                    href={`https://api.whatsapp.com/send?phone=5571996504413&text=Ola%20Gabriel,%20vi%20o%20case%20do%20${encodeURIComponent(
+                      project.title
+                    )}%20e%20quero%20um%20orcamento%20para%20minha%20empresa.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary btn-sm"
-                    aria-label={`Código fonte de ${project.title}`}
+                    title="Solicitar projeto semelhante"
                     style={{ padding: "0.55rem 0.85rem" }}
                   >
-                    <Github size={17} />
+                    <MessageCircle size={17} />
                   </a>
                 </div>
               </div>
@@ -213,6 +246,12 @@ export default function Projects() {
           ))}
         </div>
       </div>
+
+      {/* Case Study Modal for Private Projects */}
+      <ProjectModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 }

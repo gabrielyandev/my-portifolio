@@ -1,58 +1,28 @@
-# Meu Portfólio 🚀
+# Gabriel Yan - Engenharia de Software & Desenvolvimento Web
 
-Bem-vindo(a) ao meu Mundo Digital! Portfólio pessoal moderno desenvolvido com **Next.js (App Router)**, **React**, **TypeScript** e **Design System Moderno** com suporte nativo a Dark/Light Mode.
+Portfólio profissional e plataforma de serviços de desenvolvimento de software sob medida, PWAs e landing pages de alta conversão.
 
-**[🔗 Acesse o portfólio online na Vercel!](https://portfolio-gabrielyandev.vercel.app/)**
+## Tecnologias
 
----
+- **Framework**: Next.js 15 (App Router)
+- **Biblioteca**: React 19
+- **Linguagem**: TypeScript
+- **Estilização**: CSS Vanilla com Design System em Purple / Violeta e Glassmorphism
+- **Efeitos 3D**: Canvas 3D de alta performance com animações interativas guiadas pela rolagem (Scroll-Driven 3D Object)
+- **Modos**: Suporte nativo a Modo Escuro e Modo Claro
+- **Ícones**: 100% SVG (Lucide React)
 
-## ✨ Destaques do Projeto
+## Projetos em Destaque
 
-- **Tecnologia de Ponta:** Desenvolvido em **Next.js 15+** com **TypeScript** e componentização limpa.
-- **Dark & Light Mode:** Alternância de tema fluida com persistência no `localStorage` e detecção da preferência do sistema.
-- **Efeitos Dinâmicos e Partículas:** Animação de partículas em Canvas 60fps, efeito de digitação suave (Typewriter) e micro-interações.
-- **Estrutura Modular de Dados:** Todos os projetos, dados pessoais e habilidades centralizados em `data/portfolioData.ts` para fácil manutenção.
-- **Responsividade Total:** Adaptado para smartphones, tablets e telas ultrawide.
-- **Pronto para Deploy na Vercel:** Configurado e otimizado para deploy contínuo com zero esforço.
+1. **Portal Ourobras** - Sistema Web Full-Stack, PWA e empacotamento nativo via Capacitor (APK Android) para gestão de chamados corporativos.
+2. **TaskHub** - Plataforma de Gestão de Projetos e Tarefas com Quadro Kanban, KPIs em tempo real e relatórios dinâmicos.
+3. **Landing Page Ton** - Página de vendas e conversão de maquininhas com cronômetro regressivo dinâmico e comparativo de planos.
 
----
+## Como Executar Localmente
 
-## 🛠️ Stack Utilizada
-
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
-
----
-
-## 🚀 Como rodar localmente
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/gabrielyandev/my-portifolio.git
-cd my-portifolio
-```
-
-2. Instale as dependências:
 ```bash
 npm install
-```
-
-3. Inicie o servidor de desenvolvimento:
-```bash
 npm run dev
 ```
 
-4. Abra no seu navegador:
-```
-http://localhost:3000
-```
-
----
-
-## 👨‍💻 Autor
-
-- **Gabriel Yan** - [@gabrielyandev](https://www.github.com/gabrielyandev)
-- [LinkedIn](https://www.linkedin.com/in/gabrielyandev/)
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.

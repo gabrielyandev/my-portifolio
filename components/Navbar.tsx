@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Moon, Sun, Menu, X, MessageCircle, Terminal } from "lucide-react";
+import { Moon, Sun, Menu, X, MessageCircle, Code2 } from "lucide-react";
 import { personalInfo } from "@/data/portfolioData";
 
 export default function Navbar() {
@@ -32,12 +32,13 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { index: "01", name: "Início", href: "#inicio" },
-    { index: "02", name: "Sobre", href: "#sobre" },
-    { index: "03", name: "Resumo", href: "#resumo" },
-    { index: "04", name: "Skills", href: "#habilidades" },
-    { index: "05", name: "GitHub", href: "#github" },
-    { index: "06", name: "Projetos", href: "#projetos" }
+    { name: "Início", href: "#inicio" },
+    { name: "Serviços", href: "#servicos" },
+    { name: "Projetos", href: "#projetos" },
+    { name: "GitHub", href: "#github" },
+    { name: "Experiência", href: "#resumo" },
+    { name: "Habilidades", href: "#habilidades" },
+    { name: "Contato", href: "#contato" }
   ];
 
   return (
@@ -48,10 +49,10 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 50,
-        background: isScrolled ? "var(--navbar-bg)" : "rgba(3, 3, 5, 0.4)",
-        backdropFilter: "blur(16px)",
-        WebkitBackdropFilter: "blur(16px)",
-        borderBottom: isScrolled ? "1px solid var(--border-color)" : "1px solid rgba(255, 255, 255, 0.05)",
+        background: isScrolled ? "var(--navbar-bg)" : "transparent",
+        backdropFilter: isScrolled ? "blur(16px)" : "none",
+        WebkitBackdropFilter: isScrolled ? "blur(16px)" : "none",
+        borderBottom: isScrolled ? "1px solid var(--border-color)" : "1px solid transparent",
         transition: "all 0.3s ease"
       }}
     >
@@ -64,41 +65,41 @@ export default function Navbar() {
           height: "4.75rem"
         }}
       >
-        {/* Brand with cyber logo */}
+        {/* Brand */}
         <Link
           href="#inicio"
           style={{
             textDecoration: "none",
-            fontSize: "1.2rem",
+            fontSize: "1.25rem",
             fontWeight: 800,
             letterSpacing: "-0.02em",
             display: "flex",
             alignItems: "center",
-            gap: "0.5rem"
+            gap: "0.6rem"
           }}
         >
           <div
             style={{
-              width: "2rem",
-              height: "2rem",
-              borderRadius: "4px",
-              background: "rgba(237, 20, 91, 0.15)",
-              border: "1px solid var(--fiap-magenta)",
+              width: "2.2rem",
+              height: "2.2rem",
+              borderRadius: "8px",
+              background: "var(--purple-subtle)",
+              border: "1px solid var(--purple-primary)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "var(--fiap-magenta)",
-              boxShadow: "0 0 10px rgba(237, 20, 91, 0.3)"
+              color: "var(--purple-primary)",
+              boxShadow: "0 0 12px var(--purple-glow)"
             }}
           >
-            <Terminal size={14} />
+            <Code2 size={16} />
           </div>
-          <span style={{ color: "#fff", fontWeight: 800 }}>
-            gabrielyan<span style={{ color: "var(--fiap-magenta)" }}>.dev</span>
+          <span style={{ color: "var(--text-primary)", fontWeight: 800 }}>
+            gabrielyan<span style={{ color: "var(--purple-primary)" }}>.dev</span>
           </span>
         </Link>
 
-        {/* Desktop Navigation Links with Tech Indexes */}
+        {/* Desktop Navigation Links */}
         <div
           style={{
             display: "none",
@@ -113,54 +114,54 @@ export default function Navbar() {
               href={link.href}
               style={{
                 textDecoration: "none",
-                fontSize: "0.88rem",
+                fontSize: "0.92rem",
                 fontWeight: 600,
                 color: "var(--text-secondary)",
-                letterSpacing: "0.05em",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.4rem",
+                letterSpacing: "0.01em",
                 transition: "color 0.2s ease"
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--purple-primary)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-secondary)")}
             >
-              <span
-                style={{
-                  fontFamily: "monospace",
-                  fontSize: "0.75rem",
-                  color: "var(--fiap-magenta)"
-                }}
-              >
-                //{link.index}
-              </span>
-              <span>{link.name}</span>
+              {link.name}
             </a>
           ))}
         </div>
 
         {/* Right Actions: Theme Toggle + Contact CTA */}
-        <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.85rem" }}>
+          {/* Light / Dark Mode Toggle Button */}
           <button
             onClick={toggleTheme}
-            aria-label="Alternar tema"
+            aria-label={theme === "dark" ? "Mudar para Modo Claro" : "Mudar para Modo Escuro"}
+            title={theme === "dark" ? "Mudar para Modo Claro" : "Mudar para Modo Escuro"}
             style={{
-              background: "rgba(255, 255, 255, 0.04)",
+              background: "var(--bg-card)",
               border: "1px solid var(--border-color)",
               color: "var(--text-primary)",
-              borderRadius: "4px",
-              width: "2.5rem",
-              height: "2.5rem",
+              borderRadius: "10px",
+              width: "2.6rem",
+              height: "2.6rem",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               cursor: "pointer",
               transition: "all 0.2s ease"
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "var(--fiap-magenta)")}
-            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "var(--border-color)")}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "var(--purple-primary)";
+              e.currentTarget.style.boxShadow = "0 0 12px var(--purple-glow)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "var(--border-color)";
+              e.currentTarget.style.boxShadow = "none";
+            }}
           >
-            {theme === "dark" ? <Sun size={17} color="#00d2ff" /> : <Moon size={17} color="#ed145b" />}
+            {theme === "dark" ? (
+              <Sun size={18} color="var(--purple-primary)" />
+            ) : (
+              <Moon size={18} color="var(--purple-primary)" />
+            )}
           </button>
 
           <a
@@ -168,10 +169,9 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary btn-sm desktop-only"
-            style={{ display: "none" }}
           >
             <MessageCircle size={15} />
-            <span>Falar Comigo</span>
+            <span>Contratar Serviços</span>
           </a>
 
           {/* Mobile Menu Button */}
@@ -181,14 +181,15 @@ export default function Navbar() {
             className="mobile-toggle"
             style={{
               display: "flex",
-              background: "none",
-              border: "none",
+              background: "var(--bg-card)",
+              border: "1px solid var(--border-color)",
+              borderRadius: "8px",
               color: "var(--text-primary)",
               cursor: "pointer",
-              padding: "0.25rem"
+              padding: "0.5rem"
             }}
           >
-            {isMenuOpen ? <X size={24} color="var(--fiap-magenta)" /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} color="var(--purple-primary)" /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -201,13 +202,15 @@ export default function Navbar() {
             top: "4.75rem",
             left: 0,
             right: 0,
-            background: "rgba(3, 3, 5, 0.98)",
-            borderBottom: "1px solid var(--fiap-magenta)",
+            background: "var(--bg-card)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            borderBottom: "1px solid var(--border-color)",
             padding: "2rem 1.5rem",
             display: "flex",
             flexDirection: "column",
             gap: "1.25rem",
-            boxShadow: "0 10px 40px rgba(0,0,0,0.8)"
+            boxShadow: "0 10px 40px rgba(0,0,0,0.4)"
           }}
         >
           {navLinks.map((link) => (
@@ -217,18 +220,13 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               style={{
                 textDecoration: "none",
-                color: "#ffffff",
-                fontSize: "1.1rem",
+                color: "var(--text-primary)",
+                fontSize: "1.05rem",
                 fontWeight: 600,
-                display: "flex",
-                alignItems: "center",
-                gap: "0.75rem"
+                padding: "0.35rem 0"
               }}
             >
-              <span style={{ color: "var(--fiap-magenta)", fontFamily: "monospace", fontSize: "0.9rem" }}>
-                //{link.index}
-              </span>
-              <span>{link.name}</span>
+              {link.name}
             </a>
           ))}
           <a
@@ -237,9 +235,9 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="btn-primary"
             onClick={() => setIsMenuOpen(false)}
-            style={{ marginTop: "1rem", width: "100%" }}
+            style={{ marginTop: "0.75rem", width: "100%" }}
           >
-            <MessageCircle size={18} />
+            <MessageCircle size={17} />
             <span>Falar no WhatsApp</span>
           </a>
         </div>
