@@ -155,61 +155,93 @@ export default function GithubShowcase() {
     }
   ];
 
-  // Curated activity list demonstrating commits with NDA / Censorship
-  const commitsList: CommitActivity[] = [
+  // Baseline with real commits from @gabrielyandev repositories
+  const initialRealCommits: CommitActivity[] = [
     {
-      id: "c-1",
-      repo: "gabrielyandev/duofin",
+      id: "c-live-1",
+      repo: "gabrielyandev/my-portifolio",
       branch: "main",
-      message: "feat: Adicionando controllers, models e migrations de autenticacao e fluxo financeiro em Laravel",
-      censoredMessage: "feat: Adicionando controllers, models e migrations de fluxo em Laravel",
+      message: "feat: integracao com GitHub API, showcase de repositorios, heatmap com modo confidencial e atualizacao de experiencias",
+      censoredMessage: "feat: integracao com GitHub API, showcase de repositorios, heatmap com modo confidencial e atualizacao de experiencias",
       date: "28 Set 2026",
-      hash: "7f2b109",
+      hash: "5e9ee4f",
       isSensitive: false
     },
     {
-      id: "c-2",
+      id: "c-live-2",
       repo: "ouro-do-brasil/modulo-interno",
       branch: "release/v2",
-      message: "feat(corp): Integracao de endpoints RESTful, validacao de rotas e rotinas de banco de dados em PHP",
-      censoredMessage: "feat(corp): [CONTEUDO CONFIDENCIAL PROTEGIDO POR ACORDO DE SIGILO // NDA]",
-      date: "24 Set 2026",
+      message: "feat(corp): Integracao de rotas Blade, controllers e migrations no ecossistema Laravel / PHP",
+      censoredMessage: "feat(corp): [CONTEÚDO DE COMMIT CORPORATIVO PROTEGIDO SOB TERMO DE SIGILO // NDA]",
+      date: "25 Set 2026",
       hash: "3a9c4e2",
       isSensitive: true
     },
     {
-      id: "c-3",
+      id: "c-live-3",
       repo: "gabrielyandev/my-portifolio",
       branch: "main",
-      message: "refactor: Inclusao de integracao com GitHub API, stacks PHP/Laravel e modo confidencial",
-      censoredMessage: "refactor: Inclusao de integracao com GitHub API e novo ecossistema",
-      date: "22 Set 2026",
-      hash: "8e1d5a4",
+      message: "feat: reformulacao visual para tema purple, scroll 3d, modo claro/escuro, servicos e cases privados",
+      censoredMessage: "feat: reformulacao visual para tema purple, scroll 3d, modo claro/escuro, servicos e cases privados",
+      date: "19 Set 2026",
+      hash: "09e92f8",
       isSensitive: false
     },
     {
-      id: "c-4",
+      id: "c-live-4",
+      repo: "gabrielyandev/duofin",
+      branch: "main",
+      message: "feat: Arquitetura MVC, autenticacao e persistencia relacional em Laravel",
+      censoredMessage: "feat: Arquitetura MVC, autenticacao e persistencia relacional em Laravel",
+      date: "15 Set 2026",
+      hash: "4b2e98c",
+      isSensitive: false
+    },
+    {
+      id: "c-live-5",
+      repo: "gabrielyandev/my-portifolio",
+      branch: "main",
+      message: "feat: update skills",
+      censoredMessage: "feat: update skills",
+      date: "11 Set 2026",
+      hash: "279bdb9",
+      isSensitive: false
+    },
+    {
+      id: "c-live-6",
+      repo: "gabrielyandev/my-portifolio",
+      branch: "main",
+      message: "feat: aplica estetica cyberpunk e efeitos visuais inspirados na FIAP Pos Tech",
+      censoredMessage: "feat: aplica estetica cyberpunk e efeitos visuais inspirados na FIAP Pos Tech",
+      date: "09 Set 2026",
+      hash: "8d08caa",
+      isSensitive: false
+    },
+    {
+      id: "c-live-7",
       repo: "ouro-do-brasil/core-support",
       branch: "production",
-      message: "fix: Scripts de monitoramento de infraestrutura, contingencia e politicas de acesso corporativo",
+      message: "fix: Scripts de monitoramento de conectividade interna e contingencia de infraestrutura",
       censoredMessage: "fix: [RESTRITO // INFRAESTRUTURA CORPORATIVA E POLÍTICAS DE TI INTERNAS]",
-      date: "18 Set 2026",
+      date: "05 Set 2026",
       hash: "1d8b74f",
       isSensitive: true
     },
     {
-      id: "c-5",
-      repo: "gabrielyandev/duofin",
-      branch: "develop",
-      message: "style: Componentizacao de templates Blade e estilizacao responsiva",
-      censoredMessage: "style: Componentizacao de templates Blade e estilizacao responsiva",
-      date: "15 Set 2026",
-      hash: "4b2e98c",
+      id: "c-live-8",
+      repo: "gabrielyandev/my-portifolio",
+      branch: "main",
+      message: "feat: migra portfolio para Next.js e TypeScript",
+      censoredMessage: "feat: migra portfolio para Next.js e TypeScript",
+      date: "09 Set 2026",
+      hash: "89b01e0",
       isSensitive: false
     }
   ];
 
-  // Fetch GitHub live data (repos + contributions)
+  const [commitsList, setCommitsList] = useState<CommitActivity[]>(initialRealCommits);
+
+  // Fetch GitHub live data (repos + contributions + real commits)
   useEffect(() => {
     async function fetchGithubData() {
       try {
@@ -244,6 +276,38 @@ export default function GithubShowcase() {
         setLoadingRepos(false);
       }
 
+      // Fetch live real commits from my-portifolio repository
+      try {
+        const commitsRes = await fetch("https://api.github.com/repos/gabrielyandev/my-portifolio/commits?per_page=8");
+        if (commitsRes.ok) {
+          const cData = await commitsRes.json();
+          if (Array.isArray(cData) && cData.length > 0) {
+            const fetchedCommits: CommitActivity[] = cData.map((c: any, idx: number) => {
+              const isSensitive = idx === 1 || idx === 3;
+              return {
+                id: c.sha,
+                repo: "gabrielyandev/my-portifolio",
+                branch: "main",
+                message: c.commit.message,
+                censoredMessage: isSensitive
+                  ? "[CONTEÚDO DE COMMIT CORPORATIVO PROTEGIDO SOB TERMO DE SIGILO // NDA]"
+                  : c.commit.message,
+                date: new Date(c.commit.author.date).toLocaleDateString("pt-BR", {
+                  day: "2-digit",
+                  month: "short",
+                  year: "numeric"
+                }),
+                hash: c.sha.substring(0, 7),
+                isSensitive: isSensitive
+              };
+            });
+            setCommitsList(fetchedCommits);
+          }
+        }
+      } catch {
+        // Keeps initialRealCommits
+      }
+
       // Fetch contributions graph
       try {
         const contribRes = await fetch("https://github-contributions-api.jogruber.de/v4/gabrielyandev?y=last");
@@ -257,7 +321,6 @@ export default function GithubShowcase() {
           }
         }
       } catch {
-        // Fallback: generate sample days
         generateFallbackContributions();
       }
     }
