@@ -1,22 +1,22 @@
-import { Github, Linkedin, MapPin, Target, Database, Code2 } from "lucide-react";
+import { Github, Linkedin, MapPin, Target, Database, Code2, Server } from "lucide-react";
 import { personalInfo } from "@/data/portfolioData";
 
 export default function About() {
   const highlights = [
     {
+      icon: <Server size={20} color="#ff2d20" />,
+      title: "BACK-END & LARAVEL",
+      desc: "PHP, Laravel, APIs REST"
+    },
+    {
       icon: <Code2 size={20} color="var(--fiap-magenta)" />,
-      title: "DESENVOLVIMENTO",
-      desc: "Front-End & Back-End"
+      title: "FRONT-END",
+      desc: "React, Next.js, Blade, TS"
     },
     {
       icon: <Database size={20} color="var(--fiap-cyan)" />,
       title: "BANCOS DE DADOS",
       desc: "MySQL, Postgres, Firebird"
-    },
-    {
-      icon: <MapPin size={20} color="#a855f7" />,
-      title: "LOCALIZAÇÃO",
-      desc: "Salvador, BA - Brasil"
     },
     {
       icon: <Target size={20} color="#10b981" />,

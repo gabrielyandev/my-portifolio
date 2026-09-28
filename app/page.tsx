@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
+import GithubShowcase from "@/components/GithubShowcase";
 import Projects from "@/components/Projects";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <Experience />
       <Skills />
+      <GithubShowcase />
       <Projects />
     </>
   );

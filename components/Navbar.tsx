@@ -36,7 +36,8 @@ export default function Navbar() {
     { index: "02", name: "Sobre", href: "#sobre" },
     { index: "03", name: "Resumo", href: "#resumo" },
     { index: "04", name: "Skills", href: "#habilidades" },
-    { index: "05", name: "Projetos", href: "#projetos" }
+    { index: "05", name: "GitHub", href: "#github" },
+    { index: "06", name: "Projetos", href: "#projetos" }
   ];
 
   return (

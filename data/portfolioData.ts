@@ -33,16 +33,16 @@ export interface Skill {
 export const personalInfo = {
   name: "Gabriel Yan",
   handle: "@gabrielyandev",
-  badge: "Frontend · UX/UI · DBA",
+  badge: "Full-Stack · Laravel / PHP · DBA",
   typingTexts: [
     "Em desenvolver para o mundo",
     "Em transformar ideias em código",
     "Em criar interfaces de alto impacto",
     "Em arquitetar soluções completas"
   ],
-  bioTitle: "DBA em TI, Desenvolvedor Web, Programador Front-End e Back-End",
+  bioTitle: "Desenvolvedor Full-Stack (Laravel / PHP / React) & DBA",
   bioDescription:
-    "Sou brasileiro, baiano e soteropolitano. Desde a infância, aos 13 anos, me tornei amante da tecnologia depois de ver um computador pela primeira vez. Sou um pesquisador nato, autodidata, e trabalhei como freelancer em suporte de TI. Aos 22 anos, descobri minha paixão pela programação, que é minha trilha atual. Estou cursando o 3º período de Análise e Desenvolvimento de Sistemas na Descomplica. Meu próximo passo é Engenharia de Software, com o objetivo de morar no Canadá.",
+    "Sou brasileiro, baiano e soteropolitano. Desde a infância, aos 13 anos, me tornei amante da tecnologia depois de ver um computador pela primeira vez. Sou um pesquisador nato, autodidata, e trabalhei com suporte de TI e desenvolvimento. Desenvolvedor Full-Stack com foco no ecossistema PHP/Laravel e tecnologias modernas como React e TypeScript, além de sólida experiência em administração e migração de bancos de dados relacionais. Cursando Análise e Desenvolvimento de Sistemas.",
   profileImage: "/assets/profile1.png",
   cvPath: "/assets/curriculo.pdf",
   github: "https://github.com/gabrielyandev",
@@ -52,6 +52,22 @@ export const personalInfo = {
 
 export const experiences: Experience[] = [
   {
+    period: "2025 - Atual",
+    role: "Desenvolvedor Jr.",
+    company: "Ouro do Brasil",
+    location: "Salvador, BA",
+    description:
+      "Desenvolvimento e sustentação de sistemas web e módulos corporativos utilizando PHP e o ecossistema Laravel (Blade, Eloquent ORM, rotas, controllers e migrations). Implementação e consumo de APIs RESTful, integração e modelagem de bancos de dados relacionais, versionamento com Git e criação de interfaces responsivas com JavaScript e TypeScript."
+  },
+  {
+    period: "2025 - 2026",
+    role: "Assistente de Suporte de TI",
+    company: "Ouro do Brasil",
+    location: "Salvador, BA",
+    description:
+      "Atuação no atendimento e diagnóstico de incidentes de TI, suporte e configuração de sistemas corporativos, manutenção preventiva de equipamentos e periféricos, gestão de acessos e monitoramento de conectividade interna."
+  },
+  {
     period: "2024 - 2025",
     role: "DBA (Administrador de Banco de Dados)",
     company: "Focus Tecnologia",
@@ -60,7 +76,7 @@ export const experiences: Experience[] = [
       "Atuei na migração do banco de dados e fiz as devidas correções ou implementações de novas funcionalidades, utilizando Firebird, MySQL e Pentaho Data Integration."
   },
   {
-    period: "2023 - 2024",
+    period: "2023 - Atual",
     role: "Desenvolvedor Web",
     company: "99jobs & Freelancer",
     location: "Salvador, BA",
@@ -89,6 +105,10 @@ export const educations: Education[] = [
 ];
 
 export const skills: Skill[] = [
+  { name: "PHP", category: "backend" },
+  { name: "Laravel", category: "backend" },
+  { name: "REST APIs", category: "backend" },
+  { name: "Blade", category: "frontend" },
   { name: "React", category: "frontend" },
   { name: "Next.js", category: "frontend" },
   { name: "TypeScript", category: "frontend" },

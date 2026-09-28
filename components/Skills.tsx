@@ -1,12 +1,20 @@
-import { Code, Database, Wrench, Terminal } from "lucide-react";
+import { Code, Database, Wrench, Terminal, Server } from "lucide-react";
 import { skills } from "@/data/portfolioData";
 
 export default function Skills() {
+  const backendSkills = skills.filter((s) => s.category === "backend");
   const frontendSkills = skills.filter((s) => s.category === "frontend");
   const dbSkills = skills.filter((s) => s.category === "database");
   const toolSkills = skills.filter((s) => s.category === "tools");
 
   const categories = [
+    {
+      title: "BACK-END & LARAVEL",
+      icon: <Server size={20} color="#ff2d20" />,
+      items: backendSkills,
+      color: "#ff2d20",
+      borderGlow: "rgba(255, 45, 32, 0.4)"
+    },
     {
       title: "FRONT-END & INTERFACE",
       icon: <Code size={20} color="var(--fiap-magenta)" />,

@@ -422,3 +422,65 @@ body::after {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--fiap-magenta);
 }
+
+/* GitHub Heatmap & Censored Mode Styles */
+.heatmap-container {
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+}
+
+.heatmap-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.heatmap-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+}
+
+.heatmap-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.heatmap-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.heatmap-cell:hover {
+  outline: 2px solid #ffffff;
+  outline-offset: -1px;
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+.redacted-bar {
+  display: inline-block;
+  background: rgba(237, 20, 91, 0.18);
+  color: #ed145b !important;
+  font-family: monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px dashed rgba(237, 20, 91, 0.5);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.repo-card {
+  transition: all 0.25s ease;
+}
+
+.repo-card:hover {
+  border-color: var(--fiap-cyan) !important;
+  box-shadow: 0 8px 30px rgba(0, 210, 255, 0.2) !important;
+  transform: translateY(-3px);
+}
+
